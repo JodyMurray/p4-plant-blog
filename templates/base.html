@@ -14,9 +14,26 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Featured</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 <body>
     <p>Hello</p>
     <main class="flex-shrink-0 main-bg">
@@ -25,12 +42,14 @@
         {% endblock content %}
     </main>
 
-<footer class="footer mt-auto py-3 dark-bg">
-        <i class="fas fa-facebook-square ms-3"></i>
-        <i class="fas fa-twitter-square ms-3"></i>
-        <i class="fas fa-instagram-square ms-3"></i>
-        <i class="fas fa-youtube-square ms-3"></i></p>
+    <footer class="footer mt-auto py-3 dark-bg">
+        <i class="fab fa-facebook-square ms-3"></i>
+        <i class="fab fa-twitter-square ms-3"></i>
+        <i class="fab fa-instagram-square ms-3"></i>
+        <i class="fab fa-youtube-square ms-3"></i>
     </footer>
+    <script src="https://kit.fontawesome.com/9b64cea43d.js" crossorigin="anonymous"></script>
 </body>
+
 
 </html>
