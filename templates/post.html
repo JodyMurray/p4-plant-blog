@@ -1,14 +1,19 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="container">
-    <h1 class="post-title">{{ post.title }}</h1>
+<div class="masthead">
+    <div class="container">
+        <h1 class="post-title">{{ post.title }}</h1>
+        <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
+    </div>
+    <div class="d-none d-md-block col-md-6 masthead-image">
+        {% if "placeholder" in post.featured_image.url %}
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fplant&psig=AOvVaw1hGYtpaAKoasgzm2M1xpFJ&ust=1666887900029000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjl0Lqn_voCFQAAAAAdAAAAABAK"
+            width="100%">
+        {% else %}
+        <img src=" {{ post.featured_image.url }}" width="100%">
+        {% endif %}
+    </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col card mb-4  mt-3 left  top">
-            <div class="card-body">
-                <p class="card-text ">
-                    {{ post.content | safe }}
-                </p>
-
+</div>
+</div>
 {% endblock %}
