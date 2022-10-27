@@ -5,7 +5,7 @@
         <h1 class="post-title">{{ post.title }}</h1>
         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
     </div>
-    
+
     <div class="d-none d-md-block col-md-6 post-image">
         {% if "placeholder" in post.featured_image.url %}
         <img src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?cs=srgb&dl=pexels-alena-koval-886521.jpg&fm=jpg&_gl=1*1yqe4ni*_ga*MTM3NzE5NzA4NS4xNjY2Njc4OTQz*_ga_8JE65Q40S6*MTY2NjY4NTIxNS4yLjEuMTY2NjY4NTgxOS4wLjAuMA.."
@@ -28,22 +28,23 @@
                         {{ comment.body | linebreaks }}
                     </div>
                     {% endfor %}
-    </div>
-    <div class="row">
+                </div>
+                <div class="row">
 
-        <div class="col-1">
-            <strong class="text-secondary"><i class="fas fa-seedling"></i> {{ post.number_of_likes }} </strong>
-        </div>
-        <div class="col-1">
-            {% with comments.count as total_comments %}
-            <strong class="text-secondary"><i class="far fa-comments"></i>
-                {{ total_comments }}</strong>
-            {% endwith %}
+                    <div class="col-1">
+                        <strong class="text-secondary"><i class="fas fa-seedling"></i> {{ post.number_of_likes }}
+                        </strong>
+                    </div>
+                    <div class="col-1">
+                        {% with comments.count as total_comments %}
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                            {{ total_comments }}</strong>
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-</div>
-</div>
-</div>
-</div>
+
 {% endblock %}

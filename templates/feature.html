@@ -1,36 +1,25 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 {% block content %}
-
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card mb-4">
-                <div class="card-body">
-                    <div class="image-container">
-                        {% if "placeholder" in feature.featured_image.url %}
-                        <img class="card-img-top rounded mx-auto d-block"
-                            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-photo%2F3d-podium-pastel-beige-background-halloween-pumpkin-spooky-abstract-dry-plants-autumn-scene_16708052.htm&psig=AOvVaw0wiiKD7yLhvhB4EAgyi3vu&ust=1666944490257000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCOj3rqP6__oCFQAAAAAdAAAAABAG">
-                        {% else %}
-                        <img class="card-img-top" src=" {{ feature.featured_image.url }}">
-                        {% endif %}
-                    </div>
-                </div>
-            </div>
+<div class="row">
+    <div class="col-sm-5">
+      <div class="card">
+        <div class="card-body">
+            <img class="card-img-bottom rounded float-left" src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1666866222/witch_hdpr91.jpg" alt="Card image cap">
+          <h5 class="card-title">All things Halloween</h5>
+          <p class="card-text">Click the button to see our feature this month!</p>
+          <a href="#" class="btn btn-success">Halloween Time!</a>
+        </div>
+      </div>
     </div>
-    <div class="row">
+    <div class="col-sm-5">
+      <div class="card">
+        <div class="card-body">
+            <img class="card-img-bottom" src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1666866837/gardening_ywa45y.jpg" alt="Card image cap">
+          <h5 class="card-title">See our events!</h5>
+          <p class="card-text">Click the button to see what events are coming up!</p>
+          <a href="#" class="btn btn-success">Event list</a>
+        </div>
+      </div>
     </div>
-    {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
-            {% endif %}
-            {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
-
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
-</div>
+  </div>
 {% endblock %}
