@@ -1,7 +1,43 @@
 body {
     background-color: #F3F9ED;
-    color: green;
+    color: #064E4B;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.card-title {
+    color: #064E4B;
+    text-decoration: none;
+}
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
+}
+
+.card-text {
+    text-decoration: none;
+    color: #E19D85;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    color: #064E4B;
+    margin-left: 2%;
+    
+}
+.nav {
+    position: fixed;
+    background: none;
+}
+
+.nav-item {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: right;
+}
+
+.nav-item > a{
+    text-align: right;
+    color: #064E4B;
+    margin-right: 10px;
+}
+
 
 
 
