@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="masthead">
+<div class="post-body">
     <div class="container">
         <h1 class="post-title">{{ post.title }}</h1>
         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
     </div>
-    <div class="d-none d-md-block col-md-6 masthead-image">
+    <div class="d-none d-md-block col-md-6 post-image">
         {% if "placeholder" in post.featured_image.url %}
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fplant&psig=AOvVaw1hGYtpaAKoasgzm2M1xpFJ&ust=1666887900029000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCMjl0Lqn_voCFQAAAAAdAAAAABAK"
+        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwepik.com%2Ftemplate%2Fprofessional-wall-plants-zoom-background-r-1318198469&psig=AOvVaw0XYWoeeRZSHIli_3-5DqE2&ust=1666933326400000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCJiPg9jQ__oCFQAAAAAdAAAAABAX"
             width="100%">
         {% else %}
         <img src=" {{ post.featured_image.url }}" width="100%">
