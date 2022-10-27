@@ -5,14 +5,44 @@
         <h1 class="post-title">{{ post.title }}</h1>
         <p class="post-subtitle">{{ post.author }} | {{ post.created_on }}</p>
     </div>
+    
     <div class="d-none d-md-block col-md-6 post-image">
         {% if "placeholder" in post.featured_image.url %}
-        <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwepik.com%2Ftemplate%2Fprofessional-wall-plants-zoom-background-r-1318198469&psig=AOvVaw0XYWoeeRZSHIli_3-5DqE2&ust=1666933326400000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCJiPg9jQ__oCFQAAAAAdAAAAABAX"
+        <img src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?cs=srgb&dl=pexels-alena-koval-886521.jpg&fm=jpg&_gl=1*1yqe4ni*_ga*MTM3NzE5NzA4NS4xNjY2Njc4OTQz*_ga_8JE65Q40S6*MTY2NjY4NTIxNS4yLjEuMTY2NjY4NTgxOS4wLjAuMA.."
             width="100%">
         {% else %}
         <img src=" {{ post.featured_image.url }}" width="100%">
         {% endif %}
+        <div class="row">
+            <div class="col-md-8 card mb-4  mt-3">
+                <h3>Comments:</h3>
+                <div class="card-body">
+                    {% for comment in comments %}
+                    <div class="comments" style="padding: 10px;">
+                        <p class="font-weight-bold">
+                            {{ comment.name }}
+                            <span class=" text-muted font-weight-normal">
+                                {{ comment.created_on }}
+                            </span> wrote:
+                        </p>
+                        {{ comment.body | linebreaks }}
+                    </div>
+                    {% endfor %}
     </div>
+    <div class="row">
+
+        <div class="col-1">
+            <strong class="text-secondary"><i class="fas fa-seedling"></i> {{ post.number_of_likes }} </strong>
+        </div>
+        <div class="col-1">
+            {% with comments.count as total_comments %}
+            <strong class="text-secondary"><i class="far fa-comments"></i>
+                {{ total_comments }}</strong>
+            {% endwith %}
+        </div>
+    </div>
+</div>
+</div>
 </div>
 </div>
 </div>

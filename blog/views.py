@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic, View
 from .models import Post
+from django.shortcuts import render
+
 
 
 class PostList(generic.ListView):
@@ -28,3 +30,9 @@ class PostDetail(View):
                 "liked": liked
             },
         )
+
+
+class FeaturedView(generic.TemplateView):
+
+    model = Post
+    template_name = "feature.html"
