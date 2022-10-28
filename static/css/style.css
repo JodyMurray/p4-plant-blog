@@ -44,8 +44,11 @@ a:active {
     margin-right: 10px;
 }
 
-.form-row {
+/* .form-row {
     margin-left: 15%;
+} */
+form {
+    margin-left: 10%;
 }
 
 .bg-img {
@@ -54,4 +57,7 @@ a:active {
     background-repeat: no-repeat;
     background-size: cover;
     filter: opacity(0.9);
+}
+.input-area {
+    background-color: #fafafa;
 }

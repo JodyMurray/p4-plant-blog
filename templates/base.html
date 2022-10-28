@@ -56,20 +56,78 @@
     {% endblock content %}
   </main>
 
-  <footer class="footer mt-auto py-3 dark-bg">
-    <a href="#">
-      <i class="fa fa-facebook-square ms-3" aria-hidden="true"></i>
-    </a>
-    <a href="#">
-      <i class="fa fa-twitter-square ms-3" aria-hidden="true"></i>
-    </a>
-    <a href="#">
-      <i class="fa fa-instagram-square ms-3" aria-hidden="true"></i>
-    </a>
-    <a href="#">
-      <i class="fa fa-youtube-square ms-3" aria-hidden="true"></i>
-    </a>
-  </footer>
+  <footer class="text-center text-lg-start container-fluid">
+
+    <!-- Footer Logo -->
+    <div class="text-center p-4" id="footer-logo">
+        <a class="navbar-brand" href="/">
+            Jody's Plant Blog <i class="fas fa-seedling"></i>
+        </a>
+    </div>
+
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center social-media-icons">
+                    <!-- Social Media Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Follow Us
+                    </h6>
+                    <a href="" class="btn btn-link btn-floating btn-lg text-dark m-1">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="btn btn-link btn-floating btn-lg text-dark m-1">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="btn btn-link btn-floating btn-lg text-dark m-1">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 quick-links">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Quick Links
+                    </h6>
+                    <p>
+                        <a href="{% url 'home' %}" class="text-reset">Home</a>
+                    </p>
+
+                    {% if user.is_authenticated %}
+                    <p>
+                        <a href="{% url 'user_profile' %}" class="text-reset">Profile</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'account_logout' %}" class="text-reset">Login</a>
+                    </p>
+                    {% else %}
+                    <p>
+                        <a href="{% url 'account_signup' %}" class="text-reset">Sign Up</a>
+                    </p>
+                    <p>
+                        <a href="{% url 'account_login' %}" class="text-reset">Login</a>
+                    </p>
+                    {% endif %}
+                </div>
+
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
+                    <p>
+                        <i class="fas fa-envelope me-3 text-secondary"></i>
+                        email
+                    </p>
+                    <p><i class="fas fa-phone me-3 text-secondary"></i>123</p>
+                    <p><i class="fas fa-print me-3 text-secondary"></i>123</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+        © 2022 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/">Jody's Plant Blog</a>
+    </div>
+</footer>
   <script src="https://kit.fontawesome.com/9b64cea43d.js" crossorigin="anonymous"></script>
 
   {% if is_paginated %}
