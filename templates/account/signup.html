@@ -9,10 +9,10 @@
   <div class="text-center">
     <h1>{% trans "Sign Up" %}</h1>
 
-    <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
+    <p>{% blocktrans %}Already have an account? <a href="{{ login_url }}">Sign in</a>.{% endblocktrans %}
     </p>
     <div class="form-row">
-      <div class="form-group col-md-6">
+      <div class="form-group col-md-9">
         <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
           {% csrf_token %}
           {{ form.as_p }}
