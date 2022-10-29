@@ -4,9 +4,17 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <div class="d-flex justify-content-end"> 
+                <div class="p-3 mb-3 bg-light rounded">
+                    <h4>news</h4>
+                    <p class="mb-0">This is a comment</p>
+                </div>
+            </aside>
+        </div>
+        <div class="row">
             {% for post in post_list %}
-            <div class="col-md-4">
-                <div class="card mb-4">
+            <div class="col-md-3">
+                <div class="card mb-2 shadow p-3 mb-5 bg-white rounded">
                     <div class="card-body">
                         <div class="image-container">
                             {% if "placeholder" in post.featured_image.url %}
@@ -24,17 +32,34 @@
                             <p class="card-text">{{ post.excerpt }}</p>
                         </a>
                         <hr />
-                        <p class="card-text text-muted h6">{{ post.created_on}}<i class="fa-regular fa-face-grin-hearts"></i>
+                        <p class="card-text text-muted h6">{{ post.created_on}}<i
+                                class="fa-regular fa-face-grin-hearts"></i>
                             {{ post.number_of_likes }}</p>
                     </div>
+
                 </div>
+
             </div>
+
             {% if forloop.counter|divisibleby:3 %}
+            <div class="row">
+                {% endif %}
+
+                {% endfor %}
+            </div>
         </div>
-        <div class="row">
-            {% endif %}
-            {% endfor %}
-        </div>
+    </div>
+    <!-- <div class="container">
+            <div class="row">
+                <aside class="col-md-4 blog-sidebar">
+                    <div class="p-3 mb-3 bg-light rounded">
+                        <h4>news</h4>
+                        <p class="mb-0">This is a comment</p>
+                    </div>
+                </aside>
+            </div>
+        </div> -->
+    </div>
     </div>
 </body>
 
