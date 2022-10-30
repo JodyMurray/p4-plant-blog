@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap');
+
 body {
     background-color: #F3F9ED;
     color: #064E4B;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container-fluid {
+    padding-left: 8rem;
+    padding-right: 8rem;
 }
 
 .card-title {
@@ -19,6 +26,10 @@ a:active {
 .card-text {
     text-decoration: none;
     color: #E19D85;
+}
+
+.col-md-3 {
+    padding: 10px;
 }
 
 .navbar-brand {
@@ -44,6 +55,7 @@ a:active {
     margin-right: 10px;
 }
 
+
 /* .form-row {
     margin-left: 15%;
 } */
@@ -59,5 +71,58 @@ form {
     filter: opacity(0.9);
 }
 
+.latest-posts {
+    padding-bottom: 10px;
+    position: relative;
+    font-family: 'Satisfy', cursive;
+    font-weight: 300;
+    color: #306844;
+}
 
 
+
+.break {
+    border: 0;
+    height: 1px;
+    background: #333;
+    align-items: center;
+    background-image: linear-gradient(to right, #63AA85, #333, #63AA85);
+}
+
+.tips {
+    text-align: center;
+    padding: 5%;
+}
+
+.feature-row {
+    padding-left: 10rem;
+    padding-top: 3rem;
+}
+
+.col-md-4 {
+
+    padding-top: 3rem;
+}
+
+.plant-care {
+    border-width: 1px;
+    border-style: solid;
+    border-image:
+        linear-gradient(to bottom,
+            green,
+            rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.plant-care li {
+    text-decoration: none;
+}
+
+.tips-card {
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
+    height: 120px;
+    border-radius: 5px;
+    backdrop-filter: blur(14px);
+    padding: 10px;
+}
