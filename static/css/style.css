@@ -16,7 +16,12 @@ body {
     text-decoration: none;
 }
 
-a:hover,
+a:hover {
+    text-decoration: none;
+    color: #63AA85;
+    transform: scale(1.1);
+}
+
 a:visited,
 a:link,
 a:active {
@@ -104,25 +109,41 @@ form {
     padding-top: 3rem;
 }
 
-.plant-care {
-    border-width: 1px;
+/* .plant-care {
+    border-width: thin;
     border-style: solid;
     border-image:
         linear-gradient(to bottom,
             green,
             rgba(0, 0, 0, 0)) 1 100%;
+} */
+
+ol {
+    text-decoration: none;
+    position: relative;
+    top: 9rem;
 }
 
-.plant-care li {
-    text-decoration: none;
-}
 
 .tips-card {
-    margin-right: auto;
-    margin-left: auto;
-    box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
-    height: 120px;
-    border-radius: 5px;
+    margin-left: 10%;
+    border-right: 3px solid grey;
+    border-bottom: 3px solid grey;
+    box-shadow: 0 0 25px rgb(129 124 124 / 20%);
+    height: 140px;
+    position: relative;
+    left: 8%;
+    top: 20%;
+    border-radius: 20px;
+    max-width: fit-content;
     backdrop-filter: blur(14px);
-    padding: 10px;
+    background-color: #FEFFFE;
+    opacity: 0.6;
+
+    align-items: center;
 }
+
+.tips-image {
+    opacity: 0.6;
+}
+
