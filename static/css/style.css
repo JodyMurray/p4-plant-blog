@@ -145,5 +145,26 @@ ol {
 
 .tips-image {
     opacity: 0.6;
+    margin-bottom: 8%;
 }
 
+.image-2 {
+    position: relative;
+    width: 60%;
+    opacity: 0.7;
+    left: 90%;
+}
+
+#mistakes-list {
+    position: relative;
+    top: -25rem;
+    padding: 5%;
+    left: 80px;
+    height: 200px;
+    border-left: 1px solid #dbd8cf;
+}
+
+
+footer {
+    padding: 3%;
+}
