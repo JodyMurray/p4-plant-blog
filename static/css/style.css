@@ -157,14 +157,18 @@ ol {
 
 #mistakes-list {
     position: relative;
-    top: -25rem;
+    top: -28rem;
     padding: 5%;
     left: 80px;
-    height: 200px;
+    height: 500px;
     border-left: 1px solid #dbd8cf;
 }
+#mistakes-list p {
+    font-size: 13px;
+}
 
-
+#mistakes-list h3 {
+}
 footer {
     padding: 3%;
 }
