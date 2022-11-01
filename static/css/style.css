@@ -11,6 +11,10 @@ body {
     padding-right: 8rem;
 }
 
+#blog-posts {
+    border-radius: 30%;
+}
+
 .card-title {
     color: #064E4B;
     text-decoration: none;
@@ -96,7 +100,7 @@ form {
 
 .tips {
     text-align: center;
-    padding: 5%;
+    padding-top: 7%;
 }
 
 .feature-row {
@@ -116,7 +120,7 @@ ol {
 }
 
 
-.tips-card {
+/* .tips-card {
     margin-left: 10%;
     border-right: 3px solid grey;
     border-bottom: 3px solid grey;
@@ -130,13 +134,18 @@ ol {
     backdrop-filter: blur(14px);
     background-color: #FEFFFE;
     opacity: 0.6;
-
     align-items: center;
+} */
+.tips-list {
+    list-style: circle;
+    line-height: 2;
+    top: 6rem;
 }
 
 .left-image {
     opacity: 0.6;
-    margin-bottom: 8%;
+    margin-bottom: 15%;
+    text-align: center;
 }
 
 .image-2 {
@@ -150,32 +159,41 @@ ol {
     position: relative;
     top: -28rem;
     padding: 5%;
-    left: 80px;
     height: 500px;
     border-left: 1px solid #dbd8cf;
 }
+
 #mistakes-list p {
     font-size: 13px;
 }
 
-.health-img {
-    /* filter: sepia(60%); */
+
+.health img {
+    left: 90px;
     position: relative;
     height: fit-content;
+    opacity: 0.3;
+    filter: sepia(1);
+    top: 25%;
 }
-.health img {
-    width: 60%;
-    opacity: 0.6;
-    justify-content: center;
+
+.health h4 {
+    font-family: 'Pacifico', cursive;
+    font-size: 25px;
 }
+
 #health-list {
     position: relative;
-    top: -28rem;
-    padding: 5%;
-    left: 50%;
+    top: -27rem;
+    padding: 10%;
     height: 500px;
-    font-size: 13px;
+    font-size: 15px;
+    color: darkslategrey;
+    line-height: 2;
+}
 
+.list-break {
+    width: fit-content;
 }
 
 footer {
