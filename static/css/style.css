@@ -198,6 +198,7 @@ ol {
 
 .cat-image {
     border-radius: 50%;
+    width: 50%;
 }
 .cat-text {
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
