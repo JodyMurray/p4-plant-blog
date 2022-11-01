@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap');
 
 body {
-    background-color: #F3F9ED;
+    background-color: #FFFFF4;
     color: #064E4B;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -109,15 +109,6 @@ form {
     padding-top: 3rem;
 }
 
-/* .plant-care {
-    border-width: thin;
-    border-style: solid;
-    border-image:
-        linear-gradient(to bottom,
-            green,
-            rgba(0, 0, 0, 0)) 1 100%;
-} */
-
 ol {
     text-decoration: none;
     position: relative;
@@ -143,7 +134,7 @@ ol {
     align-items: center;
 }
 
-.tips-image {
+.left-image {
     opacity: 0.6;
     margin-bottom: 8%;
 }
@@ -167,8 +158,26 @@ ol {
     font-size: 13px;
 }
 
-#mistakes-list h3 {
+.health-img {
+    /* filter: sepia(60%); */
+    position: relative;
+    height: fit-content;
 }
+.health img {
+    width: 60%;
+    opacity: 0.6;
+    justify-content: center;
+}
+#health-list {
+    position: relative;
+    top: -28rem;
+    padding: 5%;
+    left: 50%;
+    height: 500px;
+    font-size: 13px;
+
+}
+
 footer {
     padding: 3%;
 }
