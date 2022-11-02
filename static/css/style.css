@@ -32,10 +32,6 @@ a:active {
     text-decoration: none;
 }
 
-.card-text {
-    text-decoration: none;
-    color: #E19D85;
-}
 
 .col-md-3 {
     padding: 10px;
@@ -217,4 +213,17 @@ ol {
 
 footer {
     padding: 3%;
+}
+
+/* Post-page html*/
+
+.post-image {
+    position: relative;
+    left: 25%;
+}
+
+
+.card-text {
+    text-decoration: none;
+    color: #306844;
 }
