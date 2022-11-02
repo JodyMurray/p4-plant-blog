@@ -152,7 +152,7 @@ ol {
     position: relative;
     width: 60%;
     opacity: 0.7;
-    left: 90%;
+    left: 95%;
 }
 
 #mistakes-list {
@@ -197,11 +197,17 @@ ol {
 }
 
 .cat-image {
-    border-radius: 50%;
-    width: 50%;
+    border-radius: 5%;
+    box-shadow: 0 0 25px rgb(129 124 124 / 20%);
+    margin-top: 10%;
 }
-.cat-text {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
+
+.plants-and-pets {
+    position: relative;
+    padding: 1%;
+    margin-top: 10%;
+    border-radius: 20%;
+    /* box-shadow: 0 0 25px rgb(100 124 124 / 20%); */
 }
 
 footer {
