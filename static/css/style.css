@@ -45,7 +45,6 @@ a:active {
     text-decoration: none;
     color: #064E4B;
     margin-left: 2%;
-
 }
 
 .nav {
@@ -64,10 +63,6 @@ a:active {
     margin-right: 10px;
 }
 
-
-/* .form-row {
-    margin-left: 15%;
-} */
 form {
     margin-left: 10%;
 }
@@ -88,7 +83,17 @@ form {
     color: #306844;
 }
 
+.pagination-btn a:hover {
+    text-decoration: none;
+    color: #63AA85;
+    transform: scale(1.1);
+}
 
+.pagination-btn a {
+    color: #064E4B;
+    border-radius: 10%;
+    bottom: 20px;
+}
 
 .break {
     border: 0;

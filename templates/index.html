@@ -52,126 +52,151 @@
 
                 {% endfor %}
             </div>
-            <hr class="break" style="width:90%; margin: auto;" />
+
+
+
+            <!-- <hr class="break" style="width:90%; margin: auto;" /> -->
+        </div>
+    </div>
+    <div class="row mt-3">
+        {% if is_paginated %}
+        <nav aria-label="Page Navigation">
+            <ul class="pagination justify-content-center pagination-btn">
+                {% if page_obj.has_previous %}
+                <li>
+                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo;
+                        Previous</a>
+                </li>
+                {% endif %}
+                {% if page_obj.has_next %}
+                <li>
+                    <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next &raquo;</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+    <hr class="break" style="width:95%; margin: auto;" />
+
+
+    <div class="row">
+
+
+        <!-- <section class="d-flex justify-content-center"> -->
+        <h1 class="tips latest-posts">Quick Tips</h1>
+        <div class="left-image col-7">
+            <img class="rounded-circle col-10"
+                src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667203578/minimal_ll5djf.jpg" alt="">
         </div>
 
-        <div class="row">
+        <ol class="col-sm col-5 tips-list">
+            <li>
+                Spin your plants around
+                so they grow evenly and not lopsided.
+            <li>
+                Pick plants that work
+                with your schedule.</li>
+            <li>
+                Watering: not too much
+                and not too little.</li>
+            <li>
+                Don't be scared to repot.</li>
+            <li>
+                Feel the Soil to Know How Often to Water Your Plants</li>
+            <li>
+                Cut away old growth.</li>
+            <li>
+                Keep your pet away.</li>
 
+        </ol>
+    </div>
 
-            <!-- <section class="d-flex justify-content-center"> -->
-            <h1 class="tips latest-posts">Quick Tips</h1>
-            <div class="left-image col-7">
-                <img class="rounded-circle col-10"
-                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667203578/minimal_ll5djf.jpg" alt="">
-            </div>
-
-            <ol class="col-sm col-5 tips-list">
-                <li>
-                    Spin your plants around
-                    so they grow evenly and not lopsided.
-                <li>
-                    Pick plants that work
-                    with your schedule.</li>
-                <li>
-                    Watering: not too much
-                    and not too little.</li>
-                <li>
-                    Don't be scared to repot.</li>
-                <li>
-                    Feel the Soil to Know How Often to Water Your Plants</li>
-                <li>
-                    Cut away old growth.</li>
-                <li>
-                    Keep your pet away.</li>
-
-            </ol>
+    <hr class="break" style="width:95%; margin: auto;" />
+    <div class="row" style="height: 160vh;">
+        <h1 class="tips latest-posts">Common Mistakes</h1>
+        <div class="col-7">
+            <img class="col image-2 rounded-circle"
+                src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667217425/blue-background_wmmrnm.jpg"
+                alt="Card image">
         </div>
 
-        <hr class="break" style="width:95%; margin: auto;" />
-        <div class="row" style="height: 160vh;">
-            <h1 class="tips latest-posts">Common Mistakes</h1>
-            <div class="col-7">
-                <img class="col image-2 rounded-circle"
-                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667217425/blue-background_wmmrnm.jpg"
-                    alt="Card image">
+        <div id="mistakes-list">
+            <div class="col-6">
+                <h4>Over watering</h4>
+                <p>
+                    Do you check the soil before you water? If you don't, you could be over or underwatering
+                    your
+                    plants. Both are problematic.
+                </p>
+                <h4>Not enough sunlight</h4>
+                <p>
+                    Do plants need full sun of the tag says so? Yes, they do. Placing a plant that needs lots of
+                    direct sunlight (cactus, succulents, for example) in a space with no direct sunlight will
+                    not
+                    bring you a happy plant.
+                </p>
+                <h4>Forgetting to check the roots.</h4>
+                <p>
+                    Roots being the feeding organ of the plant, it's essential to keep them healthy.
+                </p>
+                <h4>Pot size.</h4>
+                <p>
+                    Use the right size container. Too small of a container will crowd the roots, and one that is
+                    too
+                    large will hold excess moisture that may cause root rot.
+                </p>
             </div>
-
-            <div id="mistakes-list">
-                <div class="col-6">
-                    <h4>Over watering</h4>
-                    <p>
-                        Do you check the soil before you water? If you don't, you could be over or underwatering
-                        your
-                        plants. Both are problematic.
-                    </p>
-                    <h4>Not enough sunlight</h4>
-                    <p>
-                        Do plants need full sun of the tag says so? Yes, they do. Placing a plant that needs lots of
-                        direct sunlight (cactus, succulents, for example) in a space with no direct sunlight will
-                        not
-                        bring you a happy plant.
-                    </p>
-                    <h4>Forgetting to check the roots.</h4>
-                    <p>
-                        Roots being the feeding organ of the plant, it's essential to keep them healthy.
-                    </p>
-                    <h4>Pot size.</h4>
-                    <p>
-                        Use the right size container. Too small of a container will crowd the roots, and one that is
-                        too
-                        large will hold excess moisture that may cause root rot.
-                    </p>
-                </div>
-            </div>
-
         </div>
 
-        <hr class="break" style="width:95%; margin: auto;" />
-        <h1 class="tips latest-posts">Plants & Your Health</h1>
-        <div class="row justify-content-center" style="height: 50rem;">
+    </div>
 
-            <div class="col-7 health">
+    <hr class="break" style="width:95%; margin: auto;" />
+    <h1 class="tips latest-posts">Plants & Your Health</h1>
+    <div class="row justify-content-center" style="height: 50rem;">
 
-                <img class="rounded-circle col-10"
-                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667303062/pinkhair_letyourselfgrow_4x_vtkyvn.jpg"
-                    alt="">
+        <div class="col-7 health">
+
+            <img class="rounded-circle col-10"
+                src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667303062/pinkhair_letyourselfgrow_4x_vtkyvn.jpg"
+                alt="">
+        </div>
+        <!-- <div class="col-10"> -->
+        <div id="health-list">
+            <div class="text-center health">
+                <h4>Stress reduction.</h4>
+                <hr class="break" style="width:50%; margin: auto;" />
+                <p>
+                    Spending time in natural settings helps speed up recovery from mental fatigue, slow down
+                    heart rate, reduce high blood pressure, and lower anxiety.
+                </p>
+                <h4>Higher levels of creativity.</h4>
+                <hr class="break" style="width:50%; margin: auto;" />
+                <p>
+                    Nature walks, and even short visits to parks and woodlands within urban areas, have been
+                    found to boost creativity, mood, and sense of vitality.
+                </p>
+                <h4> Connecting with Others.
+                </h4>
+                <hr class="break" style="width:50%; margin: auto;" />
+                <p>
+                    Few things boost our well-being like good relationships, and gardening offers ample
+                    opportunities to connect with others.
+                </p>
+                <h4>Bathing in Green.</h4>
+                <hr class="break" style="width:50%; margin: auto;" />
+                <p>The Japanese expression "shinrin-yoku" can be translated as "forest bathing," which
+                    nicely
+                    captures the experience of being immersed in green. A growing body of research has found
+                    all
+                    kinds of benefits from being in natural landscapes.
+                </p>
             </div>
-            <!-- <div class="col-10"> -->
-            <div id="health-list">
-                <div class="text-center health">
-                    <h4>Stress reduction.</h4>
-                    <hr class="break" style="width:50%; margin: auto;" />
-                    <p>
-                        Spending time in natural settings helps speed up recovery from mental fatigue, slow down
-                        heart rate, reduce high blood pressure, and lower anxiety.
-                    </p>
-                    <h4>Higher levels of creativity.</h4>
-                    <hr class="break" style="width:50%; margin: auto;" />
-                    <p>
-                        Nature walks, and even short visits to parks and woodlands within urban areas, have been
-                        found to boost creativity, mood, and sense of vitality.
-                    </p>
-                    <h4> Connecting with Others.
-                    </h4>
-                    <hr class="break" style="width:50%; margin: auto;" />
-                    <p>
-                        Few things boost our well-being like good relationships, and gardening offers ample
-                        opportunities to connect with others.
-                    </p>
-                    <h4>Bathing in Green.</h4>
-                    <hr class="break" style="width:50%; margin: auto;" />
-                    <p>The Japanese expression "shinrin-yoku" can be translated as "forest bathing," which
-                        nicely
-                        captures the experience of being immersed in green. A growing body of research has found
-                        all
-                        kinds of benefits from being in natural landscapes.
-                    </p>
-                </div>
-            </div>
-
         </div>
 
-        <hr class="break" style="width:90%; margin: auto;" />
+    </div>
+
+    <hr class="break" style="width:90%; margin: auto;" />
     </div>
 
     <!-- Pets and plants section-->
