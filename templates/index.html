@@ -2,16 +2,7 @@
 {% block content %}
 
 <body>
-
     <div class="container-fluid">
-        <!-- <div class="row py-3">
-            <div class="col-4 order-2" id="sticky-sidebar">
-                <div class="sticky-top">
-                    <h4>news</h4>
-                    <p class="mb-0">This is a comment</p>
-                </div>
-            </div>
-        </div> -->
         <div class="row">
             <h2 class="latest-posts d-flex justify-content-center">Latest Blog Posts</h2>
 
@@ -36,7 +27,7 @@
                             <h2 class="card-title">{{ post.title }}</h2>
                             <p class="card-text">{{ post.excerpt }}</p>
                         </a>
-                        <hr />
+                        <!-- <hr /> -->
                         <p class="card-text text-muted h6">{{ post.created_on}}<i
                                 class="fa-regular fa-face-grin-hearts"></i>
                             {{ post.number_of_likes }}</p>
@@ -52,8 +43,6 @@
 
                 {% endfor %}
             </div>
-
-
 
             <!-- <hr class="break" style="width:90%; margin: auto;" /> -->
         </div>
@@ -76,160 +65,168 @@
             </ul>
         </nav>
         {% endif %}
+        <hr class="break" style="width:95%; margin: auto;" />
     </div>
-    <hr class="break" style="width:95%; margin: auto;" />
 
 
-    <div class="row">
+    <!--Quick tips section-->
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="tips latest-posts">Quick Tips</h1>
+            <div class="left-image col-7">
+                <img class="rounded-circle col-10"
+                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667203578/minimal_ll5djf.jpg" alt="">
+            </div>
 
+            <ol class="col-sm col-5 tips-list">
+                <li>
+                    Spin your plants around
+                    so they grow evenly and not lopsided.
+                <li>
+                    Pick plants that work
+                    with your schedule.</li>
+                <li>
+                    Watering: not too much
+                    and not too little.</li>
+                <li>
+                    Don't be scared to repot.</li>
+                <li>
+                    Feel the Soil to Know How Often to Water Your Plants</li>
+                <li>
+                    Cut away old growth.</li>
+                <li>
+                    Keep your pet away.</li>
 
-        <!-- <section class="d-flex justify-content-center"> -->
-        <h1 class="tips latest-posts">Quick Tips</h1>
-        <div class="left-image col-7">
-            <img class="rounded-circle col-10"
-                src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667203578/minimal_ll5djf.jpg" alt="">
+            </ol>
+            <hr class="break" style="width:95%; margin: auto;" />
         </div>
-
-        <ol class="col-sm col-5 tips-list">
-            <li>
-                Spin your plants around
-                so they grow evenly and not lopsided.
-            <li>
-                Pick plants that work
-                with your schedule.</li>
-            <li>
-                Watering: not too much
-                and not too little.</li>
-            <li>
-                Don't be scared to repot.</li>
-            <li>
-                Feel the Soil to Know How Often to Water Your Plants</li>
-            <li>
-                Cut away old growth.</li>
-            <li>
-                Keep your pet away.</li>
-
-        </ol>
     </div>
-
-    <hr class="break" style="width:95%; margin: auto;" />
+    <!--Common mistakes section-->
+    <div class="container-fluid">
+        <hr class="break" style="width:95%; margin: auto;" />
     <div class="row" style="height: 160vh;">
         <h1 class="tips latest-posts">Common Mistakes</h1>
         <div class="col-7">
-            <img class="col image-2 rounded-circle"
+            <img class="col-12 image-2 rounded-circle"
                 src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667217425/blue-background_wmmrnm.jpg"
                 alt="Card image">
         </div>
 
         <div id="mistakes-list">
             <div class="col-6">
-                <h4>Over watering</h4>
-                <p>
-                    Do you check the soil before you water? If you don't, you could be over or underwatering
-                    your
-                    plants. Both are problematic.
-                </p>
-                <h4>Not enough sunlight</h4>
-                <p>
-                    Do plants need full sun of the tag says so? Yes, they do. Placing a plant that needs lots of
-                    direct sunlight (cactus, succulents, for example) in a space with no direct sunlight will
-                    not
-                    bring you a happy plant.
-                </p>
-                <h4>Forgetting to check the roots.</h4>
-                <p>
-                    Roots being the feeding organ of the plant, it's essential to keep them healthy.
-                </p>
-                <h4>Pot size.</h4>
-                <p>
-                    Use the right size container. Too small of a container will crowd the roots, and one that is
-                    too
-                    large will hold excess moisture that may cause root rot.
-                </p>
+                    <h4>Over watering</h4>
+                    <p>
+                        Do you check the soil before you water? If you don't, you could be over or underwatering
+                        your
+                        plants. Both are problematic.
+                    </p>
+                    <h4>Not enough sunlight</h4>
+                    <p>
+                        Do plants need full sun of the tag says so? Yes, they do. Placing a plant that needs lots of
+                        direct sunlight (cactus, succulents, for example) in a space with no direct sunlight will
+                        not
+                        bring you a happy plant.
+                    </p>
+                    <h4>Forgetting to check the roots.</h4>
+                    <p>
+                        Roots being the feeding organ of the plant, it's essential to keep them healthy.
+                    </p>
+                    <h4>Pot size.</h4>
+                    <p>
+                        Use the right size container. Too small of a container will crowd the roots, and one that is
+                        too
+                        large will hold excess moisture that may cause root rot.
+                    </p>
+                </div>
             </div>
         </div>
-
+    </div>
     </div>
 
     <hr class="break" style="width:95%; margin: auto;" />
-    <h1 class="tips latest-posts">Plants & Your Health</h1>
-    <div class="row justify-content-center" style="height: 50rem;">
 
-        <div class="col-7 health">
+    <!--Plants and your health section-->
 
-            <img class="rounded-circle col-10"
-                src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667303062/pinkhair_letyourselfgrow_4x_vtkyvn.jpg"
-                alt="">
-        </div>
-        <!-- <div class="col-10"> -->
-        <div id="health-list">
-            <div class="text-center health">
-                <h4>Stress reduction.</h4>
-                <hr class="break" style="width:50%; margin: auto;" />
-                <p>
-                    Spending time in natural settings helps speed up recovery from mental fatigue, slow down
-                    heart rate, reduce high blood pressure, and lower anxiety.
-                </p>
-                <h4>Higher levels of creativity.</h4>
-                <hr class="break" style="width:50%; margin: auto;" />
-                <p>
-                    Nature walks, and even short visits to parks and woodlands within urban areas, have been
-                    found to boost creativity, mood, and sense of vitality.
-                </p>
-                <h4> Connecting with Others.
-                </h4>
-                <hr class="break" style="width:50%; margin: auto;" />
-                <p>
-                    Few things boost our well-being like good relationships, and gardening offers ample
-                    opportunities to connect with others.
-                </p>
-                <h4>Bathing in Green.</h4>
-                <hr class="break" style="width:50%; margin: auto;" />
-                <p>The Japanese expression "shinrin-yoku" can be translated as "forest bathing," which
-                    nicely
-                    captures the experience of being immersed in green. A growing body of research has found
-                    all
-                    kinds of benefits from being in natural landscapes.
-                </p>
+    <div class="conatiner-fluid">
+        <div class="row justify-content-center">
+            <div class="col-7 health">
+                <h1 class="tips latest-posts">Plants & Your Health</h1>
+
+                <img class="rounded-circle col-10"
+                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667303062/pinkhair_letyourselfgrow_4x_vtkyvn.jpg"
+                    alt="">
+                <div id="health-list">
+                    <div class="text-center health">
+                        <h4>Stress reduction.</h4>
+                        <hr class="break" style="width:50%; margin: auto;" />
+                        <p>
+                            Spending time in natural settings helps speed up recovery from mental fatigue, slow down
+                            heart rate, reduce high blood pressure, and lower anxiety.
+                        </p>
+                        <h4>Higher levels of creativity.</h4>
+                        <hr class="break" style="width:50%; margin: auto;" />
+                        <p>
+                            Nature walks, and even short visits to parks and woodlands within urban areas, have been
+                            found to boost creativity, mood, and sense of vitality.
+                        </p>
+                        <h4> Connecting with Others.
+                        </h4>
+                        <hr class="break" style="width:50%; margin: auto;" />
+                        <p>
+                            Few things boost our well-being like good relationships, and gardening offers ample
+                            opportunities to connect with others.
+                        </p>
+                        <h4>Bathing in Green.</h4>
+                        <hr class="break" style="width:50%; margin: auto;" />
+                        <p>The Japanese expression "shinrin-yoku" can be translated as "forest bathing," which
+                            nicely
+                            captures the experience of being immersed in green. A growing body of research has found
+                            all
+                            kinds of benefits from being in natural landscapes.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
 
-    </div>
 
-    <hr class="break" style="width:90%; margin: auto;" />
     </div>
+    <hr class="break" style="width:90%; margin: auto;" />
 
     <!-- Pets and plants section-->
-    <div class="row justify-content-start">
-        <div class="tips latest-posts">
-            <h1>
-                Pets & Plants
-            </h1>
 
-        </div>
-        <div class="col-12 col-md-10 col-lg-6">
-            <img class="card-img cat-image"
-                src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667371515/960x0_qqwz5n.jpg" alt="Card image">
+    <div class="container-fluid">
+        <div class="row justify-content-start">
+            <div class="tips latest-posts">
+                <h1>
+                    Pets & Plants
+                </h1>
 
-        </div>
+            </div>
+            <div class="col-12 col-md-10 col-lg-6">
+                <img class="card-img cat-image"
+                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667371515/960x0_qqwz5n.jpg"
+                    alt="Card image">
 
-        <div class=" bg-transparent rounded plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
-            style="width: 18rem; height: fit-content;">
-            <div class="card-body">
-                <h5 class="card-title">Toxic Plants to Steer Clear of!</h5>
-                <p class="card-text">Find out which plants are harmful for your beloved pets!</p>
-                <a href="#" class="btn btn-outline-secondary">Read more</a>
+            </div>
+
+            <div class=" bg-transparent rounded plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
+                style="width: 18rem; height: fit-content;">
+                <div class="card-body">
+                    <h5 class="card-title">Toxic Plants to Steer Clear of!</h5>
+                    <p class="card-text">Find out which plants are harmful for your beloved pets!</p>
+                    <a href="#" class="btn btn-outline-secondary">Read more</a>
+                </div>
+            </div>
+            <div class=" bg-transparent rounded plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
+                style="width: 18rem; height: fit-content;">
+                <div class="card-body">
+                    <h5 class="card-title">How to Keep Pets away from Plants!</h5>
+                    <p class="card-text">Find out a few tricks to keep your furbabies away from your plant babies!</p>
+                    <a href="#" class="btn btn-outline-secondary">Read more</a>
+                </div>
             </div>
         </div>
-        <div class=" bg-transparent rounded plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
-            style="width: 18rem; height: fit-content;">
-            <div class="card-body">
-                <h5 class="card-title">How to Keep Pets away from Plants!</h5>
-                <p class="card-text">Find out a few tricks to keep your furbabies away from your plant babies!</p>
-                <a href="#" class="btn btn-outline-secondary">Read more</a>
-            </div>
-        </div>
-    </div>
     </div>
 </body>
 

@@ -151,16 +151,14 @@ ol {
 
 .image-2 {
     position: relative;
-    width: 60%;
+    width: 45%;
+    left: 50%;
     opacity: 0.7;
-    left: 95%;
 }
 
 #mistakes-list {
     position: relative;
-    top: -28rem;
     padding: 5%;
-    height: 500px;
     border-left: 1px solid #dbd8cf;
 }
 
@@ -175,8 +173,9 @@ ol {
     height: fit-content;
     opacity: 0.3;
     filter: sepia(1);
-    top: 25%;
 }
+
+
 
 .health h4 {
     font-family: 'Pacifico', cursive;
@@ -184,10 +183,10 @@ ol {
 }
 
 #health-list {
-    position: relative;
-    top: -27rem;
-    padding: 10%;
-    height: 500px;
+    position: absolute;
+    padding-top: 5%;
+    left: 50%;
+    transform: translate(-50%, -90%);
     font-size: 15px;
     color: darkslategrey;
     line-height: 2;
