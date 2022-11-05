@@ -121,22 +121,6 @@ ol {
 }
 
 
-/* .tips-card {
-    margin-left: 10%;
-    border-right: 3px solid grey;
-    border-bottom: 3px solid grey;
-    box-shadow: 0 0 25px rgb(129 124 124 / 20%);
-    height: 140px;
-    position: relative;
-    left: 8%;
-    top: 20%;
-    border-radius: 20px;
-    max-width: fit-content;
-    backdrop-filter: blur(14px);
-    background-color: #FEFFFE;
-    opacity: 0.6;
-    align-items: center;
-} */
 .tips-list {
     list-style: circle;
     line-height: 2;
@@ -202,6 +186,10 @@ ol {
     border-radius: 5%;
     box-shadow: 0 0 25px rgb(129 124 124 / 20%);
     margin-top: 10%;
+    position: relative;
+    left: 25%;
+    width: 80%;
+    opacity: 0.7;
 }
 
 .plants-and-pets {
@@ -209,7 +197,8 @@ ol {
     padding: 1%;
     margin-top: 10%;
     border-radius: 20%;
-    /* box-shadow: 0 0 25px rgb(100 124 124 / 20%); */
+    left: 40px;
+    padding: 20px;
 }
 
 footer {

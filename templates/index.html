@@ -27,7 +27,6 @@
                             <h2 class="card-title">{{ post.title }}</h2>
                             <p class="card-text">{{ post.excerpt }}</p>
                         </a>
-                        <!-- <hr /> -->
                         <p class="card-text text-muted h6">{{ post.created_on}}<i
                                 class="fa-regular fa-face-grin-hearts"></i>
                             {{ post.number_of_likes }}</p>
@@ -43,8 +42,6 @@
 
                 {% endfor %}
             </div>
-
-            <!-- <hr class="break" style="width:90%; margin: auto;" /> -->
         </div>
     </div>
     <div class="row mt-3">
@@ -189,43 +186,41 @@
 
 
     </div>
-    <hr class="break" style="width:90%; margin: auto;" />
 
     <!-- Pets and plants section-->
-
-    <section class="container-fluid">
+    <section class="container-fluid plants-and-pets" style="padding-bottom: 10%;">
+        <hr class="break" style="width:90%; margin: auto;" />
         <div class="row justify-content-start">
             <div class="tips latest-posts">
                 <h1>
                     Pets & Plants
                 </h1>
-
             </div>
             <div class="col-12 col-md-10 col-lg-6">
-                <img class="card-img cat-image"
+                <img class="cat-image"
                     src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667371515/960x0_qqwz5n.jpg"
-                    alt="Card image">
+                    alt="">
 
             </div>
 
-            <div class=" bg-transparent rounded plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
-                style="width: 18rem; height: fit-content;">
+            <div class="bg-light plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
+                style="width: 15rem; height: fit-content; text-align: center;">
                 <div class="card-body">
                     <h5 class="card-title">Toxic Plants to Steer Clear of!</h5>
                     <p class="card-text">Find out which plants are harmful for your beloved pets!</p>
-                    <a href="#" class="btn btn-outline-secondary">Read more</a>
+                    <a href="#" class="btn btn-outline-secondary pet-button">Read more</a>
                 </div>
             </div>
-            <div class=" bg-transparent rounded plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
-                style="width: 18rem; height: fit-content;">
+            <div class="bg-light plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
+                style="width: 15rem; height: fit-content; text-align: center;">
                 <div class="card-body">
                     <h5 class="card-title">How to Keep Pets away from Plants!</h5>
-                    <p class="card-text">Find out a few tricks to keep your furbabies away from your plant babies!</p>
-                    <a href="#" class="btn btn-outline-secondary">Read more</a>
+                    <p class="card-text">Find out a few tricks to keep them away!</p>
+                    <a href="#" class="btn btn-outline-secondary pet-button">Read more</a>
                 </div>
             </div>
         </div>
     </section>
 </body>
-
+<hr class="break" style="width:80%; margin: auto;" />
 {%endblock%}
