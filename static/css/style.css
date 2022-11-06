@@ -11,6 +11,7 @@ body {
     padding-right: 8rem;
 }
 
+/* Blog posts */
 #blog-posts {
     border-radius: 30%;
 }
@@ -37,6 +38,7 @@ a:active {
     padding: 10px;
 }
 
+/* Navbar */
 .navbar-brand {
     text-decoration: none;
     color: #064E4B;
@@ -59,8 +61,8 @@ a:active {
     margin-right: 10px;
 }
 
+/* Forms */
 form {
-    margin-left: 10%;
 }
 
 .bg-img {
@@ -71,7 +73,8 @@ form {
     filter: opacity(0.9);
 }
 
-.latest-posts {
+
+.post-header {
     padding-bottom: 10px;
     position: relative;
     font-family: 'Satisfy', cursive;
@@ -79,6 +82,7 @@ form {
     color: #306844;
 }
 
+/* Pagination */
 .pagination-btn a:hover {
     text-decoration: none;
     color: #63AA85;
@@ -91,6 +95,7 @@ form {
     bottom: 20px;
 }
 
+/* HR */
 .break {
     border: 0;
     height: 1px;
@@ -99,6 +104,7 @@ form {
     background-image: linear-gradient(to right, #63AA85, #333, #63AA85);
 }
 
+/* Quick tips */
 .tips {
     text-align: center;
     padding-top: 7%;
@@ -110,7 +116,6 @@ form {
 }
 
 .col-md-4 {
-
     padding-top: 3rem;
 }
 
@@ -133,6 +138,7 @@ ol {
     text-align: center;
 }
 
+/* Common mistakes */
 .image-2 {
     position: relative;
     left: 60%;
@@ -152,7 +158,7 @@ ol {
     font-size: 13px;
 }
 
-
+/* Plants and your health*/
 .health img {
     left: 90px;
     position: relative;
@@ -160,8 +166,6 @@ ol {
     opacity: 0.3;
     filter: sepia(1);
 }
-
-
 
 .health h4 {
     font-family: 'Pacifico', cursive;
@@ -182,6 +186,7 @@ ol {
     width: fit-content;
 }
 
+/* Pets and plants */
 .cat-image {
     border-radius: 5%;
     box-shadow: 0 0 25px rgb(129 124 124 / 20%);
@@ -197,23 +202,33 @@ ol {
     padding: 1%;
     margin-top: 10%;
     border-radius: 20%;
-    left: 40px;
     padding: 20px;
 }
 
+/* Footer */
 footer {
     padding: 3%;
 }
 
-/* Post-page html*/
+/* Post-page html */
 
 .post-image {
     position: relative;
     left: 25%;
 }
 
-
 .card-text {
     text-decoration: none;
     color: #306844;
+}
+
+.comment-area {
+    border: 0;
+    box-sizing: border-box;
+    height: 140px;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 15px;
+    resize: none;
+    width: 100%;
 }
