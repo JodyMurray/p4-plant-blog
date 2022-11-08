@@ -62,8 +62,7 @@ a:active {
 }
 
 /* Forms */
-form {
-}
+
 
 .bg-img {
     background-image: url('https://res.cloudinary.com/dmqu7iqfu/image/upload/v1666970168/textile-textured-spring-leaves-horizontal-border-vector-2745931_xpr5p3.jpg');
@@ -223,12 +222,8 @@ footer {
 }
 
 .comment-area {
-    border: 0;
-    box-sizing: border-box;
-    height: 140px;
-    line-height: 1.5em;
-    margin: 0;
-    padding: 15px;
-    resize: none;
-    width: 100%;
+    position: relative;
+    left: 10%;
+    border-radius: 5px;
+    background: transparent;
 }
