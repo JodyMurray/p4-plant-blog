@@ -11,15 +11,6 @@ body {
     padding-right: 8rem;
 }
 
-/* Blog posts */
-#blog-posts {
-    border-radius: 30%;
-}
-
-.card-title {
-    color: #064E4B;
-    text-decoration: none;
-}
 
 a:hover {
     text-decoration: none;
@@ -33,9 +24,18 @@ a:active {
     text-decoration: none;
 }
 
-
 .col-md-3 {
     padding: 10px;
+}
+
+/* Blog posts */
+#blog-posts {
+    border-radius: 30%;
+}
+
+.card-title {
+    color: #064E4B;
+    text-decoration: none;
 }
 
 /* Navbar */
@@ -63,7 +63,6 @@ a:active {
 
 /* Forms */
 
-
 .bg-img {
     background-image: url('https://res.cloudinary.com/dmqu7iqfu/image/upload/v1666970168/textile-textured-spring-leaves-horizontal-border-vector-2745931_xpr5p3.jpg');
     background-position: center;
@@ -71,7 +70,6 @@ a:active {
     background-size: cover;
     filter: opacity(0.9);
 }
-
 
 .post-header {
     padding-bottom: 10px;
@@ -157,7 +155,7 @@ ol {
     font-size: 13px;
 }
 
-/* Plants and your health*/
+/* Plants and your health */
 .health img {
     left: 90px;
     position: relative;
@@ -221,6 +219,7 @@ footer {
     color: #306844;
 }
 
+/* Comment section */
 .comment-area {
     position: relative;
     left: 10%;
@@ -231,4 +230,18 @@ footer {
 .btn-like {
     border: none;
     background: transparent;
+}
+
+.like-button {
+    border: 1px solid rgba(0,0,0,.1);
+    display: inline-block;
+    vertical-align: middle;
+    height: 34px;
+    margin: 14px;
+    white-space: nowrap;
+    border-radius: 60px;
+    padding: 0 11.5px;
+    width: 11%;
+    font-size: 18px;
+    opacity: 0.7;
 }
