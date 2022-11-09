@@ -227,3 +227,8 @@ footer {
     border-radius: 5px;
     background: transparent;
 }
+
+.btn-like {
+    border: none;
+    background: transparent;
+}
