@@ -54,9 +54,9 @@
                 </div>
             </div>
         </div>
+        {% if commented %}
         <div class="col-md-6 card mb-4 mt-3 comment-area shadow-sm p-3 mb-5 rounded" style="width: 80%;">
             <div class="card-body" style="padding: 5%;">
-                {% if commented %}
                 <div class="alert alert-success" role="alert">
                     Your comment is awaiting approval
                 </div>
@@ -69,7 +69,8 @@
                 <form method="post" style="margin-top: 1.3em; border-radius: 10%;">
                     {{ comment_form|crispy }}
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <br>
+                    <button type="submit" class="btn btn-outline-secondary">Submit</button>
                 </form>
                 {% endif %}
                 {% endif %}
