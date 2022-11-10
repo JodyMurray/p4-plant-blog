@@ -5,25 +5,49 @@
 {% block head_title %}{% trans "Signup" %}{% endblock %}
 
 {% block content %}
-<div class="col-md-6 mt-3 offset-md-3">
+<div class="col-md-8 mt-3 offset-md-3">
   <div class="text-center">
-    <h1>{% trans "Sign Up" %}</h1>
-
-    <p>{% blocktrans %}Already have an account? <a href="{{ login_url }}">Sign in</a>.{% endblocktrans %}
-    </p>
     <div class="form-row">
-      <div class="form-group col-md-12">
-        <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-          {% csrf_token %}
-          {{ form.as_p }}
-          {% if redirect_field_value %}
-          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-          {% endif %}
-          <button type="submit" class="btn btn-outline-secondary">{% trans "Sign Up" %} &raquo;</button>
+      <div class="form-group col-md-9">
+        <h1>{% trans "Sign Up" %}</h1>
+
+        <p>{% blocktrans %}Already have an account? <a href="{{ login_url }}">Sign in</a>.{% endblocktrans %}
+        </p>
+        <div class="row mb-4">
+          <div class="col">
+            <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+              {% csrf_token %}
+              {{ form.as_p }}
+              {% if redirect_field_value %}
+
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+              {% endif %}
+              <button type="submit" class="btn btn-outline-secondary">{% trans "Sign Up" %} &raquo;</button>
+          </div>
+          <!-- Register buttons -->
+          <div class="text-center">
+            <p>or sign up with:</p>
+            <button type="button" class="btn btn-success btn-floating mx-1">
+              <i class="fab fa-facebook-f"></i>
+            </button>
+
+            <button type="button" class="btn btn-success btn-floating mx-1">
+              <i class="fab fa-google"></i>
+            </button>
+
+            <button type="button" class="btn btn-success btn-floating mx-1">
+              <i class="fab fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-success btn-floating mx-1">
+              <i class="fab fa-github"></i>
+            </button>
+          </div>
+
+          </form>
+        </div>
       </div>
-      </form>
     </div>
   </div>
-</div>
 
-{% endblock %}
+  {% endblock %}
