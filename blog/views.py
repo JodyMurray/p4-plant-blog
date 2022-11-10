@@ -3,6 +3,8 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Post
 from django.shortcuts import render
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .forms import CommentForm
 
 
@@ -78,6 +80,9 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
+@login_required
+def profile(request):
+    return render(request, 'templates/profile.html')
 
 class FeaturedView(generic.TemplateView):
 
