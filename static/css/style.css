@@ -64,6 +64,14 @@ a:active {
 
 /* Forms */
 
+.profile_form input {
+    width: 50%;
+    position: relative;
+}
+
+.profile-border {
+    border-right: 1px solid rgba(0,0,0,.1);
+}
 /* .signup form {
     position: relative;
     left: 40px;

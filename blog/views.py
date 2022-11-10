@@ -1,11 +1,31 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.views.generic import CreateView
 from django.http import HttpResponseRedirect
 from .models import Post
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.urls import reverse_lazy
 from django.contrib import messages
-from .forms import CommentForm
+from .forms import CommentForm, EditProfileForm
+
+
+
+class UserEditView(generic.UpdateView):
+    form_class = EditProfileForm
+    template_name = 'profile.html'
+    success_url = reverse_lazy('home')
+
+    def get_object(self):
+        return self.request.user
+
+
+
+class AddPostView(CreateView):
+    model = Post
+    template_name = 'add_post.html'
+    fields = '__all__'
 
 
 class PostList(generic.ListView):
@@ -80,9 +100,7 @@ class PostLike(View):
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
 
-@login_required
-def profile(request):
-    return render(request, 'templates/profile.html')
+
 
 class FeaturedView(generic.TemplateView):
 
