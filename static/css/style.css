@@ -67,6 +67,7 @@ a:active {
 .profile_form input {
     width: 50%;
     position: relative;
+    border-radius: 5%;
 }
 
 .profile-border {
