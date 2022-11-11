@@ -9,7 +9,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    profilePic = models.ImageField(default='default.jpg', upload_to='profile_images')
+    profile_pic = models.ImageField(default='default_profile_picture.jpg', upload_to='images/profile')
     bio = models.TextField()
 
     def __str__(self):

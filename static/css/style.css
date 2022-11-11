@@ -82,9 +82,11 @@ a:active {
     position: relative;
 }
 
-input,
-text-area {
-    background: ;
+
+.date-joined {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0.6;
+    font-style: italic;
 }
 
 .bg-img {
