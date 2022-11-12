@@ -34,16 +34,11 @@
 
 
                 <div class="form-group profile_form">
-                    <form method="POST" class="bg-transparent">
+                    <form method = "post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {{ form.as_p }}
-                        <form action="{% url 'profile' %}" method="POST" enctype="multipart/form-data">
-                            <span class="fas fa-paperclip mr-3"></span>
-                            <input name="profile_pic" type="file">
-                            <br>
-                            <br>
-                            <button type='submit' class="btn btn-outline-secondary">Update Profile</button>
-                        </form>
+                        <button type='submit' class="btn btn-outline-secondary">Update Profile</button>
+                        <input name="profile_image_view" type="file">
                     </form>
                 </div>
 

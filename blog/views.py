@@ -11,24 +11,11 @@ from django.contrib import messages
 from .forms import CommentForm, EditProfileForm
 
 
-
 from . import forms
 
 
 from . import models
 
-
-@login_required
-def photo_upload(request):
-    form = forms.PhotoForm()
-    if request.method == 'POST': 
-        form = forms.PhotoForm(request.POST, request.FILES)
-        if form.is_valid():
-            photo = form.save(commit=False)
-            photo.uploader = request.user
-            photo.save()
-            return redirect('profile')
-    return render(request, 'profile.html', context={'form': form})
 
 class UserProfile(generic.ListView):
     model = Profile
@@ -44,6 +31,22 @@ class UserEditView(generic.UpdateView):
     def get_object(self):
         return self.request.user
 
+
+def profile_image_view(request):
+
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES)
+
+    if form.is_valid():
+        form.save()
+        return redirect('success')
+    else:
+        form = ProfileForm()
+    return render(request, 'profile.html', {'form': form})
+
+
+def success(request):
+    return HttpResponse('successfully uploaded')
 
 
 class AddPostView(CreateView):
@@ -123,7 +126,6 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
 
 
 class FeaturedView(generic.TemplateView):
