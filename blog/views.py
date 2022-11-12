@@ -12,6 +12,24 @@ from .forms import CommentForm, EditProfileForm
 
 
 
+from . import forms
+
+
+from . import models
+
+
+@login_required
+def photo_upload(request):
+    form = forms.PhotoForm()
+    if request.method == 'POST': 
+        form = forms.PhotoForm(request.POST, request.FILES)
+        if form.is_valid():
+            photo = form.save(commit=False)
+            photo.uploader = request.user
+            photo.save()
+            return redirect('profile')
+    return render(request, 'profile.html', context={'form': form})
+
 class UserProfile(generic.ListView):
     model = Profile
     queryset = Profile.objects.all()

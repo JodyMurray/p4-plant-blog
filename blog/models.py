@@ -9,16 +9,19 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    profile_pic = models.ImageField(upload_to='profile_pic', default='default.jpeg')
+    profile_pic = CloudinaryField(
+        'profile_pic',
+        default='default.jpeg'
+    )
 
     bio = models.TextField()
 
     def __str__(self):
         return self.user.username
 
-    # @property
-    # def get_avatar(self):
-    #     return self.avatar.url
+    @property
+    def get_avatar(self):
+        return self.profile_pic.url
 
 
 class Post(models.Model):

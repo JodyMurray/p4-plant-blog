@@ -8,15 +8,18 @@ class ProfileAdmin(admin.ModelAdmin):
 
     list_display = (
         'user',
-        'bio'
+        'bio',
+        'profile_pic'
     )
     list_filter = (
         'user',
-        'bio'
+        'bio',
+        'profile_pic'
     )
     search_fields = (
         'user',
-        'bio'
+        'bio',
+        'profile_pic'
     )
 
 
