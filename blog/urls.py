@@ -1,3 +1,5 @@
+from django.conf import settings
+from django.conf.urls.static import static
 from . import views
 from django.urls import path
 from .views import UserEditView, AddPostView
@@ -12,3 +14,7 @@ urlpatterns = [
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>/', views.PostLike.as_view(), name='post_like'),
 ]
+
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL,
+#                           document_root=settings.MEDIA_ROOT)

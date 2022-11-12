@@ -9,24 +9,31 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
-    profile_pic = models.ImageField(default='default_profile_picture.jpg', upload_to='images/profile')
+    avatar = CloudinaryField('image', default='placeholder')
+
     bio = models.TextField()
 
     def __str__(self):
         return self.user.username
 
+    # @property
+    # def get_avatar(self):
+    #     return self.avatar.url
+
 
 class Post(models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="blog_posts")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="blog_posts")
     update_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name='blogpost_like', blank=True)
+    likes = models.ManyToManyField(
+        User, related_name='blogpost_like', blank=True)
 
     class Meta:
         ordering = ['-created_on']

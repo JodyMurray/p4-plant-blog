@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.views.generic import CreateView
 from django.http import HttpResponseRedirect
-from .models import Post
+from .models import Post, Profile
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
@@ -10,6 +10,12 @@ from django.urls import reverse_lazy
 from django.contrib import messages
 from .forms import CommentForm, EditProfileForm
 
+
+
+class UserProfile(generic.ListView):
+    model = Profile
+    queryset = Profile.objects.all()
+    template_name = 'profile.html'
 
 
 class UserEditView(generic.UpdateView):

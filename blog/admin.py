@@ -3,7 +3,15 @@ from .models import Post, Comment, Profile
 from django_summernote.admin import SummernoteModelAdmin
 
 
-admin.site.register(Profile)
+# @admin.site.register(Profile)
+# class ProfileAdmin(admin.ModelAdmin):
+#     class Meta:
+#         model = Profile
+#         list_display = (
+#             'user',
+#             'avatar',
+#             'bio',
+#         )
 
 
 @admin.register(Post)
