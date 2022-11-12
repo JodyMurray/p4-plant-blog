@@ -21,7 +21,7 @@ class UserProfile(generic.ListView):
 class UserEditView(generic.UpdateView):
     form_class = EditProfileForm
     template_name = 'profile.html'
-    success_url = reverse_lazy('home')
+    success_url = reverse_lazy('profile')
 
     def get_object(self):
         return self.request.user
