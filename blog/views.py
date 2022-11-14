@@ -1,20 +1,12 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import CreateView
 from django.http import HttpResponseRedirect
-from .models import Post, Profile
-from django.shortcuts import render
+from .models import Post, Profile, User
 from django.contrib.auth.decorators import login_required
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from django.urls import reverse_lazy
 from django.contrib import messages
 from .forms import CommentForm, EditProfileForm
-
-
-from . import forms
-
-
-from . import models
 
 
 class UserProfile(generic.ListView):
@@ -22,31 +14,41 @@ class UserProfile(generic.ListView):
     queryset = Profile.objects.all()
     template_name = 'profile.html'
 
+class UserSettings(View):
 
-class UserEditView(generic.UpdateView):
-    form_class = EditProfileForm
-    template_name = 'profile.html'
-    success_url = reverse_lazy('profile')
+    def get(self, request):
 
-    def get_object(self):
-        return self.request.user
+        profile = Profile.objects.all()
 
+        return render(
+            request,
+            "edit_profile.html",
+            {
+                "profile": profile,
+                "profile_form": EditProfileForm()
+            },
+        )
 
-def profile_image_view(request):
+    def post(self, request):
 
-    if request.method == 'POST':
-        form = ProfileForm(request.POST, request.FILES)
+        profile = Profile.objects.all()
 
-    if form.is_valid():
-        form.save()
-        return redirect('success')
-    else:
-        form = ProfileForm()
-    return render(request, 'profile.html', {'form': form})
+        form = EditProfileForm(
+            request.POST,
+            request.FILES
+        )
 
+        if form.is_valid():
+            # profile = form.save(commit=False)
+            profile.save()
 
-def success(request):
-    return HttpResponse('successfully uploaded')
+            messages.success(request, 'Profile saved!')
+        else:
+            messages.error(
+                request,
+                'Could not be updated. Please contact admin.'
+                )
+        return redirect('profile')
 
 
 class AddPostView(CreateView):
@@ -126,6 +128,7 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
 
 
 class FeaturedView(generic.TemplateView):
