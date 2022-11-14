@@ -3,13 +3,14 @@
 
 Profile settings page
 
-<form action="{% url 'edit_profile' %}" method="post" enctype="multipart/form-data">
+<form method='POST' action="{% url 'edit_profile' %}" enctype="multipart/form-data">
     {% csrf_token %}
+        {{form.as_p}}
     <div class="text-center">
 
         <div>
             <div>
-            <form action="" method="get">
+            <form action="" method="post">
                 <label for="bio">Bio</label>
                 <input name="bio" class="form-control" id="bio" type="text" placeholder="Enter your bio"
                     value="{{ profile.bio|default:'' }}" required>
@@ -29,7 +30,7 @@ Profile settings page
                 </div>
             </div>
         </div>
-
+        
         <div>
             <button type="submit" class="btn">Save All</button>
         </div>

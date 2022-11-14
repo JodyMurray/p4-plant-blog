@@ -14,39 +14,29 @@ class UserProfile(generic.ListView):
     queryset = Profile.objects.all()
     template_name = 'profile.html'
 
+
 class UserSettings(View):
 
+    def dispatch(self, request, *args, **kwargs):
+        self.profile, __ = Profile.objects.get_or_create(user=request.user)
+        return super(UserSettings, self).dispatch(request, *args, **kwargs)
+
     def get(self, request):
-
-        profile = Profile.objects.all()
-
-        return render(
-            request,
-            "edit_profile.html",
-            {
-                "profile": profile,
-                "profile_form": EditProfileForm()
-            },
-        )
+        context = {'profile': self.profile}
+        return render(request, 'edit_profile.html', context)
 
     def post(self, request):
-
-        profile = Profile.objects.all()
-
-        form = EditProfileForm(
-            request.POST,
-            request.FILES
-        )
+        form = EditProfileForm(request.POST, request.FILES, instance=self.profile)
 
         if form.is_valid():
-            # profile = form.save(commit=False)
+            profile = form.save(commit=False)
             profile.save()
 
-            messages.success(request, 'Profile saved!')
+            messages.success(request, 'Profile saved')
         else:
             messages.error(
                 request,
-                'Could not be updated. Please contact admin.'
+                'Profile could not be updated.'
                 )
         return redirect('profile')
 
@@ -128,7 +118,6 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
-
 
 
 class FeaturedView(generic.TemplateView):

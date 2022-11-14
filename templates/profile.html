@@ -18,7 +18,8 @@
             </div>
 
         </div>
-        
+        {% csrf_token %}
+        {{form.as_p}}
         <div class="col-md-5 border-right">
 
             <div class="p-4 py-5">
@@ -26,7 +27,7 @@
                     <h3 class="post-header">This is the profile page for {{user.username}}</h3>
                 </div>
 
-                <div class="form-group profile_form">
+                <div>
                     {{ profile.bio }}
                 </div>
             </div>
@@ -39,7 +40,7 @@
             </a>
         </div>
 
-    </div>    
+    </div>
 </div>
 
 

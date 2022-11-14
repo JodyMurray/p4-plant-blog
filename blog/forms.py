@@ -12,6 +12,7 @@ class EditProfileForm(forms.ModelForm):
             'profile_pic',
             'bio'
         )
+        exclude = ['user']
 
 
 class CommentForm(forms.ModelForm):
