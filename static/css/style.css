@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #FFFFF4;
     color: #064E4B;
