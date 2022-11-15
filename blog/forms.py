@@ -9,6 +9,8 @@ class EditProfileForm(forms.ModelForm):
         model = Profile
         fields = (
             'user',
+            'first_name',
+            'last_name',
             'profile_pic',
             'bio'
         )

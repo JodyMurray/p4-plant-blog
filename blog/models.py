@@ -12,6 +12,16 @@ class Profile(models.Model):
         User,
         on_delete=models.CASCADE
     )
+    first_name = models.CharField(
+        max_length=100,
+        null=True,
+        blank=True
+    )
+    last_name = models.CharField(
+        max_length=100,
+        null=True,
+        blank=True
+    )
     profile_pic = models.ImageField(
         upload_to='media'
     )

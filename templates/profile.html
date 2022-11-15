@@ -9,13 +9,15 @@
 <div class="container rounded bg-transparent mt-5 mb-5 ">
     <div class="row">
 
-        {{ profile.bio }}
-
         <div class="col-md-3 profile-border">
 
             <div class="d-flex flex-column align-items-center text-center p-3 py-5">
                 <img class="rounded-circle mt-5 profile_pic" width="150px" src="{{ profile.get_profile_pic }}">
+                {{ user.username }}
+                <div class="date-joined text-capitalize text-muted">Date Joined <br>
+                    {{ request.user.date_joined|date:"b d Y" }}</div>
             </div>
+            
 
         </div>
         {% csrf_token %}
@@ -26,16 +28,21 @@
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h3 class="post-header">This is the profile page for {{user.username}}</h3>
                 </div>
+                <div class="user-info">
+                {{ profile.first_name }}
+                {{ profile.last_name }}</div>
+                <br>
+                <br>
 
-                <div>
-                    {{ profile.bio }}
+                <div class="bio-section">
+                    "{{ profile.bio }}"
                 </div>
             </div>
 
         </div>
 
         <div class="text-center">
-            <a href="{% url 'edit_profile' %}" class="btn">
+            <a href="{% url 'edit_profile' %}" class="btn btn-outline-secondary">
                 Update profile
             </a>
         </div>

@@ -63,6 +63,15 @@ a:active {
 }
 
 /* Forms */
+.user-info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+.bio-section {
+    font-style: italic;
+    width: fit-content;
+    color: #306844;
+}
 
 .profile_form input {
     width: 50%;
