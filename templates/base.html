@@ -31,7 +31,7 @@
             <a class="nav-link" href="{% url 'add_post' %}">Add Post</a>
           </li>
           {% else %}
-          
+
           {% endif %}
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
@@ -39,7 +39,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'featured' %}">Featured</a>
           </li>
-          
+
           {% if user.is_authenticated %}
           <li class="nav-item">
             <a class="nav-link" href="{% url 'profile' %}">Profile</a>
@@ -54,7 +54,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'account_login' %}">Login</a>
           </li>
-          
+
           {% endif %}
         </ul>
       </div>
@@ -129,14 +129,14 @@
       </div>
     </section>
 
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-      © 2022 Copyright:
-      <a class="text-reset fw-bold" href="home/">Jody's Plant Blog</a>
-    </div>
-  </footer>
-  <script src="https://kit.fontawesome.com/9b64cea43d.js" crossorigin="anonymous"></script>
+<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+  © 2022 Copyright:
+  <a class="text-reset fw-bold" href="home/">Jody's Plant Blog</a>
+</div>
+</footer>
+<script src="https://kit.fontawesome.com/9b64cea43d.js" crossorigin="anonymous"></script>
+
 
 </body>
-
 
 </html>

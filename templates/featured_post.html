@@ -1,7 +1,142 @@
 {% extends "base.html" %}
 {% block content %}
+{% load crispy_forms_tags %}
 
-hello
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <h2 class="post-header d-flex justify-content-center">Winter is Coming!</h2>
+
+            <hr class="break" style="width:90%; margin: auto;" />
+            <br>
+        </div>
+        <!-- <div class="">
+            <blockquote class="blockquote text-center quote" style="font-family: Pacifico;">
+                <p class="mb-0">“Every gardener know that under the cloak of winter lies a miracle.”</p>
+                <footer class="blockquote-footer">Barbara Winkler </footer>
+            </blockquote>
+        </div> -->
+        <br>
+        <img class="post-image rounded" style="width: 50%; opacity: 0.7;"
+            src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1668602806/549556_qpkfgi.jpg" alt="">
 
 
-            {% endblock %}
+        <div class="post-body text-start">
+            <div class="d-none d-md-block col-md-6 post-image">
+                <br>
+
+                <div class="winter-section ">
+
+                    <h2 class="text-center">How to Care for Your Houseplants in Winter</h2>
+                    <br>
+                    <h4>1: Increase Light</h4>
+                    <p>
+                        If it feels like we rarely see the sun in the winter, that's because it sets earlier, is lower
+                        in
+                        the
+                        sky, and is often covered with clouds. Make sure your houseplants are getting enough light
+                        during
+                        this
+                        time. Most plants will adjust to the seasonal change in their current spot, while others might
+                        need
+                        to
+                        be moved closer to their light source, the window, to receive more light. If plants are visibly
+                        leaning
+                        towards the window, gradually rotate them every few days to help them straighten out. If plants
+                        have
+                        spindly new growth, move them closer to the sill. You can also consider adding some supplemental
+                        lighting to your space with a grow light.</p>
+                    <br>
+                    <h4>2: Be Mindful of Temperature</h4>
+                    <p>
+                        An extreme change in temperature, or draft of cold or warm air, can cause indoor plants, used to
+                        somewhat stable conditions, to stress out. Keep your plants away from open windows and front
+                        doors, as well as heating units and radiators (which can quickly dry them out). Some plants are
+                        more sensitive to the cold than others bu if you're feeling the chill, chances are, your plant
+                        is too. Most common houseplants prefer temps around 23°C.
+                    </p>
+                    <br>
+                    <h4>3: Move Them Closer to a Window</h4>
+                    <p>
+                        Shorter days mean fewer hours of sunlight. Help your plants maximise the day's rays by moving
+                        them a bit closer to a window.
+                        You won't need to worry about winter sun scorching them.
+                    </p>
+                    <br>
+                    <h4>4: Don't stress about dropped leaves</h4>
+                    <p>Most plants are sleeping now, which means they're conserving as much energy as possible. That
+                        means they may drop some leaves, because they don't need them.
+                        This is nothing to worry about and there's nothing you need to do. Don't be tempted to water
+                        more or feed them. It will do more harm than good.</p>
+                    <br>
+                    <h4>5: Embrace Dormancy</h4>
+                    <p>Feel sleepy in winter? Plants do too—thanks to shorter days and less sun. Plants can go into a
+                        state of dormancy or semi-dormancy in the winter months. And since plants only take up water
+                        based on the amount of light they receive, this will change how much you should water your
+                        plants. You will find yourself watering less often than you did in the summer growing season.
+                        For most plants, you will want to wait until the potting soil has dried out complete before
+                        watering again. You can also wait for visible signs of thirst to show, like wrinkling leaves for
+                        succulents or drooping stems for tropicals, paired with bone dry soil.
+                    </p>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="row justify-content-center">
+
+                    <!-- Total comments -->
+                    <div class="col-md-1 like-button">
+                        {% with comments.count as total_comments %}
+                        <strong class="text-secondary"><i class="far fa-comments"></i>
+                            {{ total_comments }}</strong>
+                        {% endwith %}
+                    </div>
+                </div>
+            </div>
+            <!-- Comments list -->
+            <div class="row justify-content-center">
+                <div class="col-md-6 card mb-4  mt-3 bg-transparent shadow-sm p-3 mb-5 bg-white rounded">
+                    <h3 class="text-center">Comments:</h3>
+                    <div class="card-body">
+
+                        {% for comment in comments %}
+                        <div class="comments" style="padding: 10px;">
+                            <p class="font-weight-bold">
+                                {{ comment.name }}
+                                <span class="text-muted font-weight-normal">
+                                    {{ comment.created_on }}
+                                </span> wrote:
+                            </p>
+                            {{ comment.body | linebreaks }}
+                            <hr class="break" style="width:80%; margin: auto;" />
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% if commented %}
+            <div class="col-md-6 card mb-4 mt-3 comment-area shadow-sm p-3 mb-5 rounded" style="width: 80%;">
+                <div class="card-body" style="padding: 5%;">
+                    <div class="alert alert-success" role="alert">
+                        Your comment is awaiting approval
+                    </div>
+                    {% else %}
+                    <!-- Leave a comment area -->
+                    {% if user.is_authenticated %}
+
+                    <h3>Leave a comment:</h3>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em; border-radius: 10%;">
+                        {{ comment_form|crispy }}
+                        {% csrf_token %}
+                        <br>
+                        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
