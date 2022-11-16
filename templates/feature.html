@@ -11,7 +11,7 @@
             <img class="card-img-bottom rounded float-left" src="https://res.cloudinary.com/dmqu7iqfu/image/upload/co_rgb:ffffff,o_52/v1668505607/seasons_iznpqt.jpg" alt="Card image cap">
           <h5 class="card-title">Winter is coming</h5>
           <p class="card-text">Click the button to see our tips on how to care for your plants this coming season!</p>
-          <a href="{{ post.featured_image.url }}" class="btn btn-outline-secondary">Go!</a>
+          <a href="{% url 'featured_post' %}" class="btn btn-outline-secondary">Go!</a>
         </div>
       </div>
     </div>
@@ -21,7 +21,9 @@
             <img class="card-img-bottom" src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1668514944/heart_jpe8s2.jpg" alt="Card image cap">
           <h5 class="card-title">See our events!</h5>
           <p class="card-text">Click the button to see what events are coming up!</p>
-          <a href="#" class="btn btn-outline-secondary">Event list</a>
+
+          <a href="" class="btn btn-outline-secondary">Event list</a>
+
         </div>
       </div>
     </div>
