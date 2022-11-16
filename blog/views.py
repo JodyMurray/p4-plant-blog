@@ -26,7 +26,8 @@ class UserSettings(View):
         return render(request, 'edit_profile.html', context)
 
     def post(self, request):
-        form = EditProfileForm(request.POST, request.FILES, instance=self.profile)
+        form = EditProfileForm(
+            request.POST, request.FILES, instance=self.profile)
 
         if form.is_valid():
             profile = form.save(commit=False)
@@ -37,7 +38,7 @@ class UserSettings(View):
             messages.error(
                 request,
                 'Profile could not be updated.'
-                )
+            )
         return redirect('profile')
 
 
@@ -124,3 +125,23 @@ class FeaturedView(generic.TemplateView):
 
     model = Post
     template_name = "feature.html"
+
+
+# class FeaturedPost(generic.TemplateView):
+
+#     def get(self, request, slug, *args, **kwargs):
+#         queryset = Post.objects.filter(status=1)
+#         post = get_object_or_404(queryset, slug=slug)
+#         # comments = post.comments.filter(
+#         #     approved=True).order_by("-created_on")
+#         # liked = False
+#         # if post.likes.filter(id=self.request.user.id).exists():
+#         #     liked = True
+
+#         return render(
+#                 request,
+#                 "featured_post.html",
+#                 {
+#                     "post": post,
+#                 },
+#             )
