@@ -129,4 +129,6 @@ class FeaturedView(generic.TemplateView):
 
 def FeaturedPost(request):
     template_name = "featured_post.html"
+    PostLike()
+    
     return render(request, 'featured_post.html')
