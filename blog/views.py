@@ -100,6 +100,7 @@ class PostDetail(View):
             "post.html",
             {
                 "post": post,
+                "profile_pic": Profile.profile_pic,
                 "comments": comments,
                 "commented": True,
                 "liked": liked,
