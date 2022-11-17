@@ -125,7 +125,6 @@ a:active {
 /* Pagination */
 .pagination-btn a:hover {
     text-decoration: none;
-    color: #63AA85;
     transform: scale(1.1);
 }
 

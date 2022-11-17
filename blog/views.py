@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
+from django.views.generic.edit import DeleteView
 from django.views.generic import CreateView
 from django.http import HttpResponseRedirect
 from .models import Post, Profile, User
@@ -134,7 +135,7 @@ def FeaturedPost(request):
     return render(request, 'featured_post.html')
 
 
-def delete_post(request, post_id):
-    post = get_object_or_404(Post, id=post_id)
+def delete_post(request, id):
+    post = Post.objects.filter(id=id)
     post.delete()
-    return redirect('index.html')
+    return redirect('/')
