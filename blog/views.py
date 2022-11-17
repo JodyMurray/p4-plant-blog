@@ -97,10 +97,10 @@ class PostDetail(View):
 
         return render(
             request,
+
             "post.html",
             {
                 "post": post,
-                "profile_pic": Profile.profile_pic,
                 "comments": comments,
                 "commented": True,
                 "liked": liked,
@@ -130,6 +130,11 @@ class FeaturedView(generic.TemplateView):
 
 def FeaturedPost(request):
     template_name = "featured_post.html"
-    PostLike()
-    
+
     return render(request, 'featured_post.html')
+
+
+def delete_post(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    post.delete()
+    return redirect('index.html')

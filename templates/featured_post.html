@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
 {% load crispy_forms_tags %}
 
 
@@ -11,7 +12,7 @@
             <hr class="break" style="width:90%; margin: auto;" />
             <br>
         </div>
-    
+
         <br>
         <img class="post-image rounded" style="width: 50%; opacity: 0.7;"
             src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1668602806/549556_qpkfgi.jpg" alt="">
@@ -77,83 +78,5 @@
 
                 </div>
             </div>
-            <div class="container">
-                <div class="row justify-content-center">
-
-                    <!-- Total comments -->
-                    <div class="col-md-1 like-button">
-                        {% with comments.count as total_comments %}
-                        <strong class="text-secondary"><i class="far fa-comments"></i>
-                            {{ total_comments }}</strong>
-                        {% endwith %}
-                    </div>
-                </div>
-            </div>
-            <!-- Like button -->
-            <div class="col-md-2 like-button">
-                <strong>
-                    {% if user.is_authenticated %}
-                    <form class="d-inline" action="{% url 'post_like' post.slug %}" method="POST">
-                        {% csrf_token %}
-                        {% if liked %}
-                        <button type="submit" name="blogpost_id" value="{{post.slug}}"
-                            class="btn-like text-secondary"><i class="fa-regular fa-face-kiss-wink-heart"></i></button>
-                        {% else %}
-                        <button type="submit" name="blogpost_id" value="{{post.slug}}"
-                            class="btn-like text-secondary"><i class="fa-regular fa-face-smile"></i></button>
-                        {% endif %}
-                    </form>
-                    {% else %}
-                    <span class="text-secondary"><i class="fa-regular fa-face-smile"></i>
-                    </span>
-
-                    {% endif %}
-                    <span class="text-secondary">{{ post.number_of_likes }} </span>
-                </strong>
-            </div>
-            <!-- Comments list -->
-            <div class="row justify-content-center">
-                <div class="col-md-6 card mb-4  mt-3 bg-transparent shadow-sm p-3 mb-5 bg-white rounded">
-                    <h3 class="text-center">Comments:</h3>
-                    <div class="card-body">
-
-                        {% for comment in comments %}
-                        <div class="comments" style="padding: 10px;">
-                            <p class="font-weight-bold">
-                                {{ comment.name }}
-                                <span class="text-muted font-weight-normal">
-                                    {{ comment.created_on }}
-                                </span> wrote:
-                            </p>
-                            {{ comment.body | linebreaks }}
-                            <hr class="break" style="width:80%; margin: auto;" />
-                        </div>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-            {% if commented %}
-            <div class="col-md-6 card mb-4 mt-3 comment-area shadow-sm p-3 mb-5 rounded" style="width: 80%;">
-                <div class="card-body" style="padding: 5%;">
-                    <div class="alert alert-success" role="alert">
-                        Your comment is awaiting approval
-                    </div>
-                    {% else %}
-                    <!-- Leave a comment area -->
-                    {% if user.is_authenticated %}
-
-                    <h3>Leave a comment:</h3>
-                    <p>Posting as: {{ user.username }}</p>
-                    <form method="post" style="margin-top: 1.3em; border-radius: 10%;">
-                        {{ comment_form|crispy }}
-                        {% csrf_token %}
-                        <br>
-                        <button type="submit" class="btn btn-outline-secondary">Submit</button>
-                    </form>
-                    {% endif %}
-                    {% endif %}
-                </div>
-            </div>
-        </div>
-    </div>
-    {% endblock %}
+            
+{% endblock %}
