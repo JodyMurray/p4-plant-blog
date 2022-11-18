@@ -63,6 +63,7 @@ class Post(models.Model):
         return reverse('add_post', args=(str(self.id)))
 
 
+
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")

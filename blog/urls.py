@@ -2,7 +2,7 @@ from django.conf.urls.static import static
 from django.contrib.auth.decorators import login_required
 from django.urls import path
 from . import views
-from .views import AddPostView, UserSettings, UserProfile
+from .views import AddPostView, UserSettings, UserProfile, PostEditView
 from .models import Profile
 
 
@@ -19,5 +19,5 @@ urlpatterns = [
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
     path('like/<slug:slug>/', views.PostLike.as_view(), name='post_like'),
     path('<int:id>/delete-post', views.delete_post, name='delete_post'),
-    # path('<int:id>/edit-post', views.edit_post, name='edit_post')
-]
+    path('post/edit/<int:pk>/', PostEditView.as_view(), name='post-edit'), 
+    ]

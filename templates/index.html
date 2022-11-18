@@ -39,6 +39,8 @@
                 <a class="btn btn-outline-secondary" href="{% url 'delete_post' id=post.id %}">Delete</a>
                 </div>
             {% endif %}
+            <a class="btn btn-outline-secondary" href="{% url 'post-edit' post.pk %}"><i class="far fa-edit"></i>Edit</a>
+
         </div>
 
         {% if forloop.counter|divisibleby:3 %}
