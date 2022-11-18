@@ -140,3 +140,8 @@ def delete_post(request, id):
     post = Post.objects.filter(id=id)
     post.delete()
     return redirect('/')
+
+# def edit_post(request, id):
+#     post = Post.objects.filter(id=id)
+#     post.update()
+#     return redirect('/')
