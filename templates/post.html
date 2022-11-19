@@ -26,7 +26,17 @@
             </p>
             <div class="container">
                 <div class="row justify-content-center">
-                    <a class="btn btn-outline-secondary" href="{% url 'edit_post' post.id%}"><i class="far fa-edit"></i>Edit</a>
+                    {% if user.is_staff %}
+                    <div class="d-grid gap-2 justify-content-center">
+                        <a class="btn btn-outline-secondary" href="{% url 'edit_post' post.id%}"><i
+                                class="far fa-edit"></i>Edit</a>
+                        <div class="justify-content-end">
+                            <a class="btn btn-outline-secondary" href="{% url 'delete_post' id=post.id %}"><i
+                                    class="fa-solid fa-trash"></i>Delete</a>
+
+                        </div>
+                        {% endif %}
+                    </div>
                     <!-- Like button -->
                     <div class="col-md-2 like-button">
                         <strong>

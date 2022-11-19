@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row mt-5">
         <div class="col-md-3 col-sm-6">
-            <a href="{% url 'home' %}" class="btn btn-light">Back to Blog</a>
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary">Back to Blog</a>
         </div>
     </div>
     <div class="row justify-content-center mt-5">
@@ -29,8 +29,8 @@
                 <textarea name="content" class="form-control" cols="30" rows="10">{{ post.content }}</textarea>
                 <br>
 
-                <div class="d-grid gap-2">
-                    <a href="{% url 'home' %}" type="submit" class="btn btn-outline-secondary mt-3">Submit!</a>
+                <div class="d-grid gap-2 justify-content-center">
+                    <button type="submit" class="btn btn-outline-secondary mt-3" >Submit!<a href="{% url 'home' %}"></a></button>
                 </div>
             </form>
         </div>
