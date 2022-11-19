@@ -1,7 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.views.generic.edit import DeleteView, UpdateView
-from django.views.generic import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.http import HttpResponseRedirect
 from .models import Post, Profile, User
 from django.contrib.auth.decorators import login_required
@@ -143,15 +142,14 @@ def delete_post(request, id):
     return redirect('/')
 
 
-class PostEditView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    model = Post
-    fields = '__all__'
-    template_name = 'update_post.html'
+def edit_post(request, post_id):
+    post = Post.objects.get(pk=post_id)
+    if request.method == "POST":
+        title = request.POST["title"]
+        content = request.POST["content"]
 
-    def get_success_url(self):
-        pk = self.kwargs['pk']
-        return reverse_lazy('post_edit', kwargs={'pk': pk})
-    
-    def test_func(self):
-        post = self.get_object()
-        return self.request.user == post.author
+        post.title = title
+        post.content = content
+        post.save()
+        return redirect(f"/edit/{post.id}", redirect('home'))
+    return render(request, "update_post.html", {"post": post})
