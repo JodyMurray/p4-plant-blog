@@ -23,10 +23,3 @@ class CommentForm(forms.ModelForm):
         fields = ('body',)
 
 
-# class BlogPostForm(forms.ModelForm):
-#     class Meta:
-#         model = Post
-#         fields = ['title', 'content']
-#         labels = {'content': ''}
-#         widgets = {'content': forms.Textarea(attrs={'cols':80})}
-

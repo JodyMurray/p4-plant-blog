@@ -3,8 +3,8 @@
 {% load i18n %}
 
 {% block content %}
-
 {% for profile in profile_list %}
+{% if user == profile.user %}
 
 <div class="container rounded bg-transparent mt-5 mb-5 ">
     <div class="row">
@@ -17,8 +17,8 @@
                 <div class="date-joined text-capitalize text-muted">Date Joined <br>
                     {{ request.user.date_joined|date:"b d Y" }}</div>
             </div>
-
         </div>
+       
         {% csrf_token %}
         {{form.as_p}}
         <div class="col-md-5 border-right">
@@ -39,16 +39,15 @@
             </div>
 
         </div>
-
         <div class="text-center">
             <a href="{% url 'edit_profile' %}" class="btn btn-outline-secondary">
                 Update profile
             </a>
         </div>
-
     </div>
+    
 </div>
 
-
+{% endif %}
 {% endfor %}
 {% endblock %}
