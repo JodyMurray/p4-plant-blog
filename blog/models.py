@@ -60,7 +60,7 @@ class Post(models.Model):
         return self.likes.count()
 
     def get_absolute_url(self):
-        return reverse('add_post', args=(str(self.id)))
+        return reverse('add_post')
 
 
 
