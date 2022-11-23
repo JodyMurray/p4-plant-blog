@@ -34,15 +34,15 @@
                     </div>
 
                 </div>
-        </div>
+            </div>
 
-        {% if forloop.counter|divisibleby:3 %}
-        <div class="row">
-            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+            <div class="row">
+                {% endif %}
 
-            {% endfor %}
+                {% endfor %}
+            </div>
         </div>
-    </div>
     </div>
     <div class="row mt-3">
         {% if is_paginated %}
@@ -50,13 +50,15 @@
             <ul class="pagination justify-content-center pagination-btn">
                 {% if page_obj.has_previous %}
                 <li>
-                    <a class="btn btn-outline-secondary" href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo;
+                    <a class="btn btn-outline-secondary" href="?page={{ page_obj.previous_page_number }}"
+                        class="page-link">&laquo;
                         Previous</a>
                 </li>
                 {% endif %}
                 {% if page_obj.has_next %}
                 <li>
-                    <a class="btn btn-outline-secondary" href="?page={{ page_obj.next_page_number }}" class="page-link">Next &raquo;</a>
+                    <a class="btn btn-outline-secondary" href="?page={{ page_obj.next_page_number }}"
+                        class="page-link">Next &raquo;</a>
                 </li>
                 {% endif %}
             </ul>
@@ -135,8 +137,7 @@
             </div>
         </div>
     </div>
-    </div>
-    </div>
+
 
     <hr class="break" style="width:95%; margin: auto;" />
 
@@ -182,44 +183,39 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-
-
     </div>
 
-    <!-- Pets and plants section-->
-    <section class="container-fluid plants-and-pets" style="padding-bottom: 10%;">
-        <hr class="break" style="width:90%; margin: auto;" />
-        <div class="row justify-content-start">
-            <div class="tips post-header">
-                <h1>
-                    Pets & Plants
-                </h1>
-            </div>
-            <div class="col-12 col-md-10 col-lg-6">
-                <img class="cat-image"
-                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667371515/960x0_qqwz5n.jpg" alt="">
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Newsletter section -->
 
-            </div>
-
-            <div class="bg-light plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
-                style="width: 15rem; height: fit-content; text-align: center; left: 40px;">
-                <div class="card-body">
-                    <h5 class="card-title">Toxic Plants to Steer Clear of!</h5>
-                    <p class="card-text">Find out which plants are harmful for your beloved pets!</p>
-                    <a href="#" class="btn btn-outline-secondary pet-button">Read more</a>
-                </div>
-            </div>
-            <div class="bg-light plants-and-pets shadow-sm p-3 mb-5 bg-white rounded"
-                style="width: 15rem; height: fit-content; text-align: center; left: 60px;">
-                <div class="card-body">
-                    <h5 class="card-title">How to Keep Pets away from Plants!</h5>
-                    <p class="card-text">Find out a few tricks to keep them away!</p>
-                    <a href="#" class="btn btn-outline-secondary pet-button">Read more</a>
+    <hr class="break" style="width:80%; margin: auto;" />
+    <section class="home-newsletter">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="single">
+                        <h2>Subscribe to our Newsletter</h2>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <span class="input-group-btn">
+                                <button class="btn btn-theme" type="submit">Subscribe</button>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        
     </section>
+    <hr class="break" style="width:80%; margin: auto;" />
 </body>
-<hr class="break" style="width:80%; margin: auto;" />
+
 {%endblock%}
