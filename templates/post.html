@@ -68,54 +68,54 @@
                         {% endwith %}
                     </div>
                 </div>
-            </div>
-            <!-- Comments list -->
-            <div class="col-md-8 card mb-4  mt-3 bg-transparent shadow-sm p-3 mb-5 bg-white rounded">
-                <h3>Comments:</h3>
-                <div class="card-body">
-                    {% for comment in comments %}
-                    <div class="comments" style="padding: 10px;">
-                        <p class="font-weight-bold">
-                            <img class=" thumbnail rounded-circle profile_pic" style="width: 10%;"
-                                src="{{ user.profile.profile_pic.url }}">
+                <!-- Comments list -->
+                <div class="col-md-8 card mb-4  mt-3 bg-transparent shadow-sm p-3 mb-5 bg-white rounded">
+                    <h3>Comments:</h3>
+                    <div class="card-body">
+                        {% for comment in comments %}
+                        <div class="comments" style="padding: 10px;">
+                            <p class="font-weight-bold">
+                                <img class=" thumbnail rounded-circle profile_pic" style="width: 10%;"
+                                    src="{{ user.profile.profile_pic.url }}">
 
-                            {{ comment.name }}
+                                {{ comment.name }}
 
 
-                            <span class="text-muted font-weight-normal">
-                                {{ comment.created_on }}
+                                <span class="text-muted font-weight-normal">
+                                    {{ comment.created_on }}
 
-                            </span> wrote:
+                                </span> wrote:
 
-                        </p>
+                            </p>
 
-                        {{ comment.body | linebreaks }}
-                        <hr class="break" style="width:80%; margin: auto;" />
+                            {{ comment.body | linebreaks }}
+                            <hr class="break" style="width:80%; margin: auto;" />
+                        </div>
+                        {% endfor %}
                     </div>
-                    {% endfor %}
                 </div>
             </div>
-        </div>
-        {% if commented %}
-        <div class="col-md-6 card mb-4 mt-3 comment-area shadow-sm p-3 mb-5 rounded" style="width: 80%;">
-            <div class="card-body" style="padding: 5%;">
-                <div class="alert alert-success" role="alert">
-                    Your comment is awaiting approval
-                </div>
-                {% else %}
-                <!-- Leave a comment area -->
-                {% if user.is_authenticated %}
+            {% if commented %}
+            <div class="col-md-6 card mb-4 mt-3 comment-area shadow-sm p-3 mb-5 rounded" style="width: 80%;">
+                <div class="card-body" style="padding: 5%;">
+                    <div class="alert alert-success" role="alert">
+                        Your comment is awaiting approval
+                    </div>
+                    {% else %}
+                    <!-- Leave a comment area -->
+                    {% if user.is_authenticated %}
 
-                <h3>Leave a comment:</h3>
-                <p>Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em; border-radius: 10%;">
-                    {{ comment_form|crispy }}
-                    {% csrf_token %}
-                    <br>
-                    <button type="submit" class="btn btn-outline-secondary">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
+                    <h3>Leave a comment:</h3>
+                    <p>Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em; border-radius: 10%;">
+                        {{ comment_form|crispy }}
+                        {% csrf_token %}
+                        <br>
+                        <button type="submit" class="btn btn-outline-secondary">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
+                </div>
             </div>
         </div>
     </div>

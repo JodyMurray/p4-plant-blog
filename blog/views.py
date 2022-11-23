@@ -136,6 +136,12 @@ def FeaturedPost(request):
     return render(request, 'featured_post.html')
 
 
+def PetsPost(request):
+    template_name = "pets.html"
+
+    return render(request, "pets.html")
+
+
 def delete_post(request, id):
     post = Post.objects.filter(id=id)
     post.delete()
