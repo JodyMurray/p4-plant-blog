@@ -143,8 +143,11 @@ def PetsPost(request):
 
 
 def delete_post(request, id):
+    # success_message = ("Your Post has been deleted")
     post = Post.objects.filter(id=id)
     post.delete()
+
+    # messages.success(self.request, self.success_message)
     return redirect('/')
 
 

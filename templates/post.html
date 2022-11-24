@@ -74,10 +74,11 @@
                     <div class="card-body">
                         {% for comment in comments %}
                         <div class="comments" style="padding: 10px;">
-                            <p class="font-weight-bold">
-                                <img class=" thumbnail rounded-circle profile_pic" style="width: 10%;"
-                                    src="{{ user.profile.profile_pic.url }}">
 
+                            <p class="font-weight-bold">
+
+                                <img class="thumbnail rounded-circle profile_pic" style="width: 10%;"
+                                    src="{{ user.get_profile_pic }}" />
                                 {{ comment.name }}
 
 
@@ -98,7 +99,7 @@
             {% if commented %}
             <div class="col-md-6 card mb-4 mt-3 comment-area shadow-sm p-3 mb-5 rounded" style="width: 80%;">
                 <div class="card-body" style="padding: 5%;">
-                    <div class="alert alert-success" role="alert">
+                    <div class="alert" role="alert">
                         Your comment is awaiting approval
                     </div>
                     {% else %}
