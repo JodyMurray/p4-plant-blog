@@ -1,13 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic import FormView
+from django.views.generic.edit import CreateView
 from django.http import HttpResponseRedirect
 from .models import Post, Profile, User
-from django.contrib.auth.decorators import login_required
-from django.urls import reverse_lazy
-from django.contrib.auth.mixins import UserPassesTestMixin, LoginRequiredMixin
 from django.contrib import messages
 from .forms import CommentForm, EditProfileForm
+from newsletter.forms import JoinForm
 
 
 class UserProfile(generic.ListView):
