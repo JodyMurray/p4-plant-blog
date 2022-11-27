@@ -28,6 +28,7 @@ A live version of this website will be found here:
 
 - [Colour Scheme](#colour-scheme "Colour Scheme")
 - [Typography](#typography "Typography")
+- [Wireframes](#wireframes "Wireframes")
 - [Images](#images "Images")
 
 </details>
@@ -86,4 +87,51 @@ A live version of this website will be found here:
 
 ### User Demographic
 
- This application has been designed for users of all ages who love to garden
+This application has been designed for users of all ages who love to garden and learn new things about plants.
+It also includes a feature to create and personalise a profile with a profile picture and a biography entry, and with this you can comment on blog posts, to give more advice or ask questions!
+
+### Site Goals
+
+To build a platform to allow users to read blog posts, make a profile and comment on posts and allow them to also sign up for a newsletter sent to their email. Also included is admin access through the website for the admin to add, update or delete posts from each blog post page. Which allows the admin to easily see how a post would look with just the click of a button.
+
+
+### User Goals
+To engage with topics that interest them, make a personalised profile to feel welcome to the site and encourages them to explore the site and all it has to offer.
+
+### Audience
+For anyone who has an interest in plants and gardening of all sorts! Users of all ages and all levels of skills in gardening.
+
+## User Stories
+
+### Site User Stories
+
+### Admin Stories
+
+## Design
+
+### Colour Scheme
+
+The colour scheme chosen works with the theme of the topic chosen for the website. 
+- The colour chosen for headings is #2F6844.
+- The background colour is an easy on the eyes light green #FFFAF0.
+- And the hovered over buttons turn a light shade of grey thanks to bootstrap secondary theme.
+
+<br>
+
+![screenshot](media/colourscheme.png)
+
+
+
+### Typography
+
+All fonts are from the Google Fonts library.The following fonts were chosen for the page:
+
+- 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif for the navbar.
+- Satisfy for each page heading and the heading for the user's profile page.
+- Verdana, Geneva, Tahoma, sans-serif for the body font and content.
+- Pacifico font for the headings in the "health" section on the home page.
+
+
+### Wireframes
+
+![screenshot](media/wireframes1.png)
