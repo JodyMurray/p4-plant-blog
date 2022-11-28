@@ -1,5 +1,8 @@
 {% extends "base.html" %}
+
 {% block content %}
+{% load crispy_forms_tags %}
+
 
 <body>
     <div class="container-fluid">
@@ -197,23 +200,30 @@
 
     <hr class="break" style="width:80%; margin: auto;" />
     <section class="home-newsletter">
-        
+
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="single">
                         <h2>Subscribe to our Newsletter</h2>
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Enter your email">
-                            <span class="input-group-btn">
-                                <button class="btn btn-theme" type="submit">Subscribe</button>
-                            </span>
+                            <p>
+                                <form method="POST" action=''>
+                                    {% csrf_token %}
+                                    {{ form.as_p }}
+                                    <input type="email" class="form-control" placeholder="Enter your email"
+                                        value="join">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-theme form-control" type="submit">Subscribe</button>
+                                    </span>
+                                </form>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
     </section>
     <hr class="break" style="width:80%; margin: auto;" />
 </body>

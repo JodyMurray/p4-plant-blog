@@ -135,3 +135,10 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 ### Wireframes
 
 ![screenshot](media/wireframes1.png)
+
+<br>
+
+![screenshot](media/wireframes2.png)
+ <br>
+
+![screenshot](media/wireframes3.png)

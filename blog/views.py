@@ -6,7 +6,6 @@ from django.http import HttpResponseRedirect
 from .models import Post, Profile, User
 from django.contrib import messages
 from .forms import CommentForm, EditProfileForm
-from newsletter.forms import JoinForm
 
 
 class UserProfile(generic.ListView):
@@ -161,3 +160,9 @@ def edit_post(request, post_id):
         post.save()
         return redirect(f"/edit/{post.id}", redirect('home'))
     return render(request, "update_post.html", {"post": post})
+
+
+# class NewsLetterForm(FormView):
+#     template_name = 'index.html'
+#     form_class = JoinForm
+#     success_url = "/"
