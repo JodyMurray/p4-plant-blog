@@ -3,9 +3,9 @@ from .models import NewsLetter
 
 
 class JoinForm(forms.ModelForm):
-    email = forms.EmailField(
-        label='', widget=forms.EmailInput(
-            attrs={'placeholder': 'Your email', 'class': 'form-control'}))
+    # email = forms.EmailField(
+    #     label='', widget=forms.EmailInput(
+    #         attrs={'placeholder': 'Your email', 'class': 'form-control'}))
 
     class Meta:
         model = NewsLetter
@@ -17,4 +17,3 @@ class JoinForm(forms.ModelForm):
         if queryset.exists():
             raise forms.ValidationError("This email already exists")
         return email
-        print(email)

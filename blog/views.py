@@ -8,6 +8,12 @@ from django.contrib import messages
 from .forms import CommentForm, EditProfileForm
 
 
+# class NewsLetterForm(FormView):
+#     template_name = 'index.html'
+#     form_class = JoinForm
+#     success_url = '/'
+    
+
 class UserProfile(generic.ListView):
     model = Profile
     queryset = Profile.objects.all()

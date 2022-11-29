@@ -1,4 +1,9 @@
 from django.contrib import admin
 from .models import NewsLetter
 
-admin.site.register(NewsLetter)
+
+class NewsLetterAdmin(admin.ModelAdmin):
+    list_display = ('email', 'timestamp',)
+
+
+admin.site.register(NewsLetter, NewsLetterAdmin)

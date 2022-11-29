@@ -4,6 +4,7 @@ from django.urls import path
 from . import views
 from .views import AddPostView, UserSettings, UserProfile
 from .models import Profile
+from newsletter.models import NewsLetter
 
 
 urlpatterns = [
