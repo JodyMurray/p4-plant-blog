@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% crispy form form.helper %}
+{% block content %}
+<div class="home-newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="single">
+                    <h3 class="text-center">Unsubscribe from our Newletter!</h3>
+                    <form method="POST" class="">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            {% crispy form %}
+                            <span class="input-group-btn">
+                                <button class="btn btn-theme" type="submit">Unsubscribe</button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
