@@ -5,6 +5,9 @@ from django.core.mail import send_mail
 from django.views.generic import FormView
 from newsletter.forms import JoinForm
 from .models import NewsLetter
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
+
 
 
 def newsletter_signup(request):

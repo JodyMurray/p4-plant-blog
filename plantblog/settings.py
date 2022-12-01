@@ -18,7 +18,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["jodys-plants.herokuapp.com", "localhost", "*", "127.0.0.1"]
 
@@ -62,7 +62,16 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
+SENDGRID_SANDBOX_MODE_IN_DEBUG = True
 
+# Twilio SendGrid
+# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
+
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+# EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
 # EMAIL
 if DEBUG:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
