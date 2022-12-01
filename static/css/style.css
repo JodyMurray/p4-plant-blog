@@ -273,6 +273,17 @@ ol {
     color: #fff;
 }
 
+.close {
+    border-radius: 30%;
+    background: transparent;
+    border-color: cadetblue;
+}
+.close:hover {
+    text-decoration: none;
+    color: #63AA85;
+    transform: scale(1.1);
+}
+
 /* Post-page html */
 
 .post-image {
