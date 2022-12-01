@@ -18,7 +18,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["jodys-plants.herokuapp.com", "localhost", "*", "127.0.0.1"]
 
@@ -62,17 +62,8 @@ MESSAGE_TAGS = {
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
 }
-SENDGRID_SANDBOX_MODE_IN_DEBUG = True
+# SENDGRID_SANDBOX_MODE_IN_DEBUG = True
 
-# Twilio SendGrid
-# SENDGRID_API_KEY = os.getenv('SENDGRID_API_KEY')
-
-# EMAIL_HOST = 'smtp.sendgrid.net'
-# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
-# EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL
 if DEBUG:
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 else:
@@ -82,12 +73,30 @@ else:
     EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_PASSWORD")
     EMAIL_PORT = 587
     EMAIL_USE_TLS = True
-    # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-    # EMAIL_HOST = "smtp.gmail.com"
-    # EMAIL_PORT = 587
-    # EMAIL_USE_TLS = True
-    # EMAIL_HOST_USER = 'murrayjody08@gmail.com'
-    # EMAIL_HOST_PASSWORD = 'nsbkqnpojrzmvrkp'
+
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'apikey' # this is exactly the value 'apikey'
+# EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL
+# if 'DEVELOPMENT' in os.environ:
+#     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+#     DEFAULT_FROM_EMAIL = ('EMAIL_HOST_USER')
+# else:
+#     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#     EMAIL_USE_TLS = True
+#     EMAIL_PORT = 587
+#     EMAIL_HOST = 'smtp.gmail.com'
+#     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+#     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+#     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+#     # EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+#     # EMAIL_HOST = "smtp.gmail.com"
+#     # EMAIL_PORT = 587
+#     # EMAIL_USE_TLS = True
+#     # EMAIL_HOST_USER = 'murrayjody08@gmail.com'
+#     # EMAIL_HOST_PASSWORD = 'nsbkqnpojrzmvrkp'
 
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
