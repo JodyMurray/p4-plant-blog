@@ -1,13 +1,10 @@
 from django.conf import settings
 from django.contrib import messages
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from django.core.mail import send_mail
-from django.views.generic import FormView
 from newsletter.forms import JoinForm
 from .models import NewsLetter
 from django.template.loader import render_to_string
-# from sendgrid import SendGridAPIClient
-# from sendgrid.helpers.mail import Mail
 
 
 def newsletter_signup(request):

@@ -21,7 +21,8 @@
                     {% else %}
                     <form method="POST" class="">
                         {% csrf_token %}
-                        <div class="input-group text-center">
+                        <br>
+                        <div class="input-group justify-content-center">
                             {% crispy form %}
                             <span class="input-group-btn">
                                 <button class="btn btn-theme " type="submit">Unsubscribe</button>

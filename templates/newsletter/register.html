@@ -21,12 +21,15 @@
                     {% else %}
                     <form method="POST" class="">
                         {% csrf_token %}
-                        <div class="input-group text-center">
+                        <br>
+                        <div class="input-group justify-content-center">
                             {% crispy form %}
                             <span class="input-group-btn">
                                 <button class="btn btn-theme " type="submit">Subscribe</button>
                             </span>
                         </div>
+                        <br>
+                        <p>Want to unsubscribe? <a href="{% url 'newsletter_unsubscribe' %}"><i class="fa-solid fa-arrow-right-long"></i></a></p>
                     </form>
                     {% endif %}
                 </div>
