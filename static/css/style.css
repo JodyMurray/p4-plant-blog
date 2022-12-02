@@ -330,6 +330,14 @@ ol {
 
 /* featured post */
 
+.list-pets {
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #306844;
+    padding: 2%;
+    font-size: 15px;
+}
+
 /* Footer */
 footer {
     padding: 3%;
