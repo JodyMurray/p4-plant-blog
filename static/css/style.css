@@ -338,6 +338,13 @@ ol {
     padding: 2%;
     font-size: 15px;
 }
+.winter-section h2 {
+    color: #064E4B;
+}
+.winter-section h4 {
+    color: #306844;
+}
+
 
 /* Footer */
 footer {
@@ -359,6 +366,7 @@ footer {
     .nav-item {
         font-size: 35px;
     }
+    
     .card-title {
         font-size: 45px;
     }
@@ -388,22 +396,37 @@ footer {
         
     }
     .health h4 {
-        font-size: 33px;
+        font-size: 35px;
     }
     footer {
-        font-size: 25px
+        font-size: 27px
     }
     footer h6 {
-        font-size: 25px;
+        font-size: 30px;
     }
     footer i {
-        font-size: 30px;
+        font-size: 35px;
     }
     .feature-row {
         justify-content: center;
-
     }
-    .feature-row .card-body {
+    .winter-section {
+        font-size: 30px;
+    }
+    .winter-section h4 {
+        font-size: 35px;
+    }
+    .winter-section h2 {
+        font-size: 40px;
+    }
+    .featured-cards {
+        font-size: 50px;
+    }
+    .feature-icon {
+        font-size: 40px;
+    }
+    .feature-icon i {
+        font-size: 40px;
     }
 }
 
@@ -456,6 +479,27 @@ footer {
         font-size: unset;
     }
     footer i {
+        font-size: unset;
+    }
+    .feature-row {
+        justify-content: flex-start;
+
+    }
+
+    .winter-section {
+        font-size: unset;
+    }
+    .winter-section h4 {
+        font-size: unset;
+    }
+    .featured-cards {
+        font-size: unset;
+        
+    }
+    .feature-icon {
+        font-size: unset;
+    }
+    .feature-icon i {
         font-size: unset;
     }
 }
