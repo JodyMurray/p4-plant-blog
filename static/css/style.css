@@ -172,7 +172,7 @@ ol {
 .tips-list {
     list-style: circle;
     line-height: 2;
-    top: 6rem;
+    top: 4rem;
 }
 
 .left-image {
@@ -342,4 +342,120 @@ ol {
 /* Footer */
 footer {
     padding: 3%;
+}
+#footer-logo {
+    font-size: 20px;
+}
+
+/* Media queries */
+/* For large screens sizes from 2560px wide and down */
+@media screen and (max-width: 2560px){
+    .post-header{
+        font-size: 50px;
+    }
+    .navbar-brand {
+        font-size: 40px;
+    }
+    .nav-item {
+        font-size: 35px;
+    }
+    .card-title {
+        font-size: 45px;
+    }
+    .author {
+        font-size: 25px;
+    }
+    .card-text {
+        font-size: 30px;
+    }
+    .pagination-btn a {
+        font-size: 36px;
+    }
+    .tips-list {
+        font-size: 33px;
+    }
+    #mistakes-list p {
+        font-size: 30px;
+    }
+    #mistakes-list h4 {
+        font-size: 33px;
+    }
+    #health-list {
+        padding: 2%;
+    }
+    .health {
+        font-size: 30px;
+        
+    }
+    .health h4 {
+        font-size: 33px;
+    }
+    footer {
+        font-size: 25px
+    }
+    footer h6 {
+        font-size: 25px;
+    }
+    footer i {
+        font-size: 30px;
+    }
+    .feature-row {
+        justify-content: center;
+
+    }
+    .feature-row .card-body {
+    }
+}
+
+/* For large screens sizes from 1440px wide and down */
+@media screen and (min-width: 1440px) and (max-width: 1800px){
+    .post-header{
+        font-size: 30px;
+    }
+    .navbar-brand {
+        font-size: unset;
+    }
+    .nav-item{
+        font-size: unset;
+    }
+    .card-title {
+        font-size: 20px;
+    }
+    .author {
+        font-size: unset;
+    }
+    .card-text {
+        font-size: unset;
+    }
+    .pagination-btn a {
+        font-size: unset;
+    }
+    .tips-list {
+        font-size: unset;
+    }
+    #mistakes-list p {
+        font-size: unset;
+    }
+    #mistakes-list h4 {
+        font-size: unset;
+    }
+    #health-list {
+        padding: unset;
+    }
+    .health {
+        font-size: unset;
+        
+    }
+    .health h4 {
+        font-size: unset;
+    }
+    footer {
+        font-size: unset
+    }
+    footer h6 {
+        font-size: unset;
+    }
+    footer i {
+        font-size: unset;
+    }
 }

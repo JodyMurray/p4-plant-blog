@@ -12,12 +12,20 @@ def newsletter_signup(request):
         form = JoinForm(request.POST)
 
         if form.is_valid():
-            #     instance = form.save(commit=False)
+            instance = form.save(commit=False)
             # if NewsLetter.objects.filter(email=instance.email).exists():
+            if NewsLetter.objects.filter(email=instance.email).exists():
+                messages.warning(request, "Your email already exists in our database",
+                                 "alert alert-warning alert-dismissible")
+
+            else:
+                instance.save()
+                messages.success(request, "Your email has been submitted to the database",
+                                 "alert alert-success alert-dismissible")
             email = form.cleaned_data['email']
-            # print(form.cleaned_data['email'])
-            # print("Email valid")
-        # to_email = [instance.email]
+            print(form.cleaned_data['email'])
+            print("Email valid")
+            to_email = [instance.email]
 
             html = render_to_string('newsletter/email.html', {
                 'email': email,
