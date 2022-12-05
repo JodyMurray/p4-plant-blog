@@ -35,13 +35,13 @@
                             class="form-control" id="last_name" placeholder="{{ user.last_name }}"
                             value="{{ profile.last_name|default:'' }}" required>
                     </div>
-                    <label for="bio">Bio: </label>
+                    <label class="labels" for="bio">Bio: </label>
                     <input name="bio" class="form-control" id="bio" type="text" placeholder="Enter your bio"
                         value="{{ profile.bio|default:'' }}" required>
                 </div>
 
 
-                <div>
+                <div class = "profile-input">
                     <span class="icon icon-md">
                         <span class="fas fa-paperclip mr-3"></span>
                     </span>

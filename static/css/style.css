@@ -402,9 +402,9 @@ footer {
     footer i {
         font-size: 35px;
     }
-    /* .feature-row {
+    .feature-row {
         justify-content: center;
-    } */
+    }
     .winter-section {
         font-size: 30px;
     }
@@ -422,6 +422,59 @@ footer {
     }
     .feature-icon i {
         font-size: 40px;
+    }
+    .pets-header {
+        font-size: 40px;
+    }
+    .list-pets {
+        font-size: 28px;
+    }
+    .list-pets h4 {
+        font-size: 30px;
+    }
+    .home-newsletter .single h3 {
+        font-size: 60px;
+    }
+    .home-newsletter .single .form-control {
+        height: 80px;
+    }
+    .home-newsletter .single .btn {
+        height: 80px;
+        font-size: 30px;
+    }
+    .single p {
+        font-size: 30px;
+    }
+    .profile_pic {
+        width: 90%;
+        font-size: 20px;
+    }
+    .user-info {
+        font-size: 27px;
+    }
+    .profile-border {
+        font-size: 20px;
+    }
+    .bio-section {
+        font-size: 25px;
+    }
+    .border-right {
+        padding-top: 5%;
+        padding-left: 2%;
+    }
+    .update-btn {
+        font-size: 25px;
+    }
+    .border-right .form-control {
+        height: fit-content;
+        font-size: 25px;
+    }
+    .border-right .labels {
+        font-size: 25px;
+    }
+    .profile-input {
+        font-size: 25px;
+        padding-left: px;
     }
 }
 
@@ -476,7 +529,7 @@ footer {
         font-size: unset;
     }
     .feature-row {
-        justify-content: center;
+        justify-content: unset;
     }
     .winter-section {
         font-size: unset;
@@ -491,6 +544,47 @@ footer {
         font-size: unset;
     }
     .feature-icon i {
+        font-size: unset;
+    }
+    .list-pets {
+        font-size: unset;
+    }
+    .list-pets h4 {
+        font-size: unset;
+    }
+    .pets-header {
+        font-size: 20px;
+    }
+    .home-newsletter .single h3 {
+        font-size: 30px;
+    }
+    .home-newsletter .single .form-control {
+        height: 50px;
+    }
+    .home-newsletter .single .btn {
+        height: 50px;
+        font-size: unset;
+    }
+    .single p {
+        font-size: unset;
+    }
+    .profile_pic {
+        width: 50%;
+    }
+    .user-info {
+        font-size: unset;
+    }
+    .profile-border {
+        font-size: unset;
+    }
+    .bio-section {
+        font-size: unset;
+    }
+    .border-right {
+        padding-top: unset;
+        padding-left: unset;
+    }
+    .update-btn {
         font-size: unset;
     }
 }
