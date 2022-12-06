@@ -19,10 +19,11 @@
 
 <body>
   <header class="sticky-top">
-    <nav class="bg-img navbar navbar-expand-sm navbar-light bg-light shadow-sm p-3 mb-5 .bg-gradient-dark rounded">
+    <nav class="bg-img navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 .bg-gradient-dark rounded">
       <a class="navbar-brand" href="{% url 'home' %}">Jody's Plant Blog <i class="fa-brands fa-pagelines"></i></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
@@ -60,6 +61,7 @@
 
           {% endif %}
         </ul>
+      </div>
       </div>
     </nav>
   </header>
@@ -132,12 +134,12 @@
       </div>
     </section>
 
-<div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-  © 2022 Copyright:
-  <a class="text-reset fw-bold" href="home/">Jody's Plant Blog</a>
-</div>
-</footer>
-<script src="https://kit.fontawesome.com/9b64cea43d.js" crossorigin="anonymous"></script>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2022 Copyright:
+      <a class="text-reset fw-bold" href="home/">Jody's Plant Blog</a>
+    </div>
+  </footer>
+  <script src="https://kit.fontawesome.com/9b64cea43d.js" crossorigin="anonymous"></script>
 
 
 </body>

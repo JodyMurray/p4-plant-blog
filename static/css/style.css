@@ -141,6 +141,7 @@ a:active {
     align-items: center;
     background-image: linear-gradient(to right, #63AA85, #333, #63AA85);
 }
+
 .list-break {
     width: fit-content;
 }
@@ -194,9 +195,10 @@ ol {
     border-left: 1px solid #dbd8cf;
     right: 45%;
 }
+
 #mistakes-list p {
     line-height: 1.3;
-} 
+}
 
 #mistakes-list h4 {
     font-family: 'pacifico', cursive;
@@ -233,7 +235,7 @@ ol {
 .home-newsletter {
     padding: 80px 0;
     background: rgb(255, 250, 240);
-    background: radial-gradient(circle, rgba(255, 250, 240, 1) , rgba(249, 244, 234, 1) 35%, rgba(255, 250, 240, 1) 100%);
+    background: radial-gradient(circle, rgba(255, 250, 240, 1), rgba(249, 244, 234, 1) 35%, rgba(255, 250, 240, 1) 100%);
 }
 
 .home-newsletter .single {
@@ -274,6 +276,7 @@ ol {
     background: transparent;
     border-color: cadetblue;
 }
+
 .close:hover {
     text-decoration: none;
     color: #63AA85;
@@ -333,9 +336,11 @@ ol {
     padding: 2%;
     font-size: 15px;
 }
+
 .winter-section h2 {
     color: #064E4B;
 }
+
 .winter-section h4 {
     color: #306844;
 }
@@ -350,39 +355,49 @@ ol {
 footer {
     padding: 3%;
 }
+
 #footer-logo {
     font-size: 20px;
 }
 
+
+
 /* Media queries */
 /* For large screens sizes from 2560px wide and down */
-@media screen and (max-width: 2560px){
-    .post-header{
+@media screen and (max-width: 2560px) {
+    .post-header {
         font-size: 50px;
     }
+
     .navbar-brand {
         font-size: 40px;
     }
+
     .nav-item {
         font-size: 35px;
     }
-    
+
     .card-title {
         font-size: 45px;
     }
+
     .author {
         font-size: 25px;
     }
+
     .card-text,
     .pagination-btn a {
         font-size: 30px;
     }
+
     .tips-list {
         font-size: 33px;
     }
+
     #mistakes-list p {
         font-size: 30px;
     }
+
     #mistakes-list h4 {
         font-size: 33px;
     }
@@ -391,10 +406,12 @@ footer {
     #health-list {
         padding: 2%;
     }
+
     .health {
         font-size: 30px;
-        
+
     }
+
     .health h4 {
         font-size: 35px;
     }
@@ -403,9 +420,11 @@ footer {
     footer {
         font-size: 27px
     }
+
     footer h6 {
         font-size: 30px;
     }
+
     footer i {
         font-size: 35px;
     }
@@ -414,9 +433,11 @@ footer {
     .winter-section {
         font-size: 30px;
     }
+
     .winter-section h4 {
         font-size: 35px;
     }
+
     .winter-section h2 {
         font-size: 40px;
     }
@@ -425,10 +446,12 @@ footer {
     .featured-cards {
         font-size: 50px;
     }
+
     .feature-icon,
     .feature-icon i {
         font-size: 40px;
     }
+
     .feature-row {
         justify-content: center;
     }
@@ -437,9 +460,11 @@ footer {
     .pets-header {
         font-size: 40px;
     }
+
     .list-pets {
         font-size: 28px;
     }
+
     .list-pets h4 {
         font-size: 30px;
     }
@@ -448,9 +473,11 @@ footer {
     .home-newsletter .single h3 {
         font-size: 60px;
     }
+
     .home-newsletter .single .form-control {
         height: 80px;
     }
+
     .home-newsletter .single .btn {
         height: 80px;
         font-size: 30px;
@@ -460,13 +487,16 @@ footer {
     .single p {
         font-size: 30px;
     }
+
     .profile_pic {
         width: 90%;
         font-size: 20px;
     }
+
     .user-info {
         font-size: 27px;
     }
+
     .profile-border {
         font-size: 20px;
     }
@@ -477,14 +507,17 @@ footer {
     .border-right .labels {
         font-size: 25px;
     }
+
     .border-right .form-control {
         height: fit-content;
         font-size: 25px;
     }
+
     .profile-input {
         font-size: 25px;
         padding-left: 30px;
     }
+
     .profile-input icon {
         padding: 10%;
     }
@@ -493,13 +526,16 @@ footer {
     .sign-out {
         font-size: 30px;
     }
+
     .sign-out h1 {
         font-size: 50px;
     }
+
     .sign-out button {
         font-size: 30px;
     }
-    .edit-button > button {
+
+    .edit-button>button {
         font-size: 25px;
     }
 
@@ -507,19 +543,24 @@ footer {
     .login-form {
         font-size: 30px;
     }
+
     .login input {
         font-size: 20px;
         line-height: 2;
     }
+
     .login a {
         font-size: 20px;
     }
+
     .login button {
         font-size: 23px;
     }
+
     .login a {
         font-size: 25px;
     }
+
     #id_remember {
         width: 30px;
     }
@@ -528,6 +569,7 @@ footer {
     .welcome-add {
         font-size: 26px;
     }
+
     .add-post form,
     .add-post-btn {
         font-size: 25px;
@@ -537,47 +579,60 @@ footer {
     #signup_form {
         font-size: 25px;
     }
+
     .form-group h1 {
         font-size: 50px;
     }
+
     .form-group p {
         font-size: 30px;
     }
 }
 
 /* For large screens sizes from 1440px wide and down */
-@media screen and (min-width: 1440px) and (max-width: 1800px){
-    .post-header{
+@media screen and (min-width: 1440px) and (max-width: 1800px) {
+    .post-header {
         font-size: 30px;
     }
+
     /* Navbar media query */
     .navbar-brand {
         font-size: unset;
     }
-    .nav-item{
+
+    .nav-item {
         font-size: unset;
     }
 
     /* Blog cards media query */
-    .card-title,
+    .card-title {
+        font-size: 20px;
+    }
+
     .pagination-btn a,
     .card-text,
     .author {
-        font-size: 20px;
+        font-size: unset;
     }
 
     /* Index page features media query */
     .tips-list,
-    .health,
-    .health h4 {
+    .health {
         font-size: unset;
     }
+
+    .health h4 {
+        font-size: 20px;
+    }
+
     #mistakes-list p {
         font-size: unset;
     }
+
     #mistakes-list h4 {
-        font-size: unset;
+        font-size: 20px;
     }
+
     #health-list {
         padding: unset;
     }
@@ -607,6 +662,7 @@ footer {
     .list-pets h4 {
         font-size: unset;
     }
+
     .pets-header {
         font-size: 20px;
     }
@@ -615,37 +671,45 @@ footer {
     .home-newsletter .single h3 {
         font-size: 30px;
     }
+
     .home-newsletter .single .form-control {
         height: 50px;
     }
+
     .home-newsletter .single .btn {
         height: 50px;
         font-size: unset;
     }
+
     /* Profile media query */
     .single p,
     .user-info,
     .profile-border {
         font-size: unset;
     }
+
     .profile_pic {
         width: 50%;
     }
+
     /* Update profile media query */
     .bio-section,
     .border-right .labels,
     .update-btn,
-    .edit-button > button {
+    .edit-button>button {
         font-size: unset;
     }
+
     .border-right .form-control {
         height: unset;
         font-size: unset;
     }
+
     .profile-input {
         font-size: unset;
         padding-left: unset;
     }
+
     .profile-input icon {
         padding: unset;
     }
@@ -654,23 +718,27 @@ footer {
     .sign-out h1 {
         font-size: 25px;
     }
+
     .border-right .form-control {
         font-size: 15px;
     }
+
     .border-right {
         font-size: 15px;
     }
+
     .profile-input {
         font-size: unset;
         padding-left: unset;
     }
+
     .profile-input icon {
         padding: unset;
     }
 
     .sign-out,
     .sign-out button,
-    .edit-button > button {
+    .edit-button>button {
         font-size: unset;
     }
 
@@ -681,10 +749,12 @@ footer {
     .login a {
         font-size: unset;
     }
+
     .login input {
         font-size: unset;
         line-height: 1;
     }
+
     #id_remember {
         width: unset;
     }
@@ -695,12 +765,254 @@ footer {
     .add-post-btn {
         font-size: unset;
     }
+
     /* Signup media query */
     #signup_form,
     .form-group p {
         font-size: unset;
     }
+
     .form-group h1 {
         font-size: 30px;
     }
+}
+
+
+/* For Medium screens sizes from 1024px wide and down */
+@media screen and (min-width: 800px) and (max-width: 1400px) {
+    /* Navbar media query */
+    .navbar-brand {
+        font-size: 17px;
+    }
+
+    .nav-item a {
+        font-size: 16px;
+    }
+    /* Blog post media query */
+    .post-header {
+        font-size: 23px;
+    }
+
+    .card-title {
+        font-size: 20px;
+    }
+
+    .pagination-btn a,
+    .card-text,
+    .author {
+        font-size: unset;
+    }
+    /* Index features media query */
+    .tips-list {
+        font-size: 14px;
+        top: 10%;
+        left: 20px;
+        float: left;
+        padding: auto;
+        line-height: 1.5;
+        margin-left: -6%;
+    }
+
+    .left-image {
+        width: 60%;
+        margin-left: -20%;
+        height: auto;
+        float: left;
+    }
+
+    .wrapper {
+        display: block;
+        padding: 0.5em;
+    }
+
+    #mistakes-list p {
+        float: right;
+        margin-bottom: 10px;
+        font-size: 13px;
+
+    }
+
+    .image-2 {
+        width: 40%;
+        height: auto;
+        float: right;
+    }
+
+    #mistakes-list h4 {
+        font-size: 15px;
+    }
+
+   
+    #health-list {
+        padding: unset;
+        font-size: 13px;
+        margin-top: 90px;
+        padding-bottom: 5%;
+        width: 60%;
+    }
+
+    .health {
+        font-size: 14px;
+    }
+    .health h4 {
+        font-size: 20px;
+    }
+    .health h1{
+        padding: 15%;
+        font-size: 24px;
+    }
+    /* Add post section media query */
+    .welcome-add,
+    .add-post form,
+    .add-post-btn {
+        font-size: unset;
+    }
+    .feature-row {
+        justify-content: unset;
+    }
+    .feature-icon,
+    .feature-icon i {
+        font-size: unset;
+    }
+    /* Winter section media query */
+    .winter-section {
+        font-size: unset;
+    }
+
+    .winter-section h4 {
+        font-size: 20px;
+    }
+
+    .winter-section h2 {
+        font-size: 20px;
+    }
+    /* Newsletter media query */
+    .home-newsletter .single h3 {
+        font-size: 20px;
+    }
+
+    .home-newsletter .single .form-control {
+        height: 50px;
+    }
+
+    .home-newsletter .single .btn {
+        height: unset;
+        font-size: unset;
+    }
+    .single p {
+        font-size: unset;
+    }
+    /* Profile media query */
+    .single p,
+    .user-info,
+    .profile-border {
+        font-size: unset;
+    }
+
+    /* footer media query */
+    footer,
+    footer h6,
+    footer i {
+        font-size: 16px
+    }
+
+}
+
+/* For tablet screens sizes from 768px wide and down */
+@media screen and (max-width: 768px) {
+    .post-header {
+        font-size: unset;
+    }
+
+    /* Navbar media query */
+    .navbar-brand {
+        font-size: 15px;
+    }
+
+    .nav-item a {
+        font-size: 12px;
+    }
+
+    /* Blog cards media query */
+    .card-title {
+        font-size: 10px;
+    }
+
+    .pagination-btn a,
+    .card-text,
+    .author {
+        font-size: unset;
+    }
+
+    /* #menu__toggle {
+        opacity: 0;
+      }
+      #menu__toggle:checked + .menu__btn > span {
+        transform: rotate(45deg);
+      }
+      #menu__toggle:checked + .menu__btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+      }
+      #menu__toggle:checked + .menu__btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+      }
+      #menu__toggle:checked ~ .menu__box {
+        left: 0 !important;
+      }
+      .menu__btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+      }
+      .menu__btn > span,
+      .menu__btn > span::before,
+      .menu__btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+        transition-duration: .25s;
+      }
+      .menu__btn > span::before {
+        content: '';
+        top: -8px;
+      }
+      .menu__btn > span::after {
+        content: '';
+        top: 8px;
+      }
+      .menu__box {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 300px;
+        height: 100%;
+        margin: 0;
+        padding: 80px 0;
+        list-style: none;
+        background-color: #ECEFF1;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+        transition-duration: .25s;
+      }
+      .menu__item {
+        display: block;
+        padding: 12px 24px;
+        color: #333;
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        font-weight: 600;
+        text-decoration: none;
+        transition-duration: .25s;
+      }
+      .menu__item:hover {
+        background-color: #CFD8DC;
+      } */
 }
