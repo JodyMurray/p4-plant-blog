@@ -340,6 +340,11 @@ ol {
     color: #306844;
 }
 
+.welcome-add h3 {
+    font-family: cursive;
+    font-size: 30px;
+}
+
 
 /* Footer */
 footer {
@@ -368,11 +373,9 @@ footer {
     .author {
         font-size: 25px;
     }
-    .card-text {
-        font-size: 30px;
-    }
+    .card-text,
     .pagination-btn a {
-        font-size: 36px;
+        font-size: 30px;
     }
     .tips-list {
         font-size: 33px;
@@ -383,6 +386,8 @@ footer {
     #mistakes-list h4 {
         font-size: 33px;
     }
+
+    /* Health section media query */
     #health-list {
         padding: 2%;
     }
@@ -393,6 +398,8 @@ footer {
     .health h4 {
         font-size: 35px;
     }
+
+    /* Footer media query */
     footer {
         font-size: 27px
     }
@@ -402,9 +409,8 @@ footer {
     footer i {
         font-size: 35px;
     }
-    .feature-row {
-        justify-content: center;
-    }
+
+    /* Winter section media query */
     .winter-section {
         font-size: 30px;
     }
@@ -414,15 +420,20 @@ footer {
     .winter-section h2 {
         font-size: 40px;
     }
+
+    /* Featured section media query */
     .featured-cards {
         font-size: 50px;
     }
-    .feature-icon {
-        font-size: 40px;
-    }
+    .feature-icon,
     .feature-icon i {
         font-size: 40px;
     }
+    .feature-row {
+        justify-content: center;
+    }
+
+    /* Pets section media query */
     .pets-header {
         font-size: 40px;
     }
@@ -432,6 +443,8 @@ footer {
     .list-pets h4 {
         font-size: 30px;
     }
+
+    /* newsletter media query */
     .home-newsletter .single h3 {
         font-size: 60px;
     }
@@ -442,6 +455,8 @@ footer {
         height: 80px;
         font-size: 30px;
     }
+
+    /* Profile media query */
     .single p {
         font-size: 30px;
     }
@@ -455,26 +470,78 @@ footer {
     .profile-border {
         font-size: 20px;
     }
-    .bio-section {
-        font-size: 25px;
-    }
-    .border-right {
-        padding-top: 5%;
-        padding-left: 2%;
-    }
-    .update-btn {
+
+    /* Update profile media query */
+    .bio-section,
+    .update-btn,
+    .border-right .labels {
         font-size: 25px;
     }
     .border-right .form-control {
         height: fit-content;
         font-size: 25px;
     }
-    .border-right .labels {
-        font-size: 25px;
-    }
     .profile-input {
         font-size: 25px;
-        padding-left: px;
+        padding-left: 30px;
+    }
+    .profile-input icon {
+        padding: 10%;
+    }
+
+    /* Sign out media query */
+    .sign-out {
+        font-size: 30px;
+    }
+    .sign-out h1 {
+        font-size: 50px;
+    }
+    .sign-out button {
+        font-size: 30px;
+    }
+    .edit-button > button {
+        font-size: 25px;
+    }
+
+    /* Login page media query */
+    .login-form {
+        font-size: 30px;
+    }
+    .login input {
+        font-size: 20px;
+        line-height: 2;
+    }
+    .login a {
+        font-size: 20px;
+    }
+    .login button {
+        font-size: 23px;
+    }
+    .login a {
+        font-size: 25px;
+    }
+    #id_remember {
+        width: 30px;
+    }
+
+    /* Add post section media query */
+    .welcome-add {
+        font-size: 26px;
+    }
+    .add-post form,
+    .add-post-btn {
+        font-size: 25px;
+    }
+
+    /* Signup media query */
+    #signup_form {
+        font-size: 25px;
+    }
+    .form-group h1 {
+        font-size: 50px;
+    }
+    .form-group p {
+        font-size: 30px;
     }
 }
 
@@ -483,25 +550,26 @@ footer {
     .post-header{
         font-size: 30px;
     }
+    /* Navbar media query */
     .navbar-brand {
         font-size: unset;
     }
     .nav-item{
         font-size: unset;
     }
-    .card-title {
+
+    /* Blog cards media query */
+    .card-title,
+    .pagination-btn a,
+    .card-text,
+    .author {
         font-size: 20px;
     }
-    .author {
-        font-size: unset;
-    }
-    .card-text {
-        font-size: unset;
-    }
-    .pagination-btn a {
-        font-size: unset;
-    }
-    .tips-list {
+
+    /* Index page features media query */
+    .tips-list,
+    .health,
+    .health h4 {
         font-size: unset;
     }
     #mistakes-list p {
@@ -513,48 +581,37 @@ footer {
     #health-list {
         padding: unset;
     }
-    .health {
-        font-size: unset;
-    }
-    .health h4 {
-        font-size: 20px;
-    }
-    footer {
+
+    /* Footer media query */
+    footer,
+    footer h6,
+    footer i {
         font-size: unset
     }
-    footer h6 {
-        font-size: unset;
-    }
-    footer i {
-        font-size: unset;
-    }
+
     .feature-row {
         justify-content: unset;
     }
-    .winter-section {
-        font-size: unset;
-    }
-    .winter-section h4 {
-        font-size: unset;
-    }
-    .featured-cards {
-        font-size: unset;
-    }
-    .feature-icon {
-        font-size: unset;
-    }
+
+    /* featured post media query */
+    .winter-section,
+    .winter-section h4,
+    .featured-cards,
+    .feature-icon,
     .feature-icon i {
         font-size: unset;
     }
-    .list-pets {
-        font-size: unset;
-    }
+
+    /* pets section media query */
+    .list-pets,
     .list-pets h4 {
         font-size: unset;
     }
     .pets-header {
         font-size: 20px;
     }
+
+    /* Newsletter media query */
     .home-newsletter .single h3 {
         font-size: 30px;
     }
@@ -565,26 +622,85 @@ footer {
         height: 50px;
         font-size: unset;
     }
-    .single p {
+    /* Profile media query */
+    .single p,
+    .user-info,
+    .profile-border {
         font-size: unset;
     }
     .profile_pic {
         width: 50%;
     }
-    .user-info {
+    /* Update profile media query */
+    .bio-section,
+    .border-right .labels,
+    .update-btn,
+    .edit-button > button {
         font-size: unset;
     }
-    .profile-border {
+    .border-right .form-control {
+        height: unset;
         font-size: unset;
     }
-    .bio-section {
+    .profile-input {
         font-size: unset;
-    }
-    .border-right {
-        padding-top: unset;
         padding-left: unset;
     }
-    .update-btn {
+    .profile-input icon {
+        padding: unset;
+    }
+
+    /* Sign out media query */
+    .sign-out h1 {
+        font-size: 25px;
+    }
+    .border-right .form-control {
+        font-size: 15px;
+    }
+    .border-right {
+        font-size: 15px;
+    }
+    .profile-input {
         font-size: unset;
+        padding-left: unset;
+    }
+    .profile-input icon {
+        padding: unset;
+    }
+
+    .sign-out,
+    .sign-out button,
+    .edit-button > button {
+        font-size: unset;
+    }
+
+    /* Login page media query */
+    .login-form,
+    .login a,
+    .login button,
+    .login a {
+        font-size: unset;
+    }
+    .login input {
+        font-size: unset;
+        line-height: 1;
+    }
+    #id_remember {
+        width: unset;
+    }
+
+    /* Add post section media query */
+    .welcome-add,
+    .add-post form,
+    .add-post-btn {
+        font-size: unset;
+    }
+    /* Signup media query */
+    #signup_form,
+    .form-group p {
+        font-size: unset;
+    }
+    .form-group h1 {
+        font-size: 30px;
     }
 }
