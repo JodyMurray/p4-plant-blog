@@ -12,7 +12,7 @@
             <hr class="break" style="width:90%; margin: auto;" />
 
             {% for post in post_list %}
-            <div class="col-md-4 post-card" style="margin:auto;">
+            <div class="col-md-4 post-card card-columns" style="margin:auto;">
                 <div class="card mb-2 mb-5 bg-white rounded text-center"
                     style="box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;">
                     <div class="card-body">
@@ -42,7 +42,7 @@
             {% if forloop.counter|divisibleby:3 %}
             <div class="row">
                 {% endif %}
-
+                
                 {% endfor %}
             </div>
         </div>

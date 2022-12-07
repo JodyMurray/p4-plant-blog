@@ -919,13 +919,16 @@ footer {
     .profile-border {
         font-size: unset;
     }
+
     .profile_pic {
         width: 60%;
 
     }
+
     .border-right .p-4 {
         margin-top: 55px;
     }
+
     .update-btn,
     .bio-section {
         font-size: unset;
@@ -936,14 +939,17 @@ footer {
     .edit-button button {
         font-size: unset;
     }
+
     .border-right .form-control {
         height: fit-content;
         font-size: unset;
     }
+
     .profile-input {
         font-size: unset;
         padding-left: unset;
     }
+
     .profile-input icon {
         padding: unset;
     }
@@ -953,9 +959,11 @@ footer {
     .sign-out button {
         font-size: unset;
     }
+
     .sign-out h1 {
         font-size: 23px;
     }
+
     /* Login media query */
 
     .login-form,
@@ -965,9 +973,11 @@ footer {
     .login a {
         font-size: unset;
     }
+
     .login-form h1 {
         font-size: 23px;
     }
+
     .login input {
         font-size: unset;
         line-height: 1;
@@ -983,7 +993,7 @@ footer {
     footer i {
         font-size: 16px
     }
-    
+
     /* Pets section media query */
     .list-pets,
     .list-pets h4 {
@@ -1016,17 +1026,40 @@ footer {
     }
 
     /* Blog cards media query */
+    /* .card-title {
+        font-size: 18px;
+    } */
     .card-title {
-        font-size: 10px;
+        font-size: 15px;
     }
+
+    .card-text {
+        font-size: 17px;
+    }
+
+    .col-md-4 {
+        width: 90%;
+    }
+
+
 
     .pagination-btn a,
-    .card-text,
     .author {
-        font-size: unset;
+        font-size: 17px;
     }
 
-    /* #menu__toggle {
+    .card-columns {
+        @include media-breakpoint-only(lg) {
+            column-count: 4;
+        }
+
+        @include media-breakpoint-only(xl) {
+            column-count: 5;
+        }
+    }
+}
+
+/* #menu__toggle {
         opacity: 0;
       }
       #menu__toggle:checked + .menu__btn > span {
@@ -1097,4 +1130,3 @@ footer {
       .menu__item:hover {
         background-color: #CFD8DC;
       } */
-}
