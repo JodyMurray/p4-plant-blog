@@ -1043,20 +1043,15 @@ footer {
 
 
 
+
     .pagination-btn a,
     .author {
         font-size: 17px;
     }
-
-    .card-columns {
-        @include media-breakpoint-only(lg) {
-            column-count: 4;
-        }
-
-        @include media-breakpoint-only(xl) {
-            column-count: 5;
-        }
+    .col-md-4:nth-child(9) {
+        display: none;
     }
+
 }
 
 /* #menu__toggle {
