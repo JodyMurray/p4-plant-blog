@@ -19,10 +19,12 @@
 
 <body>
   <header class="sticky-top">
-    <nav class="bg-img navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 .bg-gradient-dark rounded btn-group dropright">
+    <nav
+      class="bg-img navbar navbar-expand-lg navbar-light bg-light shadow-sm p-3 mb-5 .bg-gradient-dark rounded btn-group dropright">
       <a class="navbar-brand" href="{% url 'home' %}">Jody's Plant Blog <i class="fa-brands fa-pagelines"></i></a>
-      <button class="dropdown-toggle dropdown-toggle-split" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="dropdown-toggle dropdown-toggle-split" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="custom-toggler" role="button"><i class="fa fa-bars" aria-hidden="true"></i></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
@@ -72,34 +74,58 @@
 
     {% endblock content %}
   </main>
+  <footer class="footer-16371">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-9 text-center">
+          <div class="footer-site-logo mb-4">
+            <a href="/">JodysPlantBlog <i class="fas fa-seedling"></i></a>
+          </div>
+          <ul class="list-unstyled nav-links mb-5">
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'featured' %}">Featured</a></li>
+            <li><a href="{% url 'account_signup' %}">Register</a></li>
+            <li><a href="{% url 'account_login' %}">Login</a></li>
+          </ul>
+          <div class="social mb-4">
+            <h3>Stay in touch</h3>
+            <ul class="list-unstyled">
+              <li class="in"><a href="#"><span class="fa fa-instagram"></span></a></li>
+              <li class="fb"><a href="#"><span class="fa fa-facebook"></span></a></li>
+              <li class="tw"><a href="#"><span class="fa fa-twitter"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <footer class="text-center text-lg-start container-fluid"> -->
 
-  <footer class="text-center text-lg-start container-fluid">
-
-    <div class="text-center p-4" id="footer-logo">
+  <!-- <div class="text-center p-4" id="footer-logo">
       <a class="navbar-brand" href="/">
         Jody's Plant Blog <i class="fas fa-seedling"></i>
       </a>
-    </div>
+    </div> -->
 
-    <section>
+  <!-- <section>
       <div class="container text-center text-md-start mt-5">
         <div class="row mt-3">
 
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 text-center social-media-icons">
+          <div class="col-xs-12 col-sm-6 col-md-3 text-center social-media-icons">
             <h6 class="text-uppercase fw-bold mb-4">
               Follow Us
             </h6>
-            <a href="" class="btn btn-link btn-floating btn-lg text-dark m-1">
+            <a href="www.facebook.com" class="btn btn-link btn-floating btn-lg text-dark m-1">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="" class="btn btn-link btn-floating btn-lg text-dark m-1">
+            <a href="www.twitter.com" class="btn btn-link btn-floating btn-lg text-dark m-1">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="" class="btn btn-link btn-floating btn-lg text-dark m-1">
+            <a href="www.instagram.com" class="btn btn-link btn-floating btn-lg text-dark m-1">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 quick-links">
+          <div class="col-xs-12 col-sm-6 col-md-3 quick-links">
             <h6 class="text-uppercase fw-bold mb-4">
               Quick Links
             </h6>
@@ -122,7 +148,7 @@
             {% endif %}
           </div>
 
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <div class="col-xs-12 col-sm-6 col-md-3">
             <h6 class="text-uppercase fw-bold mb-4">Contact us</h6>
             <p>
               <i class="fas fa-envelope me-3 text-secondary"></i>
@@ -133,12 +159,12 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
-      © 2022 Copyright:
-      <a class="text-reset fw-bold" href="home/">Jody's Plant Blog</a>
-    </div>
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="home/">Jody's Plant Blog</a>
+  </div>
   </footer>
   <script src="https://kit.fontawesome.com/9b64cea43d.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
