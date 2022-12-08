@@ -1027,8 +1027,11 @@ footer {
     .health h4 {
         font-size: 14px;
     }
-    .tips {
+    .health .tips {
         padding: 15%;
+    } 
+    .tips {
+        padding: 5%;
     }
 
     /* footer media query */
@@ -1087,6 +1090,7 @@ footer {
     }
     .feature-row {
         justify-content: unset;
+        margin-right: 20px;
     }
 
     /* featured post media query */
@@ -1109,9 +1113,6 @@ footer {
     }
     .list-pets h4 {
         font-size: unset;
-    }
-    .tips {
-        padding: unset;
     }
 
     .pets-header {

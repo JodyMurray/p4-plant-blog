@@ -8,12 +8,6 @@ from django.contrib import messages
 from .forms import CommentForm, EditProfileForm
 
 
-# class NewsLetterForm(FormView):
-#     template_name = 'index.html'
-#     form_class = JoinForm
-#     success_url = '/'
-    
-
 class UserProfile(generic.ListView):
     model = Profile
     queryset = Profile.objects.all()
@@ -48,7 +42,6 @@ class UserSettings(View):
 
 
 class AddPostView(CreateView):
-
     model = Post
     template_name = 'add_post.html'
     fields = '__all__'
@@ -167,8 +160,3 @@ def edit_post(request, post_id):
         return redirect(f"/edit/{post.id}", redirect('home'))
     return render(request, "update_post.html", {"post": post})
 
-
-# class NewsLetterForm(FormView):
-#     template_name = 'index.html'
-#     form_class = JoinForm
-#     success_url = "/"

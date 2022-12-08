@@ -20,8 +20,8 @@ def newsletter_signup(request):
 
             else:
                 instance.save()
-                messages.success(request, "Your email has been submitted to the database",
-                                 "alert alert-success alert-dismissible")
+                # messages.success(request, "Your email has been submitted to the database",
+                #                  "alert alert-success alert-dismissible")
             email = form.cleaned_data['email']
             print(form.cleaned_data['email'])
             print("Email valid")

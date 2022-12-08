@@ -5,6 +5,13 @@
 {% block content %}
 {% for profile in profile_list %}
 {% if user == profile.user %}
+{% if user.is_authenticated %}
+<div class="alert alert-success alert-dismissible fade show text-center">
+    <a href="#" class="close" style="width: 50%;" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Welcome, {{request.user.username}}</strong> Login Successful
+</div>
+{% endif %}
+
 
 <div class="container rounded bg-transparent mt-5 mb-5 ">
     <div class="row">
@@ -18,7 +25,7 @@
                     {{ request.user.date_joined|date:"b d Y" }}</div>
             </div>
         </div>
-       
+
         {% csrf_token %}
         {{form.as_p}}
         <div class="col-md-5 border-right">
@@ -28,8 +35,8 @@
                     <h3 class="post-header">This is the profile page for {{user.username}}</h3>
                 </div>
                 <div class="user-info">
-                {{ profile.first_name }}
-                {{ profile.last_name }}</div>
+                    {{ profile.first_name }}
+                    {{ profile.last_name }}</div>
                 <br>
                 <br>
 
@@ -45,7 +52,7 @@
             </a>
         </div>
     </div>
-    
+
 </div>
 
 {% endif %}
