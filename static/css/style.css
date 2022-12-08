@@ -117,11 +117,18 @@ a:active {
 .pagination-btn a:hover {
     text-decoration: none;
     transform: scale(1.1);
+    color: #064E4B;
+}
+.pagination-btn a:active {
+    color: #064E4B;
 }
 .pagination-btn a {
     color: #064E4B;
     border-radius: 10%;
     bottom: 20px;
+}
+.page-item .page-link {
+    background: transparent;
 }
 
 /* HR */

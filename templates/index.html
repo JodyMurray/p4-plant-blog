@@ -42,7 +42,7 @@
             {% if forloop.counter|divisibleby:3 %}
             <div class="row">
                 {% endif %}
-                
+
                 {% endfor %}
             </div>
         </div>
@@ -52,16 +52,19 @@
         <nav aria-label="Page Navigation">
             <ul class="pagination justify-content-center pagination-btn">
                 {% if page_obj.has_previous %}
-                <li>
-                    <a class="btn btn-outline-secondary" href="?page={{ page_obj.previous_page_number }}"
-                        class="page-link">&laquo;
+                <li class="page-item">
+                    <a href="?page={{ page_obj.previous_page_number }}"
+                        class="page-link" tabindex="-1">&laquo;
                         Previous</a>
                 </li>
                 {% endif %}
                 {% if page_obj.has_next %}
-                <li>
-                    <a class="btn btn-outline-secondary" href="?page={{ page_obj.next_page_number }}"
-                        class="page-link">Next &raquo;</a>
+                <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{1}}">1</a></li>
+                <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{2}}">2</a></li>
+                <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{3}}">3</a></li>
+                <li class="page-item">
+                    <a href="?page={{ page_obj.next_page_number }}"
+                        class="page-link">Next </a>
                 </li>
                 {% endif %}
             </ul>
