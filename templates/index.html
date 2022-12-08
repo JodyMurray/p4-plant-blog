@@ -5,9 +5,10 @@
 
 {% if messages %}
 {% for message in messages %}
-
-    {{ message }}
-
+<div class="alert alert-success alert-dismissible fade show text-center">
+    <a href="#" class="close" style="width: 50%;" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>{{ message }}</strong>
+</div>
 {% endfor %}
 {% endif %}
 
@@ -60,8 +61,7 @@
             <ul class="pagination justify-content-center pagination-btn">
                 {% if page_obj.has_previous %}
                 <li class="page-item">
-                    <a href="?page={{ page_obj.previous_page_number }}"
-                        class="page-link" tabindex="-1">&laquo;
+                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link" tabindex="-1">&laquo;
                         Previous</a>
                 </li>
                 {% endif %}
@@ -70,8 +70,7 @@
                 <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{2}}">2</a></li>
                 <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{3}}">3</a></li>
                 <li class="page-item">
-                    <a href="?page={{ page_obj.next_page_number }}"
-                        class="page-link">Next </a>
+                    <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next </a>
                 </li>
                 {% endif %}
             </ul>
