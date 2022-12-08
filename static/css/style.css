@@ -474,7 +474,7 @@ footer {
 
     /* Profile media query */
     .single p {
-        font-size: 30px;
+        font-size: 20px;
     }
     .profile_pic {
         width: 90%;
@@ -772,6 +772,9 @@ footer {
         display: block;
         padding: 0.5em;
     }
+    #mistakes-list {
+        left: -30%;
+    }
     #mistakes-list p {
         float: right;
         margin-bottom: 10px;
@@ -799,7 +802,6 @@ footer {
         font-size: 20px;
     }
     .health h1 {
-        padding: 15%;
         font-size: 24px;
     }
 
