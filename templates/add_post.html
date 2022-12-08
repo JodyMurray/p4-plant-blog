@@ -3,6 +3,7 @@
 {% load i18n %}
 
 {% block content %}
+{% if user.is_superuser %}
 
 <div class="row my-3 p-3 welcome-add">
     <h3 class="text-center">Welcome Admin!</h3>
@@ -14,8 +15,15 @@
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="btn btn-outline-secondary add-post-btn">Post</button>
+
     </form>
+    {% else %}
+    <div class="row my-3 p-3 d-flex justify-content-center">
+        You are not signed in as admin: <a class="text-center" href="{% url 'account_login' %}"><i class="fa-solid fa-arrow-right"></i> Login</a>
+    </div>
+
+
 </div>
 
-
+{% endif %}
 {% endblock %}
