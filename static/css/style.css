@@ -176,7 +176,7 @@ ol {
     position: relative;
     left: 60%;
     width: 47%;
-    top: 95px;
+    top: 75px;
     opacity: 0.8;
 }
 #mistakes-list {
@@ -295,7 +295,7 @@ ol {
     white-space: nowrap;
     border-radius: 60px;
     padding: 0 11.5px;
-    width: 11%;
+    width: fit-content;
     font-size: 18px;
     opacity: 0.7;
 }
@@ -592,9 +592,13 @@ footer {
     .card-text,
     .author {
         font-size: unset;
+    } 
+    .comments {
+        left: 17%;
     }
 
     /* Index page features media query */
+    
     .tips-list,
     .health {
         font-size: unset;
@@ -755,6 +759,9 @@ footer {
     .card-title {
         font-size: 20px;
     }
+    .comments {
+        left: 17%;
+    }
     .pagination-btn a,
     .card-text,
     .author {
@@ -773,7 +780,7 @@ footer {
     }
     .left-image {
         width: 60%;
-        margin-left: -20%;
+        margin-left: -10%;
         height: auto;
         float: left;
     }
@@ -942,6 +949,9 @@ footer {
 @media screen and (max-width: 768px) {
     .post-header {
         font-size: 25px;
+    }
+    .comments {
+        left: 17%;
     }
 
     /* Navbar media query */
@@ -1196,6 +1206,23 @@ footer {
         font-size: 16px;
     }
 
+    /* Posts */ 
+    .post-body {
+        width: 70%;
+    }
+    .post-body .container {
+        margin-left: 23%;
+    }
+    .comments {
+        left: -10%;
+    }
+    .d-grid {
+        margin-right: 17%;
+    }
+    .like-button {
+        margin-right: 17%;
+    }
+
     /* Index page media query */
     .left-image {
         display: none;
@@ -1205,6 +1232,7 @@ footer {
         font-size: 15px;
         margin-left: -20%;
         padding-bottom: 20px;
+        
     }
     .tips {
         padding-top: 20px;
@@ -1215,15 +1243,21 @@ footer {
     #mistakes-list {
         width: fit-content;
         left: 5%;
+        font-size: 12px;
+    }
+    #mistakes-list p {
+        font-size: 15px;
+    }
+    .mistakes-wrapper {
+        padding: 12%;
     }
     #mistakes-list h4 {
         font-size: 15px;
     }
     #health-list {
-        font-size: 10px;
+        font-size: 12px;
         margin-top: 55%;
         width: 60%;
-
     }
     .health {
         font-size: 10px;
@@ -1237,7 +1271,7 @@ footer {
     footer {
         font-size: 10px;
         padding: 0;
-        
+        padding-top: 20%;
     }
 }
 /* For medium to small phone screens sizes from 375px wide and down */

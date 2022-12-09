@@ -10,7 +10,7 @@
     </div>
 
 
-    <div class="d-none d-md-block col-md-6 post-image">
+    <div class="d-md-block col-md-6 post-image">
         {% if "placeholder" in post.featured_image.url %}
         <img class="post-image"
             src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?cs=srgb&dl=pexels-alena-koval-886521.jpg&fm=jpg&_gl=1*1yqe4ni*_ga*MTM3NzE5NzA4NS4xNjY2Njc4OTQz*_ga_8JE65Q40S6*MTY2NjY4NTIxNS4yLjEuMTY2NjY4NTgxOS4wLjAuMA.."
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <!-- Comments list -->
-                <div class="col-md-8 card mb-4  mt-3 bg-transparent shadow-sm p-3 mb-5 bg-white rounded">
+                <div class="col-md-8 card mb-4  mt-3 bg-transparent shadow-sm p-3 mb-5 bg-white rounded comments">
                     <h3>Comments:</h3>
                     <div class="card-body">
                         {% for comment in comments %}
