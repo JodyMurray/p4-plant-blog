@@ -1184,6 +1184,9 @@ footer {
 
 /* For large phone screens sizes from 425px wide and down */
 @media screen and (max-width: 425px){
+    .dropdown-menu {
+        left: 60%;
+    }
     .card-title {
         font-size: 19px;
     }
@@ -1268,6 +1271,42 @@ footer {
     .tips {
         padding: 15%;
     }
+
+    /* Featured posts media query */
+    .feature-row {
+        justify-content: unset;
+        padding: 25px;
+        margin-left: 25px;
+    }
+    .winter {
+        text-align: center;
+        width: 150% !important;
+        justify-content: center;
+        left: -15%;
+        padding-left: -20px;
+    }
+    .winter h2 {
+        right: 10%;
+    }
+    .winter-section h4 {
+        font-size: 25px;
+        width: 100%;
+    }
+    .winter-section {
+        margin-left: -50%;
+        padding-right: 20px;
+    }
+    .winter-section h2 {
+        font-size: unset;
+        width: 180%;
+        margin-left: -8%;
+    }
+    .winter-section p {
+        padding: -50px;
+        width: 180%;
+    }
+
+    /* footer */
     footer {
         font-size: 10px;
         padding: 0;
