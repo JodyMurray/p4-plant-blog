@@ -1306,11 +1306,23 @@ footer {
         width: 180%;
     }
 
+    /* Pets */
+    .list-pets {
+     
+    }
+    .post-image {
+        
+        width: 95%;
+        position: relative;
+        left: -0.2% !important;
+
     /* footer */
     footer {
         font-size: 10px;
         padding: 0;
-        padding-top: 20%;
+    }
+    .footer-16371 {
+        padding: 12rem 0;
     }
 }
 /* For medium to small phone screens sizes from 375px wide and down */
