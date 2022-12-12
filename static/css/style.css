@@ -3,26 +3,31 @@
 html {
     scroll-behavior: smooth;
 }
+
 body {
     background-color: floralwhite;
     color: #064E4B;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 .container-fluid {
     padding-left: 8rem;
     padding-right: 8rem;
 }
+
 a:hover {
     text-decoration: none;
     color: #63AA85;
     transform: scale(1.1);
 }
+
 a:visited,
 a:link,
 a:active {
     text-decoration: none;
     color: #306844;
 }
+
 .col-md-3 {
     padding: 10px;
 }
@@ -31,6 +36,7 @@ a:active {
 #blog-posts {
     border-radius: 30%;
 }
+
 .card-title {
     color: #064E4B;
     text-decoration: none;
@@ -42,20 +48,25 @@ a:active {
     color: #064E4B;
     margin-left: 2%;
 }
+
 .dropdown-menu {
     background: transparent;
 }
+
 .dropdown-toggle-split {
     display: none;
 }
+
 .nav {
     position: fixed;
     background: none;
 }
+
 .nav-item {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: right;
 }
+
 .nav-item>a {
     text-align: right;
     color: #064E4B;
@@ -67,6 +78,7 @@ a:active {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
+
 .bio-section {
     font-style: italic;
     width: fit-content;
@@ -79,9 +91,11 @@ a:active {
     position: relative;
     border-radius: 5%;
 }
+
 .profile-border {
     border-right: 1px solid rgba(0, 0, 0, .1);
 }
+
 .profile-pic {
     height: 20px;
     width: 30%;
@@ -91,11 +105,13 @@ a:active {
 #signup_form {
     position: relative;
 }
+
 .date-joined {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     opacity: 0.6;
     font-style: italic;
 }
+
 .bg-img {
     background-image: url('https://res.cloudinary.com/dmqu7iqfu/image/upload/v1666970168/textile-textured-spring-leaves-horizontal-border-vector-2745931_xpr5p3.jpg');
     background-position: center;
@@ -119,14 +135,17 @@ a:active {
     transform: scale(1.1);
     color: #064E4B;
 }
+
 .pagination-btn a:active {
     color: #064E4B;
 }
+
 .pagination-btn a {
     color: #064E4B;
     border-radius: 10%;
     bottom: 20px;
 }
+
 .page-item .page-link {
     background: transparent;
 }
@@ -139,6 +158,7 @@ a:active {
     align-items: center;
     background-image: linear-gradient(to right, #63AA85, #333, #63AA85);
 }
+
 .list-break {
     width: fit-content;
 }
@@ -148,23 +168,28 @@ a:active {
     text-align: center;
     padding-top: 7%;
 }
+
 .feature-row {
     padding-left: 10rem;
     padding-top: 3rem;
 }
+
 .col-md-4 {
     padding-top: 3rem;
 }
+
 ol {
     text-decoration: none;
     position: relative;
     top: 9rem;
 }
+
 .tips-list {
     list-style: circle;
     line-height: 2;
     top: 4rem;
 }
+
 .left-image {
     opacity: 0.6;
     margin-bottom: 15%;
@@ -179,15 +204,18 @@ ol {
     top: 75px;
     opacity: 0.8;
 }
+
 #mistakes-list {
     position: relative;
     padding: 5%;
     border-left: 1px solid #dbd8cf;
     right: 45%;
 }
+
 #mistakes-list p {
     line-height: 1.3;
 }
+
 #mistakes-list h4 {
     font-family: 'pacifico', cursive;
     line-height: 1.4;
@@ -202,10 +230,12 @@ ol {
     opacity: 0.3;
     filter: sepia(1);
 }
+
 .health h4 {
     font-family: 'Pacifico', cursive;
     font-size: 25px;
 }
+
 #health-list {
     position: absolute;
     padding-top: 5%;
@@ -222,39 +252,46 @@ ol {
     background: rgb(255, 250, 240);
     background: radial-gradient(circle, rgba(255, 250, 240, 1), rgba(249, 244, 234, 1) 35%, rgba(255, 250, 240, 1) 100%);
 }
+
 .home-newsletter .single {
     max-width: 650px;
     margin: 0 auto;
     text-align: center;
     position: relative;
 }
+
 .home-newsletter .single h2 {
     font-size: 22px;
     color: #63AA85;
     text-transform: uppercase;
     margin-bottom: 40px;
 }
+
 .home-newsletter .single .form-control {
     height: 50px;
     background: rgba(255, 255, 255, 0.6);
     border-color: transparent;
     border-radius: 20px 0 0 20px;
 }
+
 .home-newsletter .single .form-control:focus {
     box-shadow: none;
     border-color: #064E4B;
 }
+
 .home-newsletter .single .btn {
     min-height: 50px;
     border-radius: 0 20px 20px 0;
     background: #63AA85;
     color: #fff;
 }
+
 .close {
     border-radius: 30%;
     background: transparent;
     border-color: cadetblue;
 }
+
 .close:hover {
     text-decoration: none;
     color: #63AA85;
@@ -266,10 +303,12 @@ ol {
     position: relative;
     left: 25%;
 }
+
 .card-text {
     text-decoration: none;
     color: #306844;
 }
+
 .post-content ul {
     list-style: circle;
     text-align: start;
@@ -282,10 +321,12 @@ ol {
     border-radius: 5px;
     background: transparent;
 }
+
 .btn-like {
     border: none;
     background: transparent;
 }
+
 .like-button {
     border: 1px solid rgba(0, 0, 0, .1);
     display: inline-block;
@@ -308,9 +349,11 @@ ol {
     padding: 2%;
     font-size: 15px;
 }
+
 .winter-section h2 {
     color: #064E4B;
 }
+
 .winter-section h4 {
     color: #306844;
 }
@@ -325,54 +368,68 @@ ol {
 footer {
     padding: 3%;
 }
+
 #footer-logo {
     font-size: 20px;
 }
+
 .footer-16371 {
     padding: 7rem 0;
     font-family: "Poppins", sans-serif;
 }
+
 .footer-16371 .footer-site-logo {
     text-align: center;
     font-size: 2rem;
     font-weight: 900;
 }
+
 .footer-16371 .footer-site-logo a {
     color: #064E4B;
     font-weight: 300;
 }
+
 .footer-16371 .nav-links {
     padding: 0;
     margin: 0;
 }
+
 .footer-16371 .nav-links li {
     display: inline-block;
 }
+
 .footer-16371 .nav-links li a {
     padding: 10px;
     color: #000;
 }
+
 .footer-16371 .nav-links li a:hover {
     color: #63AA85;
 }
+
 .footer-16371 .social h3 {
     font-weight: bold;
     font-size: 18px;
     color: #000;
 }
+
 .footer-16371 .social ul li {
     display: inline-block;
 }
+
 .footer-16371 .social ul li a {
     display: inline-block;
     padding: 10px;
 }
+
 .footer-16371 .social ul li.in a {
     color: #df588a;
 }
+
 .footer-16371 .social ul li.tw a {
     color: #15b8ff;
 }
+
 .footer-16371 .social ul li.fb a {
     color: #3742d0;
 }
@@ -383,31 +440,40 @@ footer {
     .post-header {
         font-size: 50px;
     }
+
     .navbar-brand {
         font-size: 40px;
     }
+
     .nav-item {
         font-size: 35px;
     }
+
     .dropdown-menu {
         border: none;
     }
+
     .card-title {
         font-size: 45px;
     }
+
     .author {
         font-size: 25px;
     }
+
     .card-text,
     .pagination-btn a {
         font-size: 30px;
     }
+
     .tips-list {
         font-size: 33px;
     }
+
     #mistakes-list p {
         font-size: 30px;
     }
+
     #mistakes-list h4 {
         font-size: 33px;
     }
@@ -416,10 +482,12 @@ footer {
     #health-list {
         padding: 2%;
     }
+
     .health {
         font-size: 30px;
 
     }
+
     .health h4 {
         font-size: 35px;
     }
@@ -428,9 +496,11 @@ footer {
     footer {
         font-size: 27px
     }
+
     footer h6 {
         font-size: 30px;
     }
+
     footer i {
         font-size: 35px;
     }
@@ -439,9 +509,11 @@ footer {
     .winter-section {
         font-size: 30px;
     }
+
     .winter-section h4 {
         font-size: 35px;
     }
+
     .winter-section h2 {
         font-size: 40px;
     }
@@ -450,10 +522,12 @@ footer {
     .featured-cards {
         font-size: 50px;
     }
+
     .feature-icon,
     .feature-icon i {
         font-size: 40px;
     }
+
     .feature-row {
         justify-content: center;
     }
@@ -462,9 +536,11 @@ footer {
     .pets-header {
         font-size: 40px;
     }
+
     .list-pets {
         font-size: 28px;
     }
+
     .list-pets h4 {
         font-size: 30px;
     }
@@ -473,9 +549,11 @@ footer {
     .home-newsletter .single h3 {
         font-size: 60px;
     }
+
     .home-newsletter .single .form-control {
         height: 80px;
     }
+
     .home-newsletter .single .btn {
         height: 80px;
         font-size: 30px;
@@ -485,13 +563,16 @@ footer {
     .single p {
         font-size: 20px;
     }
+
     .profile_pic {
         width: 90%;
         font-size: 20px;
     }
+
     .user-info {
         font-size: 27px;
     }
+
     .profile-border {
         font-size: 20px;
     }
@@ -502,14 +583,17 @@ footer {
     .border-right .labels {
         font-size: 25px;
     }
+
     .border-right .form-control {
         height: fit-content;
         font-size: 25px;
     }
+
     .profile-input {
         font-size: 25px;
         padding-left: 30px;
     }
+
     .profile-input icon {
         padding: 10%;
     }
@@ -518,12 +602,15 @@ footer {
     .sign-out {
         font-size: 30px;
     }
+
     .sign-out h1 {
         font-size: 50px;
     }
+
     .sign-out button {
         font-size: 30px;
     }
+
     .edit-button>button {
         font-size: 25px;
     }
@@ -532,19 +619,24 @@ footer {
     .login-form {
         font-size: 30px;
     }
+
     .login input {
         font-size: 20px;
         line-height: 2;
     }
+
     .login a {
         font-size: 20px;
     }
+
     .login button {
         font-size: 23px;
     }
+
     .login a {
         font-size: 25px;
     }
+
     #id_remember {
         width: 30px;
     }
@@ -553,6 +645,7 @@ footer {
     .welcome-add {
         font-size: 26px;
     }
+
     .add-post form,
     .add-post-btn {
         font-size: 25px;
@@ -562,9 +655,11 @@ footer {
     #signup_form {
         font-size: 25px;
     }
+
     .form-group h1 {
         font-size: 50px;
     }
+
     .form-group p {
         font-size: 30px;
     }
@@ -580,6 +675,7 @@ footer {
     .navbar-brand {
         font-size: unset;
     }
+
     .nav-item {
         font-size: unset;
     }
@@ -588,30 +684,36 @@ footer {
     .card-title {
         font-size: 20px;
     }
+
     .pagination-btn a,
     .card-text,
     .author {
         font-size: unset;
-    } 
+    }
+
     .comments {
         left: 17%;
     }
 
     /* Index page features media query */
-    
+
     .tips-list,
     .health {
         font-size: unset;
     }
+
     .health h4 {
         font-size: 20px;
     }
+
     #mistakes-list p {
         font-size: unset;
     }
+
     #mistakes-list h4 {
         font-size: 20px;
     }
+
     #health-list {
         padding: unset;
     }
@@ -622,6 +724,7 @@ footer {
     footer i {
         font-size: unset
     }
+
     .feature-row {
         justify-content: unset;
     }
@@ -640,6 +743,7 @@ footer {
     .list-pets h4 {
         font-size: unset;
     }
+
     .pets-header {
         font-size: 20px;
     }
@@ -648,9 +752,11 @@ footer {
     .home-newsletter .single h3 {
         font-size: 30px;
     }
+
     .home-newsletter .single .form-control {
         height: 50px;
     }
+
     .home-newsletter .single .btn {
         height: 50px;
         font-size: unset;
@@ -661,6 +767,7 @@ footer {
     .profile-border {
         font-size: unset;
     }
+
     .profile_pic {
         width: 50%;
     }
@@ -673,14 +780,17 @@ footer {
     .edit-button>button {
         font-size: unset;
     }
+
     .border-right .form-control {
         height: unset;
         font-size: unset;
     }
+
     .profile-input {
         font-size: unset;
         padding-left: unset;
     }
+
     .profile-input icon {
         padding: unset;
     }
@@ -689,19 +799,24 @@ footer {
     .sign-out h1 {
         font-size: 25px;
     }
+
     .border-right .form-control {
         font-size: 15px;
     }
+
     .border-right {
         font-size: 15px;
     }
+
     .profile-input {
         font-size: unset;
         padding-left: unset;
     }
+
     .profile-input icon {
         padding: unset;
     }
+
     .sign-out,
     .sign-out button,
     .edit-button>button {
@@ -715,10 +830,12 @@ footer {
     .login a {
         font-size: unset;
     }
+
     .login input {
         font-size: unset;
         line-height: 1;
     }
+
     #id_remember {
         width: unset;
     }
@@ -735,6 +852,7 @@ footer {
     .form-group p {
         font-size: unset;
     }
+
     .form-group h1 {
         font-size: 30px;
     }
@@ -748,6 +866,7 @@ footer {
     .navbar-brand {
         font-size: 17px;
     }
+
     .nav-item a {
         font-size: 16px;
     }
@@ -756,12 +875,15 @@ footer {
     .post-header {
         font-size: 23px;
     }
+
     .card-title {
         font-size: 20px;
     }
+
     .comments {
         left: 17%;
     }
+
     .pagination-btn a,
     .card-text,
     .author {
@@ -778,32 +900,39 @@ footer {
         line-height: 1.5;
         margin-left: -6%;
     }
+
     .left-image {
         width: 60%;
         margin-left: -10%;
         height: auto;
         float: left;
     }
+
     .wrapper {
         display: block;
         padding: 0.5em;
     }
+
     #mistakes-list {
         left: -30%;
     }
+
     #mistakes-list p {
         float: right;
         margin-bottom: 10px;
         font-size: 13px;
     }
+
     .image-2 {
         width: 40%;
         height: auto;
         float: right;
     }
+
     #mistakes-list h4 {
         font-size: 15px;
     }
+
     #health-list {
         padding: unset;
         font-size: 13px;
@@ -811,12 +940,15 @@ footer {
         padding-bottom: 5%;
         width: 60%;
     }
+
     .health {
         font-size: 14px;
     }
+
     .health h4 {
         font-size: 20px;
     }
+
     .health h1 {
         font-size: 24px;
     }
@@ -827,9 +959,11 @@ footer {
     .add-post-btn {
         font-size: unset;
     }
+
     .feature-row {
         justify-content: unset;
     }
+
     .feature-icon,
     .feature-icon i {
         font-size: unset;
@@ -839,9 +973,11 @@ footer {
     .winter-section {
         font-size: unset;
     }
+
     .winter-section h4 {
         font-size: 20px;
     }
+
     .winter-section h2 {
         font-size: 20px;
     }
@@ -850,13 +986,16 @@ footer {
     .home-newsletter .single h3 {
         font-size: 20px;
     }
+
     .home-newsletter .single .form-control {
         height: 50px;
     }
+
     .home-newsletter .single .btn {
         height: unset;
         font-size: unset;
     }
+
     .single p {
         font-size: unset;
     }
@@ -866,13 +1005,16 @@ footer {
     .profile-border {
         font-size: unset;
     }
+
     .profile_pic {
         width: 60%;
 
     }
+
     .border-right .p-4 {
         margin-top: 55px;
     }
+
     .update-btn,
     .bio-section {
         font-size: unset;
@@ -888,10 +1030,12 @@ footer {
         height: fit-content;
         font-size: unset;
     }
+
     .profile-input {
         font-size: unset;
         padding-left: unset;
     }
+
     .profile-input icon {
         padding: unset;
     }
@@ -901,6 +1045,7 @@ footer {
     .sign-out button {
         font-size: unset;
     }
+
     .sign-out h1 {
         font-size: 23px;
     }
@@ -913,13 +1058,16 @@ footer {
     .login a {
         font-size: unset;
     }
+
     .login-form h1 {
         font-size: 23px;
     }
+
     .login input {
         font-size: unset;
         line-height: 1;
     }
+
     #id_remember {
         width: unset;
     }
@@ -936,9 +1084,11 @@ footer {
     .list-pets h4 {
         font-size: unset;
     }
+
     .pets-header {
         font-size: 20px;
     }
+
     .pets-image img {
         position: relative;
         top: -18%;
@@ -950,6 +1100,7 @@ footer {
     .post-header {
         font-size: 25px;
     }
+
     .comments {
         left: 17%;
     }
@@ -958,11 +1109,13 @@ footer {
     .navbar-brand {
         font-size: 18px;
     }
+
     .nav-item {
         font-size: 12px;
         padding: 5px;
         align-items: center;
     }
+
     .dropdown-menu {
         width: fit-content;
         width: 100%;
@@ -977,16 +1130,19 @@ footer {
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
     }
+
     .dropdown-toggle-split {
         display: inline-block;
         background: transparent;
         border-color: transparent;
     }
+
     .fa-bars,
     .dropdown-toggle-split {
         opacity: 0.7;
         color: #064E4B;
     }
+
     .nav-link {
         padding: 5px 0;
         width: 33%;
@@ -998,12 +1154,15 @@ footer {
     .card-title {
         font-size: 18px;
     }
+
     .card-text {
         font-size: 17px;
     }
+
     .col-md-4 {
         width: 90%;
     }
+
     .pagination-btn a,
     .author {
         font-size: 17px;
@@ -1019,27 +1178,34 @@ footer {
         line-height: 1.2;
         margin-left: -6%;
     }
+
     #mistakes-list p {
         font-size: 10px;
     }
+
     #mistakes-list h4 {
         font-size: 12px;
     }
+
     #health-list {
         padding: unset;
         font-size: 10px;
         margin-top: 10%;
         width: 60%;
     }
+
     .health {
         font-size: 13px;
     }
+
     .health h4 {
         font-size: 14px;
     }
+
     .health .tips {
         padding: 15%;
-    } 
+    }
+
     .tips {
         padding: 5%;
     }
@@ -1049,16 +1215,20 @@ footer {
         font-size: 10px;
         padding: 0;
     }
+
     footer i {
         width: fit-content;
     }
+
     footer h6 {
         font-size: 15px;
         padding: 0;
     }
+
     .footer-16371 .social ul li {
         display: inline-block;
     }
+
     .footer-16371 .social ul li a {
         display: inline-block;
         padding: 10px;
@@ -1073,13 +1243,16 @@ footer {
     .login a {
         font-size: unset;
     }
+
     .login-form h1 {
         font-size: 23px;
     }
+
     .login input {
         font-size: unset;
         line-height: 1;
     }
+
     #id_remember {
         width: unset;
     }
@@ -1089,15 +1262,18 @@ footer {
     .sign-out button {
         font-size: unset;
     }
+
     .sign-out h1 {
         font-size: 23px;
     }
+
     /* Add post section media query */
     .welcome-add,
     .add-post form,
     .add-post-btn {
         font-size: unset;
     }
+
     .feature-row {
         justify-content: unset;
         margin-right: 20px;
@@ -1110,9 +1286,11 @@ footer {
     .feature-icon i {
         font-size: unset;
     }
+
     .winter-section h4 {
         font-size: 19px;
     }
+
     .winter-section h2 {
         font-size: 20px;
     }
@@ -1121,6 +1299,7 @@ footer {
     .list-pets {
         font-size: 15px;
     }
+
     .list-pets h4 {
         font-size: unset;
     }
@@ -1128,40 +1307,50 @@ footer {
     .pets-header {
         font-size: 20px;
     }
+
     .pets-list {
         font-size: 13px;
     }
+
     /* Profile media query */
     .user-info,
     .profile-border {
         font-size: unset;
     }
+
     .profile_pic {
         width: 60%;
     }
+
     .border-right .p-4 {
         margin-top: 55px;
     }
+
     .update-btn,
     .bio-section {
         font-size: unset;
     }
+
     /* Update profile media query */
     .border-right .labels,
     .edit-button button {
         font-size: unset;
     }
+
     .border-right .form-control {
         height: fit-content;
         font-size: unset;
     }
+
     .edit-profile {
         width: max-content;
     }
+
     .profile-input {
         font-size: unset;
         padding: unset;
     }
+
     .profile-input icon {
         padding: unset;
     }
@@ -1170,23 +1359,27 @@ footer {
     .home-newsletter .single h3 {
         font-size: 20px;
     }
+
     .home-newsletter .single .form-control {
         height: 50px;
     }
+
     .home-newsletter .single .btn {
         height: unset;
         font-size: unset;
     }
+
     .single p {
         font-size: unset;
     }
 }
 
 /* For large phone screens sizes from 425px wide and down */
-@media screen and (max-width: 425px){
+@media screen and (max-width: 425px) {
     .dropdown-menu {
         left: 60%;
     }
+
     .card-title {
         font-size: 19px;
     }
@@ -1195,33 +1388,39 @@ footer {
         padding: 5px;
     }
     .post-card .card {
-        width: fit-content;
-        margin-left: -15%;
+        width: 170%;
+        margin-left: -30%;
     }
     .card-img-top {
         width: 200px;
     }
+
     .col-md-4 {
         width: fit-content;
     }
+
     .pagination-btn a,
     .author {
         font-size: 16px;
     }
 
-    /* Posts */ 
+    /* Posts */
     .post-body {
         width: 70%;
     }
+
     .post-body .container {
         margin-left: 23%;
     }
+
     .comments {
         left: -10%;
     }
+
     .d-grid {
         margin-right: 17%;
     }
+
     .like-button {
         margin-right: 17%;
     }
@@ -1230,44 +1429,55 @@ footer {
     .left-image {
         display: none;
     }
+
     .tips-list {
         min-width: 300px;
         font-size: 15px;
         margin-left: -20%;
         padding-bottom: 20px;
-        
+
     }
+
     .tips {
         padding-top: 20px;
     }
+
     .image-2 {
         display: none;
     }
+
     #mistakes-list {
         width: fit-content;
         left: 5%;
         font-size: 12px;
     }
+
     #mistakes-list p {
         font-size: 15px;
     }
+
     .mistakes-wrapper {
         padding: 12%;
     }
+
     #mistakes-list h4 {
         font-size: 15px;
     }
+
     #health-list {
         font-size: 12px;
         margin-top: 55%;
         width: 60%;
     }
+
     .health {
         font-size: 10px;
     }
+
     .health h4 {
         font-size: 14px;
     }
+
     .tips {
         padding: 15%;
     }
@@ -1278,6 +1488,7 @@ footer {
         padding: 25px;
         margin-left: 25px;
     }
+
     .winter {
         text-align: center;
         width: 150% !important;
@@ -1285,47 +1496,71 @@ footer {
         left: -15%;
         padding-left: -20px;
     }
+
     .winter h2 {
         right: 10%;
     }
+
     .winter-section h4 {
         font-size: 25px;
         width: 100%;
     }
+
     .winter-section {
         margin-left: -50%;
         padding-right: 20px;
     }
+
     .winter-section h2 {
         font-size: unset;
         width: 180%;
         margin-left: -8%;
     }
+
     .winter-section p {
         padding: -50px;
         width: 180%;
     }
 
     /* Pets */
-    .list-pets {
-     
-    }
     .post-image {
-        
+
         width: 95%;
         position: relative;
         left: -0.2% !important;
+    }
+
+    /* Edit profile media query */
+    .edit-profile .profile_pic {
+        width: 30%;
+        position: relative;
+    }
+
+    .edit-profile .profile-border {
+        display: none;
+    }
+
+    .border-right .form-control {
+        width: 40%;
+    }
 
     /* footer */
     footer {
         font-size: 10px;
         padding: 0;
     }
+
     .footer-16371 {
         padding: 12rem 0;
     }
-}
-/* For medium to small phone screens sizes from 375px wide and down */
-@media screen and (max-width: 375px){
 
+}
+
+/* For medium to small phone screens sizes from 375px wide and down */
+@media screen and (max-width: 375px) {
+
+    /* Index page media query */
+    .tips-list {
+        left: -20%;
+    }
 }
