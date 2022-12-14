@@ -1406,15 +1406,19 @@ footer {
 
     /* Posts */
     .post-body {
-        width: 70%;
+        width: 80%;
+        
     }
+    
 
     .post-body .container {
-        margin-left: 23%;
+        margin-left: 10%;
     }
-
+    .post-image-card {
+        margin-left: 20%;
+    }
     .comments {
-        left: -10%;
+        left: -5%;
     }
 
     .d-grid {
@@ -1431,7 +1435,7 @@ footer {
     }
 
     .tips-list {
-        min-width: 300px;
+        min-width: 260px;
         font-size: 15px;
         margin-left: -20%;
         padding-bottom: 20px;
@@ -1489,16 +1493,16 @@ footer {
         margin-left: 25px;
     }
 
-    .winter {
+    .winter img {
         text-align: center;
         width: 150% !important;
         justify-content: center;
-        left: -15%;
-        padding-left: -20px;
+        left: -20% !important;
+        padding-left: -30px;
     }
 
     .winter h2 {
-        right: 10%;
+        text-align: center;
     }
 
     .winter-section h4 {
@@ -1508,21 +1512,19 @@ footer {
 
     .winter-section {
         margin-left: -50%;
-        padding-right: 20px;
+        padding-right: 10px;
     }
 
     .winter-section h2 {
         font-size: unset;
         width: 180%;
-        margin-left: -8%;
+        margin-left: 10%;
     }
 
     .winter-section p {
         padding: -50px;
         width: 180%;
     }
-
-    /* Pets */
     .post-image {
 
         width: 95%;
@@ -1535,11 +1537,9 @@ footer {
         width: 30%;
         position: relative;
     }
-
     .edit-profile .profile-border {
         display: none;
     }
-
     .border-right .form-control {
         width: 40%;
     }
@@ -1549,7 +1549,6 @@ footer {
         font-size: 10px;
         padding: 0;
     }
-
     .footer-16371 {
         padding: 12rem 0;
     }
@@ -1562,5 +1561,19 @@ footer {
     /* Index page media query */
     .tips-list {
         left: -20%;
+    }
+    .post-header {
+        text-align: center;
+    }
+    .card-body {
+        width: fit-content;
+    }
+    .post-card .card {
+        width: fit-content;
+        right: 15%;
+    }
+
+    .health .tips {
+        padding: 10%;
     }
 }
