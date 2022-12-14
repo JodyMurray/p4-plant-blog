@@ -1571,6 +1571,7 @@ footer {
     }
     .post-header {
         text-align: center;
+        white-space: nowrap;
     }
     .card-body {
         width: fit-content;
@@ -1601,5 +1602,76 @@ footer {
     }
     .dropdown-menu {
         left: 55%;
+    }
+}
+
+/* For small phone screens sizes from 320px wide and down */
+@media screen and (max-width: 320px) {
+/* Navbar */
+    .dropdown-menu {
+        left: 48%;
+    }
+    /* Index page */
+    .card-body {
+        left: 80%;
+    }
+    .post-card .card {
+        right: 90%;
+    }
+    .tips-list {
+        left: -55%;
+    }
+    .health .tips {
+        left: 25%;
+        margin-top: 10%;
+    }
+    #health-list {
+        margin-top: 130%;
+    }
+    /* Blog posts */ 
+    .post-body {
+        width: 85%;
+    }
+
+    #id_content {
+        width: 95%;
+    }
+    #id_excerpt {
+        width: 95%;
+    }
+    #id_featured_image {
+        width: 90%;
+    }
+    .welcome-add {
+        width: 95%;
+        margin-left: 5%;
+    }
+
+    .feature-row {
+        width: 107%;
+        margin-left: -3%;
+    }
+
+    .winter img {
+        width: 280% !important;
+        left: -90% !important;
+    }
+    .winter-section h2 {
+        width: 250%;
+    }
+    .winter-section {
+        width: 160%;
+        margin-left: -130%;
+    }
+    .winter-section p {
+        padding: -50px;
+        width: 290%;
+    }
+    .tips {
+        right: 90%;
+    }
+    /* Footer media query */
+    .footer-16371 {
+        padding: 25rem 0 6rem;
     }
 }
