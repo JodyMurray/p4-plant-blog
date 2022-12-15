@@ -142,3 +142,12 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
  <br>
 
 ![screenshot](media/wireframes3.png)
+
+
+### Images
+
+- All images were found through google and stored using Cloudinary.
+
+## Features
+
+### Application Features
