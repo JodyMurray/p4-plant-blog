@@ -465,7 +465,33 @@ footer {
     .pagination-btn a {
         font-size: 30px;
     }
+    .post-image-card {
+        margin-left: 25%;
+        font-size: 30px;
+    }
+    .post-image-card h3 {
+        font-size: 35px;
+    }
+    .post-title {
+        font-size: 50px;
+    }
+    .post-subtitle {
+        font-size: 30px;
+    }
+    .d-grid a {
+        font-size: 30px;
+    }
+    .like-button {
+        font-size: 30px;
+    }
+    .comments {
+        left: 15%;
+    }
+    .post-content button {
+        font-size: 30px;
+    }
 
+    /* Index section */
     .tips-list {
         font-size: 33px;
     }
@@ -481,6 +507,12 @@ footer {
     /* Health section media query */
     #health-list {
         padding: 2%;
+    }
+    .health .tips {
+        left: 35%;
+    }
+    .health img {
+        left: 50%;
     }
 
     .health {
@@ -561,7 +593,7 @@ footer {
 
     /* Profile media query */
     .single p {
-        font-size: 20px;
+        font-size: 30px;
     }
 
     .profile_pic {
@@ -613,6 +645,11 @@ footer {
 
     .edit-button>button {
         font-size: 25px;
+    }
+
+    /* Register section media query */ 
+    .signup button {
+        font-size: 30px;
     }
 
     /* Login page media query */
@@ -694,12 +731,30 @@ footer {
     .comments {
         left: 17%;
     }
+    .post-image-card {
+        margin-left: 25%;
+        font-size: unset;
+    }
+    .post-image-card h3,
+    .post-subtitle,
+    .d-grid a,
+    .like-button,
+    .post-content button {
+        font-size: unset;
+    }
+    .post-title {
+        font-size: 25px;
+    }
+    
+    .comments {
+        left: 15%;
+    }
 
     /* Index page features media query */
-
     .tips-list,
     .health {
         font-size: unset;
+        margin-bottom: 15%;
     }
 
     .health h4 {
@@ -737,6 +792,9 @@ footer {
     .feature-icon i {
         font-size: unset;
     }
+    .winter-section h2 {
+        font-size: 30px;
+    }
 
     /* pets section media query */
     .list-pets,
@@ -761,6 +819,9 @@ footer {
         height: 50px;
         font-size: unset;
     }
+    .single p {
+        font-size: 25px;
+    }
 
     /* Profile media query */
     .user-info,
@@ -771,7 +832,6 @@ footer {
     .profile_pic {
         width: 50%;
     }
-
 
     /* Update profile media query */
     .bio-section,
@@ -858,7 +918,6 @@ footer {
     }
 }
 
-
 /* For Medium screens sizes from 1024px wide and down */
 @media screen and (min-width: 800px) and (max-width: 1400px) {
 
@@ -883,11 +942,28 @@ footer {
     .comments {
         left: 17%;
     }
+    .post-image-card {
+        margin-left: 25%;
+        font-size: unset;
+    }
+    .post-image-card h3,
+    .post-subtitle,
+    .d-grid a,
+    .like-button,
+    .post-content button {
+        font-size: unset;
+    }
+    .post-title {
+        font-size: 25px;
+    }
 
     .pagination-btn a,
     .card-text,
     .author {
         font-size: unset;
+    }
+    .post-image-card {
+        margin-left: 25%;
     }
 
     /* Index features media query */
@@ -1167,6 +1243,24 @@ footer {
     .author {
         font-size: 17px;
     }
+    .post-image-card {
+        margin-left: 25%;
+    }
+    .post-subtitle,
+    .d-grid a,
+    .like-button,
+    .post-content button {
+        font-size: unset;
+    }
+    .post-image-card h3 {
+        font-size: 20px;
+    }
+    .post-content {
+        font-size: 15px;
+    }
+    .post-title {
+        font-size: 20px;
+    }
 
     /* Index features media query */
     .tips-list {
@@ -1204,6 +1298,7 @@ footer {
 
     .health .tips {
         padding: 15%;
+        left: 37%;
     }
 
     .tips {
@@ -1383,14 +1478,17 @@ footer {
     .card-title {
         font-size: 19px;
     }
+
     .card-text {
         font-size: 15px;
         padding: 5px;
     }
+
     .post-card .card {
         width: 170%;
         margin-left: -30%;
     }
+
     .card-img-top {
         width: 200px;
     }
@@ -1407,16 +1505,16 @@ footer {
     /* Posts */
     .post-body {
         width: 80%;
-        
     }
-    
 
     .post-body .container {
         margin-left: 10%;
     }
+
     .post-image-card {
         margin-left: 20%;
     }
+
     .comments {
         left: -5%;
     }
@@ -1439,7 +1537,6 @@ footer {
         font-size: 15px;
         margin-left: -20%;
         padding-bottom: 20px;
-
     }
 
     .tips {
@@ -1481,7 +1578,10 @@ footer {
     .health h4 {
         font-size: 14px;
     }
-
+    .health .tips {
+        left: 35%;
+        width: max-content;
+    }
     .tips {
         padding: 15%;
     }
@@ -1525,8 +1625,8 @@ footer {
         padding: -50px;
         width: 180%;
     }
-    .post-image {
 
+    .post-image {
         width: 95%;
         position: relative;
         left: -0.2% !important;
@@ -1537,25 +1637,30 @@ footer {
         width: 30%;
         position: relative;
     }
+
     .edit-profile .profile-border {
         display: none;
     }
+
     .profile-border {
         border-right: none;
     }
+
     .border-right .form-control {
         width: 40%;
     }
+
     .border-right {
         border-top: 1px solid rgba(0, 0, 0, .1);
     }
-    
+
 
     /* footer */
     footer {
         font-size: 10px;
         padding: 0;
     }
+
     .footer-16371 {
         padding: 12rem 0 6rem;
     }
@@ -1569,24 +1674,30 @@ footer {
     .tips-list {
         left: -20%;
     }
+
     .post-header {
         text-align: center;
         white-space: nowrap;
     }
+
     .card-body {
         width: fit-content;
     }
+
     .post-card .card {
         width: fit-content;
         right: 15%;
     }
+
     .health .tips {
         padding: 10%;
         left: 35%;
     }
+
     #health-list {
         margin-top: 80%;
     }
+
     /* Profile page media query */
     .border-right {
         padding-right: 0;
@@ -1597,9 +1708,11 @@ footer {
         font-size: 10px;
         padding: 0;
     }
+
     .footer-16371 {
         padding: 18rem 0 6rem;
     }
+
     .dropdown-menu {
         left: 55%;
     }
@@ -1607,28 +1720,35 @@ footer {
 
 /* For small phone screens sizes from 320px wide and down */
 @media screen and (max-width: 320px) {
-/* Navbar */
+
+    /* Navbar */
     .dropdown-menu {
         left: 48%;
     }
+
     /* Index page */
     .card-body {
         left: 80%;
     }
+
     .post-card .card {
         right: 90%;
     }
+
     .tips-list {
         left: -55%;
     }
+
     .health .tips {
         left: 25%;
         margin-top: 10%;
     }
+
     #health-list {
         margin-top: 130%;
     }
-    /* Blog posts */ 
+
+    /* Blog posts */
     .post-body {
         width: 85%;
     }
@@ -1636,12 +1756,15 @@ footer {
     #id_content {
         width: 95%;
     }
+
     #id_excerpt {
         width: 95%;
     }
+
     #id_featured_image {
         width: 90%;
     }
+
     .welcome-add {
         width: 95%;
         margin-left: 5%;
@@ -1656,20 +1779,25 @@ footer {
         width: 280% !important;
         left: -90% !important;
     }
+
     .winter-section h2 {
         width: 250%;
     }
+
     .winter-section {
         width: 160%;
         margin-left: -130%;
     }
+
     .winter-section p {
         padding: -50px;
         width: 290%;
     }
-    .tips {
+
+    /* .tips {
         right: 90%;
-    }
+    } */
+
     /* Footer media query */
     .footer-16371 {
         padding: 25rem 0 6rem;
