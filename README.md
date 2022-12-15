@@ -4,7 +4,7 @@ This is a blog for plant lovers, the site includes blog-like posts, sign-up and 
 
 This project is the fourth of five projects that needs to be completed in order to receve a diploma in Software Development from The Code Institute.
 
-A live version of this website will be found here:
+A live version of this website will be found here: https://jodys-plants.herokuapp.com/
 
 
 ## Table of Contents ##
@@ -34,11 +34,11 @@ A live version of this website will be found here:
 </details>
 <details><summary>Features</summary>
 
-- [Application Features](#application_features "Application Features")
+- [NavBar](#nav_bar "NavBar")
 - [Home Landing Page](#home_landing_page "Home Landing Page")
 - [Featured Posts](#featured-posts "Featured Posts")
 - [Profile Page](#profile-page "Profile Page")
-- [Sign-up](#sign-up "Sign-up")
+- [Sign-in](#sign-in "Sign-in")
 - [Register](#register "Register")
 - [Newsletter](#newsletter "Newsletter")
 - [CRUD](#crud "CRUD")
@@ -150,4 +150,109 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 
 ## Features
 
-### Application Features
+### NavBar
+
+- The Navbar is sticky, so it can show login options constantly and home page redirection.
+
+![screenshot](media/navbar.png)
+
+- For responsive design, the Navbar collapses into a dropdown menu for screens 768px and below.
+
+![screenshot](media/navbar2.png)
+
+
+### Home Landing Page
+
+- The landing/home page brings you to the blog posts.
+- Each card brings you to the blog post page, featuring tips, images and a comment and like section.
+
+![screenshot](media/landing-page.png)
+![screenshot](media/blog-area.png)
+
+- Scrolling down the index page we have a "Quick Tips Section":
+
+![screenshot](media/quick-tips.png)
+
+- A common mistakes section:
+
+![screenshot](media/common-mistakes.png)
+
+- A section on why plants are good for your health:
+
+![screenshot](media/health.png)
+
+- And finally for the landing page, the Footer:
+
+![screenshot](media/footer.png)
+
+### Featured Posts 
+
+- Featured posts is an option in the Navbar and brings you to a HTML with two cards, which would ideally be changed seasonly.
+
+![screenshot](media/featured.png)
+
+- The first Featured Post is called "Winter is Coming":
+
+![screenshot](media/winter.png)
+
+- The other card features a post all regarding pets and their safety, along with how to keep the plants safe too!
+
+![screenshot](media/pets.png)
+
+### Profile Page
+
+- Once you sign up to a profile, you'll get redirected to your very own Profile page which you can edit by adding your name, profile picture and a bio!
+- Also featured is a message that pops up indicating a successful login!
+
+![screenshot](media/profile.png)
+
+- Here is the edit profile page:
+- Updating your profile will show a success message on the index page.
+
+![screenshot](media/edit-profile.png)
+
+### Sign-in
+
+- The Sign up page requires username and password to sign in, including a "forgot password" section.
+
+![screenshot](media/signin.png)
+
+### Register
+
+- The register page requires specific information to sign up for a profile, and includes a social media sign in section.
+
+![screenshot](media/signup.png)
+
+### Newsletter
+
+- The newsletter feature does not show up until you sign into your account, then you can spot it in the Navbar.
+
+- The Newsletter feature allows you to signup for the site's ongoing newsletter with featured posts about plants.
+- You can submit your email, after clicking the "Newsletter" button on the Navbar, and from the newsleter page you can choose to be redirected to an unsubscribe page to unsubscribe your email from the newsletter.
+- I came across some issues implementing this feature. Attempts to use GMAIL failed as they took away this feature just this year, I will include an option to check the results of this feature with a free email service called mailtrap.io. 
+- From mailtrap.io it is possible to see the template newsletter is being sent and linking the email used by the user.
+
+![screenshot](media/newsletter.png)
+<br>
+![screenshot](media/unsub.png)
+
+
+- Once you unsubscribe, you will see a message confirming that your email has been removed from the database.
+
+![screenshot](media/unsubscribe.png)
+
+### CRUD 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

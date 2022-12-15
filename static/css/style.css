@@ -882,6 +882,9 @@ footer {
     .edit-button>button {
         font-size: unset;
     }
+    .signup button {
+        font-size: 18px;
+    }
 
     /* Login page media query */
     .login-form,
