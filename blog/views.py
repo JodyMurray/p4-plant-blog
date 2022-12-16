@@ -44,7 +44,13 @@ class UserSettings(View):
 class AddPostView(CreateView):
     model = Post
     template_name = 'add_post.html'
-    fields = '__all__'
+    fields = [
+        'title',
+        'author',
+        'content',
+        'excerpt',
+        'featured_image',
+        'status']
 
 
 class PostList(generic.ListView):
@@ -143,6 +149,10 @@ def delete_post(request, id):
     # success_message = ("Your Post has been deleted")
     post = Post.objects.filter(id=id)
     post.delete()
+    messages.success(
+            request,
+            'Post deleted successfully.'
+        )
 
     # messages.success(self.request, self.success_message)
     return redirect('/')

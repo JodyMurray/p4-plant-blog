@@ -359,9 +359,7 @@ The following is a list of resources used to put this project together.
 - No custom JavaScript code has been written for this project, only what is included with Bootstrap4.
 
 * **Lighthouse testing**
-- For desktop:
-    ![screenshot](media/lighthouse.png)
-- For Mobile:
+
 
 * **Python Validator**
 

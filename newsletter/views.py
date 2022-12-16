@@ -13,15 +13,14 @@ def newsletter_signup(request):
 
         if form.is_valid():
             instance = form.save(commit=False)
-            # if NewsLetter.objects.filter(email=instance.email).exists():
             if NewsLetter.objects.filter(email=instance.email).exists():
                 messages.warning(request, "Your email already exists in our database",
                                  "alert alert-warning alert-dismissible")
 
             else:
                 instance.save()
-                # messages.success(request, "Your email has been submitted to the database",
-                #                  "alert alert-success alert-dismissible")
+                messages.success(request, "Your email has been submitted to the database",
+                                 "alert alert-success alert-dismissible")
             email = form.cleaned_data['email']
             print(form.cleaned_data['email'])
             print("Email valid")
@@ -40,31 +39,6 @@ def newsletter_signup(request):
     return render(request, 'newsletter/register.html', {
         'form': form
     })
-
-    # form = JoinForm(request.POST or None)
-
-    # if form.is_valid():
-    #     instance = form.save(commit=False)
-    #     if NewsLetter.objects.filter(email=instance.email).exists():
-    #         messages.warning(
-    #             request, "Your email already exists in our database",
-    #             "alert alert-warning alert-dismissible")
-    #     else:
-    #         instance.save()
-    #         messages.success(request, "Your email has been submitted to the database",
-    #                          "alert alert-success alert-dismissible")
-    #         subject = "Thank you for joining our Newsletter"
-    #         from_email = settings.EMAIL_HOST_USER
-    #         to_email = [instance.email]
-    #         signup_message = """ Welcome to Jody's Plant Blog Newsletter """
-    #         send_mail(subject=subject, from_email=from_email,
-    #                   recipient_list=to_email, message=signup_message, fail_silently=False)
-
-    # context = {
-    #     'form': form,
-    # }
-    # template = "newsletter/register.html"
-    # return render(request, template, context)
 
 
 def newsletter_unsubscribe(request):
