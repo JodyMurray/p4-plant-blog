@@ -747,7 +747,7 @@ footer {
     }
     
     .comments {
-        left: 15%;
+        left: 0;
     }
 
     /* Index page features media query */

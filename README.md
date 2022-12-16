@@ -34,23 +34,25 @@ A live version of this website will be found here: https://jodys-plants.herokuap
 </details>
 <details><summary>Features</summary>
 
-- [NavBar](#nav_bar "NavBar")
-- [Home Landing Page](#home_landing_page "Home Landing Page")
+- [NavBar](#navbar "NavBar")
+- [Home Landing Page](#home-landing-page "Home Landing Page")
 - [Featured Posts](#featured-posts "Featured Posts")
 - [Profile Page](#profile-page "Profile Page")
 - [Sign-in](#sign-in "Sign-in")
 - [Register](#register "Register")
 - [Newsletter](#newsletter "Newsletter")
 - [CRUD](#crud "CRUD")
+- [Defensive Design](#defensive-design "Defensive Design")
+
 
 
 </details>
 
 <details><summary>Technologies Used</summary>
 
-- [Languages Used](#languages_used "Languages Used")
-- [Python Libraries and API](#python_libraries_and_api "Python Libraries and API")
-- [Storing Data](#storing_data "Storing Data")
+- [Languages Used](#languages-used "Languages Used")
+- [Python Libraries and API](#python-libraries-and-api "Python Libraries and API")
+- [Storing Data](#storing-data "Storing Data")
 
 </details>
 <details><summary>Testing</summary>
@@ -127,7 +129,7 @@ The colour scheme chosen works with the theme of the topic chosen for the websit
 All fonts are from the Google Fonts library.The following fonts were chosen for the page:
 
 - 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif for the navbar.
-- Satisfy for each page heading and the heading for the user's profile page.
+- Satisfy font for each page heading and the heading for the user's profile page.
 - Verdana, Geneva, Tahoma, sans-serif for the body font and content.
 - Pacifico font for the headings in the "health" section on the home page.
 
@@ -139,7 +141,8 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 <br>
 
 ![screenshot](media/wireframes2.png)
- <br>
+
+<br>
 
 ![screenshot](media/wireframes3.png)
 
@@ -234,6 +237,7 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 
 ![screenshot](media/newsletter.png)
 <br>
+
 ![screenshot](media/unsub.png)
 
 
@@ -244,6 +248,80 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 ### CRUD 
 
 
+  | Operations                        | All users | Auth. user | Superuser |
+  | --------------------------------- | --------- | ---------- | --------- |
+  | View homepage                     | Yes       | Yes        | Yes       |
+  | View featured page                | Yes       | Yes        | Yes       |
+  | View profile page                 | No        | Yes        | Yes       |
+  | Add email to newsletter           | Yes       | Yes        | Yes       |
+  | Delete email from newsletter db.  | Yes       | Yes        | Yes       |
+  | Add/Edit/Delete profile           | No        | Yes        | Yes       |
+  | Add/Delete/Edit blog post.        | No        | No         | Yes       |
+  | Login                             | No        | Yes        | Yes       |
+  | Register                          | Yes       | No         | No        |
+  | View all comments                 | Yes       | Yes        | Yes       |
+  | Add a comment                     | No        | Yes        | Yes       |
+  | Edit/Delete a comment             | No        | No         | Yes       |
+
+
+### Defensive Design 
+- #### **Delete operations:**
+    - **Users** first need to confirm that they are sure that they want to delete:
+    - The user account.
+
+
+    - **Admin** first need to confirm that they are sure they want to delete:
+    - Blog Posts
+
+
+- #### **Comment status:**
+ - Comments can be written only by authorised users after logging in.
+    - If the admin does not approve the review:
+        - Comment will not be displayed on the blog post page comment section.
+    - In the comments section in the blog post, a box will display information:
+    ![screenshot](media/approval.png)
+
+- If the admin approves the review:
+    - In the comments section you will see the comment displayed:
+    ![screenshot](media/approved.png)
+
+- #### **Admin user mode:**
+- Authorised admin login allows for a few small features to allow easy access to edit and create posts from the webpage directly: 
+    ![screenshot](media/adminonly.png)
+- Authorised admin can add a blog post:
+    ![screenshot](media/createpost.png)
+- Authorised admin can also edit or delete blog posts from each post page:
+    ![screenshot](media/edit_delete.png)
+
+
+
+
+## Technologies Used
+### **Languages Used**
+- [HTML](https://html.spec.whatwg.org/multipage/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [Python](https://www.python.org/)
+
+### Databases platform and cloud storage
+
+- SQlite: SQL database engine provided by default as part of Django and used during development.
+- Heroku Postgres: SQL database service provided directly by Heroku for storing data.
+- Cloudinary: to store images and static files in production.
+- Heroku: to deploy and run the application in production.
+
+
+### Python Libraries and API
+
+- Google Fonts - for the font families: 
+- Font Awesome - to add icons to the social links in the footer element.
+- GitPod - to create my html files & styling sheet before pushing the project to Github.
+- GitHub - to store my repository for submission.
+- Balsamiq - were used to create mockups of the project prior to starting.
+- Am I Responsive? - to ensure the project looked good across all devices.
+- Favicon - to provide the code & image for the icon in the tab bar.
+- Django
+- Bootstrap
 
 
 
