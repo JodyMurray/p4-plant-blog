@@ -2,16 +2,51 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
 from django.views.generic import FormView
 from django.views.generic.edit import CreateView
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from .models import Post, Profile, User
 from django.contrib import messages
-from .forms import CommentForm, EditProfileForm
+from .forms import CommentForm, EditProfileForm, UserDeleteForm
 
 
 class UserProfile(generic.ListView):
     model = Profile
     queryset = Profile.objects.all()
     template_name = 'profile.html'
+
+
+# class DeleteProfile(View):
+#     def post(self, request, *args, **kwargs):
+#         profile = Profile.objects.filter(
+#             user=request.user
+#         )
+#         profile.delete()
+
+#         messages.success(
+#                 request,
+#                 'Profile deleted successfully.'
+#             )
+#         return HttpResponseRedirect(
+#             reverse(
+#                 'home'
+#             )
+#         )
+@login_required
+def deleteuser(request):
+    if request.method == 'POST':
+        delete_form = UserDeleteForm(request.POST, instance=request.user)
+        user = request.user
+        user.delete()
+        messages.info(request, 'Your account has been deleted.')
+        return redirect('home')
+    else:
+        delete_form = UserDeleteForm(instance=request.user)
+
+    context = {
+        'delete_form': delete_form
+    }
+
+    return render(request, 'home.html', context)
 
 
 class UserSettings(View):
@@ -146,7 +181,6 @@ def PetsPost(request):
 
 
 def delete_post(request, id):
-    # success_message = ("Your Post has been deleted")
     post = Post.objects.filter(id=id)
     post.delete()
     messages.success(
@@ -154,7 +188,6 @@ def delete_post(request, id):
             'Post deleted successfully.'
         )
 
-    # messages.success(self.request, self.success_message)
     return redirect('/')
 
 

@@ -17,6 +17,12 @@ class EditProfileForm(forms.ModelForm):
         exclude = ['user']
 
 
+class UserDeleteForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = []
+
+
 class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
