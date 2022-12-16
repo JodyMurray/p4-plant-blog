@@ -1,5 +1,8 @@
 # Jody's Plant Blog
 
+![screenshot](media/responsive.png)
+
+
 This is a blog for plant lovers, the site includes blog-like posts, sign-up and edit profile section, featured posts and a newsletter sign-up. Also included is a feature for admin to easily edit and delete blog posts from each blog post page.
 
 This project is the fourth of five projects that needs to be completed in order to receve a diploma in Software Development from The Code Institute.
