@@ -14,9 +14,9 @@
         {% if "placeholder" in post.featured_image.url %}
         <img class="post-image"
             src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?cs=srgb&dl=pexels-alena-koval-886521.jpg&fm=jpg&_gl=1*1yqe4ni*_ga*MTM3NzE5NzA4NS4xNjY2Njc4OTQz*_ga_8JE65Q40S6*MTY2NjY4NTIxNS4yLjEuMTY2NjY4NTgxOS4wLjAuMA.."
-            width="100%">
+            width="100%" alt="post image">
         {% else %}
-        <img src=" {{ post.featured_image.url }}" width="100%">
+        <img src=" {{ post.featured_image.url }}" width="100%" alt="featured image">
         {% endif %}
         <!-- Post content -->
         <div class="row justify-content-center post-content">
@@ -78,7 +78,7 @@
                             <p class="font-weight-bold">
 
                                 <img class="thumbnail rounded-circle profile_pic" style="width: 10%;"
-                                    src="{{ user.get_profile_pic }}" />
+                                    alt="profile pic" src="{{ user.get_profile_pic }}" />
                                 {{ comment.name }}
 
 

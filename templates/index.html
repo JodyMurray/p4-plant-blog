@@ -27,9 +27,10 @@
                         <div class="image-container">
                             {% if "placeholder" in post.featured_image.url %}
                             <img class="card-img-top rounded mx-auto d-block"
-                                src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?cs=srgb&dl=pexels-alena-koval-886521.jpg&fm=jpg&_gl=1*1yqe4ni*_ga*MTM3NzE5NzA4NS4xNjY2Njc4OTQz*_ga_8JE65Q40S6*MTY2NjY4NTIxNS4yLjEuMTY2NjY4NTgxOS4wLjAuMA..">
+                                src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?cs=srgb&dl=pexels-alena-koval-886521.jpg&fm=jpg&_gl=1*1yqe4ni*_ga*MTM3NzE5NzA4NS4xNjY2Njc4OTQz*_ga_8JE65Q40S6*MTY2NjY4NTIxNS4yLjEuMTY2NjY4NTgxOS4wLjAuMA.."
+                                alt="card img">
                             {% else %}
-                            <img class="card-img-top" src=" {{ post.featured_image.url }}">
+                            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="card img">
                             {% endif %}
                             <div class="image-flash">
                                 <p class="author">Author: {{ post.author }}</p>
@@ -87,7 +88,7 @@
             <h1 class="tips post-header">Quick Tips</h1>
             <div class="left-image col-7">
                 <img class="rounded-circle col-10"
-                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667203578/minimal_ll5djf.jpg" alt="">
+                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667203578/minimal_ll5djf.jpg" alt="woman planting">
             </div>
 
             <ol class="col-sm col-5 tips-list">
@@ -120,7 +121,7 @@
             <div class="image-2 col-7">
                 <img class="rounded-circle col-10"
                     src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667217425/blue-background_wmmrnm.jpg"
-                    alt="">
+                    alt="plant">
             </div>
 
             <div class="col-6" id="mistakes-list">
@@ -164,7 +165,7 @@
 
                 <img class="rounded-circle col-10"
                     src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667303062/pinkhair_letyourselfgrow_4x_vtkyvn.jpg"
-                    alt="">
+                    alt="woman floral">
                 <div id="health-list">
                     <div class="text-center health">
                         <h4>Stress reduction.</h4>

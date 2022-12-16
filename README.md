@@ -1,4 +1,4 @@
-# Jody's Plant Blog
+# **Jody's Plant Blog**
 
 ![screenshot](media/responsive.png)
 
@@ -10,7 +10,7 @@ This project is the fourth of five projects that needs to be completed in order 
 A live version of this website will be found here: https://jodys-plants.herokuapp.com/
 
 
-## Table of Contents ##
+## **Table of Contents** ##
 <details><summary>UX</summary>
 
 - [User Demographic](#user-demographic "User Demographic")
@@ -47,19 +47,17 @@ A live version of this website will be found here: https://jodys-plants.herokuap
 - [CRUD](#crud "CRUD")
 - [Defensive Design](#defensive-design "Defensive Design")
 
-
-
 </details>
 
 <details><summary>Technologies Used</summary>
 
 - [Languages Used](#languages-used "Languages Used")
 - [Python Libraries and API](#python-libraries-and-api "Python Libraries and API")
-- [Storing Data](#storing-data "Storing Data")
 
 </details>
 <details><summary>Testing</summary>
 
+- [Introduction](#introduction "Introduction")
 - [Validator testing](#validator-testing "Validator Testing")
 - [Testing and bugs](#testing-and-bugs "Testing and bugs")
 - [Fixed Bugs](#fixed-bugs "Fixed Bugs") 
@@ -88,33 +86,33 @@ A live version of this website will be found here: https://jodys-plants.herokuap
 
 ------------------------------------------------------------------------------------------------------------
 
-## UX 
+## **UX**
 
-### User Demographic
+### **User Demographic**
 
 This application has been designed for users of all ages who love to garden and learn new things about plants.
 It also includes a feature to create and personalise a profile with a profile picture and a biography entry, and with this you can comment on blog posts, to give more advice or ask questions!
 
-### Site Goals
+### **Site Goals**
 
 To build a platform to allow users to read blog posts, make a profile and comment on posts and allow them to also sign up for a newsletter sent to their email. Also included is admin access through the website for the admin to add, update or delete posts from each blog post page. Which allows the admin to easily see how a post would look with just the click of a button.
 
 
-### User Goals
+### **User Goals**
 To engage with topics that interest them, make a personalised profile to feel welcome to the site and encourages them to explore the site and all it has to offer.
 
-### Audience
+### **Audience**
 For anyone who has an interest in plants and gardening of all sorts! Users of all ages and all levels of skills in gardening.
 
-## User Stories
+## **User Stories**
 
-### Site User Stories
+### **Site User Stories**
 
-### Admin Stories
+### **Admin Stories**
 
-## Design
+## **Design**
 
-### Colour Scheme
+### **Colour Scheme**
 
 The colour scheme chosen works with the theme of the topic chosen for the website. 
 - The colour chosen for headings is #2F6844.
@@ -127,7 +125,7 @@ The colour scheme chosen works with the theme of the topic chosen for the websit
 
 
 
-### Typography
+### **Typography**
 
 All fonts are from the Google Fonts library.The following fonts were chosen for the page:
 
@@ -137,7 +135,9 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 - Pacifico font for the headings in the "health" section on the home page.
 
 
-### Wireframes
+### **Wireframes**
+
+The first Wireframe image shows the blog posts in a set of 6, later the pagination was changed. The purpose of this was to lessen the bulk on the index page content wise.
 
 ![screenshot](media/wireframes1.png)
 
@@ -147,16 +147,19 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 
 <br>
 
+
+This last wireframe image has the newsletter section at the end of the page, which later was changed to include it on a separate HTML page.
+
 ![screenshot](media/wireframes3.png)
 
 
-### Images
+### **Images**
 
 - All images were found through google and stored using Cloudinary.
 
-## Features
+## **Features**
 
-### NavBar
+### **NavBar**
 
 - The Navbar is sticky, so it can show login options constantly and home page redirection.
 
@@ -167,7 +170,7 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 ![screenshot](media/navbar2.png)
 
 
-### Home Landing Page
+### **Home Landing Page**
 
 - The landing/home page brings you to the blog posts.
 - Each card brings you to the blog post page, featuring tips, images and a comment and like section.
@@ -191,7 +194,7 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 
 ![screenshot](media/footer.png)
 
-### Featured Posts 
+### **Featured Posts** 
 
 - Featured posts is an option in the Navbar and brings you to a HTML with two cards, which would ideally be changed seasonly.
 
@@ -205,7 +208,7 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 
 ![screenshot](media/pets.png)
 
-### Profile Page
+### **Profile Page**
 
 - Once you sign up to a profile, you'll get redirected to your very own Profile page which you can edit by adding your name, profile picture and a bio!
 - Also featured is a message that pops up indicating a successful login!
@@ -217,19 +220,19 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 
 ![screenshot](media/edit-profile.png)
 
-### Sign-in
+### **Sign-in**
 
 - The Sign up page requires username and password to sign in, including a "forgot password" section.
 
 ![screenshot](media/signin.png)
 
-### Register
+### **Register**
 
 - The register page requires specific information to sign up for a profile, and includes a social media sign in section.
 
 ![screenshot](media/signup.png)
 
-### Newsletter
+### **Newsletter**
 
 - The newsletter feature does not show up until you sign into your account, then you can spot it in the Navbar.
 
@@ -248,7 +251,7 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 
 ![screenshot](media/unsubscribe.png)
 
-### CRUD 
+### **CRUD**
 
 
   | Operations                        | All users | Auth. user | Superuser |
@@ -267,7 +270,7 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
   | Edit/Delete a comment             | No        | No         | Yes       |
 
 
-### Defensive Design 
+### **Defensive Design**
 - #### **Delete operations:**
     - **Users** first need to confirm that they are sure that they want to delete:
     - The user account.
@@ -306,15 +309,18 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [Python](https://www.python.org/)
 
-### Databases platform and cloud storage
+### **Databases platform and cloud storage**
 
-- SQlite: SQL database engine provided by default as part of Django and used during development.
+- ElephantSQL Postgres: database service provided by ElephantSQL for data storage.
+- SQLite: SQL database engine used by default as part of Django Framework and used during development.
 - Heroku Postgres: SQL database service provided directly by Heroku for storing data.
 - Cloudinary: to store images and static files in production.
 - Heroku: to deploy and run the application in production.
 
 
-### Python Libraries and API
+### **Python Libraries and API**
+
+The following is a list of resources used to put this project together.
 
 - Google Fonts - for the font families: 
 - Font Awesome - to add icons to the social links in the footer element.
@@ -322,9 +328,46 @@ All fonts are from the Google Fonts library.The following fonts were chosen for 
 - GitHub - to store my repository for submission.
 - Balsamiq - were used to create mockups of the project prior to starting.
 - Am I Responsive? - to ensure the project looked good across all devices.
-- Favicon - to provide the code & image for the icon in the tab bar.
-- Django
-- Bootstrap
+- Icons8 - to provide the code & image for the icon in the tab bar.
+- Crispy Forms: used for comment and sign-in forms throughout website.
+- Google Lighthouse: used to access website performance.
+- Coverage.py: used for coverage testing of Python programs. 
+- HTML Markup Validation: used to validate HTML code syntax.
+- CSS Validation Service: used to validate CSS code syntax.
+- PEP8 Validation: used to validate Python code syntax.
+- Chrome DevTools: development tool supplied by Google Chrome browser to test responsive design during development.
+- Pillow: This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
+- MailTrap: Free mail platform used for newsletter.
+- Django: Python-based framework for rapid website development.
+- Bootstrap: CSS and JavaScript library.
+
+
+## **Testing**
+
+### **Introduction**
+
+* This project has been continuously tested throughout development stages using the following features:
+    * Python terminal for backend functionalities
+    * Google Developer Tools 
+    * Manual Testing
+    * Automated Testing
+
+### **Validator testing**
+
+- HTML files pass through the [W3C validator](https://validator.w3.org/) 
+- CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
+- No custom JavaScript code has been written for this project, only what is included with Bootstrap4.
+
+* **Lighthouse testing**
+- For desktop:
+    ![screenshot](media/lighthouse.png)
+- For Mobile:
+
+* **Python Validator**
+
+### **Testing and bugs**
+## **Fixed bugs and solutions:**
+
 
 
 
