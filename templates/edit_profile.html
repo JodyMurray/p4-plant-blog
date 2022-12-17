@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 
 
@@ -12,8 +13,8 @@
             <div class="col-md-3 profile-border">
 
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <img class="rounded-circle mt-5 profile_pic" width="150px" src="{{ profile.get_profile_pic }}"
-                        alt="profile pic">
+                    <img class="rounded-circle mt-5 profile_pic" width="150px" src="{% if user.profile_pic %}{{ profile.get_profile_pic }}
+                    {% else %}{% static 'images/default2.jpeg' %} {% endif %}" alt="profile pic">
                     <span class="font-weight-bold">{{ profile.user }}</span><span
                         class="text-black-50">{{ user.email }}</span><span> </span>
                     <div class="date-joined text-capitalize text-muted">Date Joined <br>
@@ -54,27 +55,53 @@
                     <button type="submit" class="btn btn-outline-secondary" style="position: relative; left:5%;">Save
                         All</button>
                 </div>
-                <br>
-                <form method="POST">
-                    {% csrf_token %}
-                    <fieldset class="form-group">
-                        <legend class="border-bottom mb-4">Delete User Account</legend>
-                            <p>Are you sure you want to delete your account?  This will permanently delete your
-                               profile and any content you have generated.</p>
-                            {{ form }}
-                    </fieldset>
-                    <div class="form-group">
-                        <button class="btn btn-danger" type="submit">Delete Account</button>
-                            <a class="btn btn-primary-custom" style="float:right;" 
-                               href="{% url 'profile' %}">Cancel</a>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-
-
-    </div>
 </form>
+<br>
+<div class="text-center mb-3">
+    <a href="{% url 'profile' %}" class="btn btn-outline-secondary">&laquo; Back</a>
+</div>
+
+<div class="col text-start text-center mb-3">
+    <form action="{% url 'delete_profile' user.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit" name="profile_id" value="{{user.id}}" class="btn btn-outline-danger">Delete profile</button>
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <section class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">
+                    Wait!
+                </h5>
+            </section>
+
+            <div class="modal-body">
+                Are you sure you want to permanently delete your profile?
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Go
+                    back</button>
+
+                <form action="{% url 'delete_profile' user.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="profile_id" value="{{user.id}}" class="btn btn-danger">Delete
+                        profile</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+
+</div>
 
 {% endblock %}
