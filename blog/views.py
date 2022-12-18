@@ -164,17 +164,6 @@ def PetsPost(request):
     return render(request, "pets.html")
 
 
-# def delete_profile(request, id):
-#     profile = Profile.objects.filter(id=id)
-#     profile.delete()
-#     messages.success(
-#             request,
-#             'Post deleted successfully.'
-#         )
-
-#     return redirect('/')
-
-
 def delete_post(request, id):
     post = Post.objects.filter(id=id)
     post.delete()

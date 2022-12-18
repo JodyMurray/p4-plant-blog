@@ -57,11 +57,13 @@
                 </div>
 </form>
 <br>
-<div class="text-center mb-3">
+<br>
+<br>
+<div class="text-center mb-3 edit-profile-btn">
     <a href="{% url 'profile' %}" class="btn btn-outline-secondary">&laquo; Back</a>
 </div>
 
-<div class="col text-start text-center mb-3">
+<div class="col text-start text-center mb-3 edit-profile-btn">
     <form action="{% url 'delete_profile' user.id %}" method="post">
         {% csrf_token %}
         <button type="submit" name="profile_id" value="{{user.id}}" class="btn btn-outline-danger">Delete profile</button>
@@ -74,7 +76,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
 
-            <section class="modal-header">
+            <!-- <section class="modal-header">
                 <h5 class="modal-title" id="deleteModalLabel">
                     Wait!
                 </h5>
@@ -84,7 +86,7 @@
                 Are you sure you want to permanently delete your profile?
             </div>
 
-            <div class="modal-footer">
+            <div class="modal-footer"> -->
 
                 <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Go
                     back</button>

@@ -529,10 +529,6 @@ footer {
         font-size: 27px
     }
 
-    footer h6 {
-        font-size: 30px;
-    }
-
     footer i {
         font-size: 35px;
     }
@@ -609,6 +605,11 @@ footer {
         font-size: 20px;
     }
 
+    .edit-profile-btn a,
+    .edit-profile-btn button {
+        font-size: 25px;
+    }
+
     /* Update profile media query */
     .bio-section,
     .update-btn,
@@ -628,6 +629,9 @@ footer {
 
     .profile-input icon {
         padding: 10%;
+    }
+    .update-profile a {
+        font-size: 25px;
     }
 
     /* Sign out media query */
@@ -825,7 +829,9 @@ footer {
 
     /* Profile media query */
     .user-info,
-    .profile-border {
+    .profile-border,
+    .edit-profile-btn a,
+    .edit-profile-btn button {
         font-size: unset;
     }
 
@@ -837,7 +843,8 @@ footer {
     .bio-section,
     .border-right .labels,
     .update-btn,
-    .edit-button>button {
+    .edit-button>button,
+    .update-profile a {
         font-size: unset;
     }
 
@@ -854,6 +861,7 @@ footer {
     .profile-input icon {
         padding: unset;
     }
+    
 
     /* Sign out media query */
     .sign-out h1 {
@@ -1081,7 +1089,9 @@ footer {
 
     /* Profile media query */
     .user-info,
-    .profile-border {
+    .profile-border,
+    .edit-profile-btn a,
+    .edit-profile-btn button {
         font-size: unset;
     }
 
@@ -1101,7 +1111,8 @@ footer {
 
     /* Update profile media query */
     .border-right .labels,
-    .edit-button button {
+    .edit-button button,
+    .update-profile a {
         font-size: unset;
     }
 
@@ -1412,6 +1423,7 @@ footer {
 
     /* Profile media query */
     .user-info,
+    .update-profile a,
     .profile-border {
         font-size: unset;
     }
@@ -1431,6 +1443,8 @@ footer {
 
     /* Update profile media query */
     .border-right .labels,
+    .edit-profile-btn a,
+    .edit-profile-btn button,
     .edit-button button {
         font-size: unset;
     }
