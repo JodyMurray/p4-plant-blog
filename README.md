@@ -442,7 +442,21 @@ For inspiration, for code, design help and advice, I'd like to thank;
 * The Code Institute.
 
 ### **Sources**
+Sites that provided me with helpful information and resolved many of my issues;
+https://www.w3schools.com/
+https://stackoverflow.com/
+https://youtube.com/
 
+The top screen shot for responsive design was taken from: 
+- https://ui.dev/amiresponsive
+
+Some tutorials that helped me along the way:
+*
+*
+
+Thank you
+
+[Back to top](#jodys-plant-blog)
 
 
 
