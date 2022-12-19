@@ -400,6 +400,37 @@ Future plans for this project include:
 
 
 ### **Deployment**
+The site was deployed to Heroku. The steps to deploy are as follows:
+- Install Django & Gunicorn:
+*pip3 install 'django<4' gunicorn*
+- Install Django database & psycopg:
+*pip3 install dj_database_url psycopg2*
+- Install Cloudinary:
+*pip3 install dj3-cloudinary-storage*
+- Creating the requirements.txt file with the following command:
+*pip3 freeze --local > requirements.txt*
+- a django project was created using:
+*django-admin startproject plantblog*
+- the blog app was then created with:
+*python3 manage.py startapp blog*
+- which was then added to the settings.py file within our project directory.
+- the changes were then migrated using:
+*python3 manage.py migrate*
+- navigated to [Heroku](www.heroku.com) & created a new app called print-statements.
+- added the Heroku Postgres database to the Resources tab.
+- navigated to the Settings Tab, to add the following key/value pairs to the configvars:
+* key: SECRET_KEY | value: randomsecretkey22
+* key: PORT | value: 8000
+* key: CLOUDINARY_URL | value: API environment variable
+* key: DATABASE_URL | value: value supplied by Heroku
+- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the env.py file
+- added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
+- add an import os statement for the env.py file.
+- added Heroku to the ALLOWED_HOSTS in settings.py
+- created the Procfile
+- pushed the project to Github
+- connected my github account to Heroku through the Deploy tab
+- connected my github project repository, and then clicked on the "Deploy" buttons
 
 
 
