@@ -419,10 +419,10 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 - navigated to [Heroku](www.heroku.com) & created a new app called print-statements.
 - added the Heroku Postgres database to the Resources tab.
 - navigated to the Settings Tab, to add the following key/value pairs to the configvars:
-* key: SECRET_KEY | value: randomsecretkey22
-* key: PORT | value: 8000
-* key: CLOUDINARY_URL | value: API environment variable
-* key: DATABASE_URL | value: value supplied by Heroku
+    * key: SECRET_KEY | value: randomsecretkey22
+    * key: PORT | value: 8000
+    * key: CLOUDINARY_URL | value: API environment variable
+    * key: DATABASE_URL | value: value supplied by Heroku
 - added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the env.py file
 - added the DATABASE_URL, SECRET_KEY & CLOUDINARY_URL to the settings.py file
 - add an import os statement for the env.py file.
@@ -432,7 +432,16 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 - connected my github account to Heroku through the Deploy tab
 - connected my github project repository, and then clicked on the "Deploy" buttons
 
+### **Acknowledgements**
 
+For inspiration, for code, design help and advice, I'd like to thank;
+
+* Martina Terlevic
+
+    * My wonderful mentor at Code Institute.
+* The Code Institute.
+
+### **Sources**
 
 
 
