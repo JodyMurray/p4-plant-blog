@@ -367,6 +367,7 @@ The following is a list of resources used to put this project together.
 
 
 * **Python Validator**
+- Pep8
 
 ### **Testing and bugs**
 ## **Fixed bugs and solutions:**
@@ -381,8 +382,8 @@ The following is a list of resources used to put this project together.
     * *Solution: the pagination was changed to three posts per page, which solved the bulky page issue.* 
 * When the admin goes into the "Add Post" section, the available inputs result in a "blog post" which is not very styled.
     * *Solution: Not entirely a solution, but a way around this, it's possible to add HTML elements such as headings, page breaks and font styles as well. Which takes a long time, but is an easy solution, and it's as quick as doing it through the ADMIN section in Django, but results are easier to see on the page.*
-* Once the delete profile feature was working, the page for profile and update profile threw an error because the "Profile pic" was not found.
-    * *Solution: Add a default image to the HTML.*
+* Delete profile feature threw an error once the profile was deleted, flagging the profile picture; saying threre was no file associated with it. 
+    * *Solution: I added an else if statement to the model which uses a default image if no image is used.*
 
 
 ## **Unfixed bugs**
