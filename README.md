@@ -60,7 +60,7 @@ A live version of this website will be found here: https://jodys-plants.herokuap
 - [Introduction](#introduction "Introduction")
 - [Validator testing](#validator-testing "Validator Testing")
 - [Testing and bugs](#testing-and-bugs "Testing and bugs")
-- [Fixed Bugs](#fixed-bugs "Fixed Bugs") 
+- [Fixed Bugs and Solutions](#fixed-bugs-and-solutions "Fixed Bugs and Solutions") 
 - [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
 - [Future plans to implement](#future-plans-to-implement "Future plans to implement")
 
@@ -273,11 +273,15 @@ This last wireframe image has the newsletter section at the end of the page, whi
 ### **Defensive Design**
 - #### **Delete operations:**
     - **Users** first need to confirm that they are sure that they want to delete:
-    - The user account.
+    - Their profile.
+
+    IMAGE
 
 
     - **Admin** first need to confirm that they are sure they want to delete:
     - Blog Posts
+
+    IMAGE
 
 
 - #### **Comment status:**
@@ -365,6 +369,43 @@ The following is a list of resources used to put this project together.
 
 ### **Testing and bugs**
 ## **Fixed bugs and solutions:**
+
+* Navigation bar links were too large for smaller screen size,  
+    * *Solution: a dropdown burger menu was added for screen sizes 768px and less.*
+* The Newsletter was originally planned for the Home page, but again it was adding bulk to the home page. 
+    * *Solution: it was changed to it's own HTML page as well as the unsubscribe section for the Newsletter.*
+* The Newsletter feature was difficult to implement for me. GMAIL service was attempted, but they have taken away this feature since this year. 
+    * *Solution: I used a free mail service which the login will be included so it can be shown that an email template is sent for subscribing and unsubscribing to our newsletter.*
+* The blog posts were taking up a lot of space, especially on smaller screens, the list of posts seemed never ending.
+    * *Solution: the pagination was changed to three posts per page, which solved the bulky page issue.* 
+* When the admin goes into the "Add Post" section, the available inputs result in a "blog post" which is not very styled.
+    * *Solution: Not entirely a solution, but a way around this, it's possible to add HTML elements such as headings, page breaks and font styles as well. Which takes a long time, but is an easy solution, and it's as quick as doing it through the ADMIN section in Django, but results are easier to see on the page.*
+* Once the delete profile feature was working, the page for profile and update profile threw an error because the "Profile pic" was not found.
+    * *Solution: Add a default image to the HTML.*
+
+
+## **Unfixed bugs**
+
+* The profile picture shows up beside each comment made by the user, instead only showing up is the logged in user's profile picture.
+* When a user "deletes" their profile from the "edit profile" page, it only deletes their profile information and profile picture and not the user account itself.
+
+
+## **Future plans to implement**
+Future plans for this project include:
+* The Newsletter section I would like to get working properly with an email direct to an actual account instead of the free mail service (mailtrap.io). This is definitely possible, services such as MailChimp and SendGrid allow for this feature. 
+* The profile picture beside the comments made by each user is an issue that should be resolved in the future.
+* The user should in the future be able to delete their whole user account and not just their profile information.
+* Also to implement in the future, the capability to sign in using Social medias, for now, the links added in the sign up section will just bring you to the social media site.
+* Ideally the "Featured Posts" section would change seasonally, giving us new seasonally related tips and content regarding the seasonal changes that come along with gardening.
+
+
+### **Deployment**
+
+
+
+
+
+
 
 
 
