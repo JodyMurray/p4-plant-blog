@@ -81,6 +81,7 @@ A live version of this website will be found here: https://jodys-plants.herokuap
 <details><summary>Sources</summary>
 
 - [Sources](#sources "Sources")
+- [Media and content](#media-and-content "Media and content")
 
 </details>
 
@@ -437,22 +438,32 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 For inspiration, for code, design help and advice, I'd like to thank;
 
 * Martina Terlevic
-
     * My wonderful mentor at Code Institute.
+    <br>
 * The Code Institute.
 
 ### **Sources**
 Sites that provided me with helpful information and resolved many of my issues;
-https://www.w3schools.com/
-https://stackoverflow.com/
-https://youtube.com/
+- https://www.w3schools.com/
+- https://stackoverflow.com/
+- https://youtube.com/
 
 The top screen shot for responsive design was taken from: 
 - https://ui.dev/amiresponsive
 
 Some tutorials that helped me along the way:
-*
-*
+* https://www.youtube.com/watch?v=m3efqF9abyg
+* https://www.youtube.com/watch?v=yZPgBThZT04&list=PLGzru6ACxEAKtb29AeyHbVGUh2-0r891H&index=27
+
+
+### **Media and content**
+
+- Google: For images.
+- https://getcssscan.com/css-box-shadow-examples: for box shadow example.
+- https://getbootstrap.com/docs/4.1: for card, columns, and signup pages.
+- https://freefrontend.com/: for CSS and Bootstrap inspirations
+
+
 
 Thank you
 

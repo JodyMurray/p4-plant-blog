@@ -24,7 +24,8 @@ class Profile(models.Model):
         blank=True
     )
     profile_pic = models.ImageField(
-        upload_to='media'
+        upload_to='media',
+        blank=True
     )
     bio = models.TextField()
 
@@ -33,7 +34,10 @@ class Profile(models.Model):
 
     @property
     def get_profile_pic(self):
-        return self.profile_pic.url
+        if self.profile_pic and hasattr(self.profile_pic, 'url'):
+            return self.profile_pic.url
+        else:
+            return "/static/images/default2.jpeg"
 
 
 class Post(models.Model):

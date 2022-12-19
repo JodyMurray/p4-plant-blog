@@ -13,8 +13,12 @@
             <div class="col-md-3 profile-border">
 
                 <div class="d-flex flex-column align-items-center text-center p-3 py-5">
-                    <img class="rounded-circle mt-5 profile_pic" width="150px" src="{% if user.profile_pic %}{{ profile.get_profile_pic }}
-                    {% else %}{% static 'images/default2.jpeg' %} {% endif %}" alt="profile pic">
+                    {% if user.profile_pic == "" %}
+                    <img src="{% static 'images/default.jpeg'%}">
+                    {% else %}
+                    <img class="rounded-circle mt-5 profile_pic" width="150px" src="{{ profile.get_profile_pic }}"
+                        alt="profile pic">
+                    {% endif %}
                     <span class="font-weight-bold">{{ profile.user }}</span><span
                         class="text-black-50">{{ user.email }}</span><span> </span>
                     <div class="date-joined text-capitalize text-muted">Date Joined <br>
