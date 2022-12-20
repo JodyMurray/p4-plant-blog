@@ -1004,7 +1004,6 @@ footer {
         top: 10%;
         left: 20px;
         float: left;
-        padding: auto;
         line-height: 1.5;
         margin-left: -6%;
     }
@@ -1308,7 +1307,6 @@ footer {
         top: 10%;
         left: 20px;
         float: left;
-        padding: auto;
         line-height: 1.2;
         margin-left: -6%;
     }
@@ -1639,7 +1637,6 @@ footer {
         width: 150% !important;
         justify-content: center;
         left: -20% !important;
-        padding-left: -30px;
     }
 
     .winter h2 {
@@ -1659,11 +1656,9 @@ footer {
     .winter-section h2 {
         font-size: unset;
         width: 180%;
-        margin-left: 10%;
     }
 
     .winter-section p {
-        padding: -50px;
         width: 180%;
     }
 
@@ -1835,7 +1830,6 @@ footer {
     }
 
     .winter-section p {
-        padding: -50px;
         width: 290%;
     }
 
