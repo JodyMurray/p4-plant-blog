@@ -13,203 +13,202 @@
 {% endif %}
 
 
-    <div class="container-fluid">
-        <div class="row">
-            <h2 class="post-header d-flex justify-content-center">Latest Blog Posts</h2>
+<div class="container-fluid">
+    <div class="row">
+        <h2 class="post-header d-flex justify-content-center">Latest Blog Posts</h2>
 
-            <hr class="break" style="width:90%; margin: auto;" />
+        <hr class="break" style="width:90%; margin: auto;">
 
-            {% for post in post_list %}
-            <div class="col-md-4 post-card" style="margin:auto;">
-                <div class="card mb-2 mb-5 bg-white rounded text-center"
-                    style="box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;">
-                    <div class="card-body">
-                        <div class="image-container">
-                            {% if "placeholder" in post.featured_image.url %}
-                            <img class="card-img-top rounded mx-auto d-block"
-                                src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?cs=srgb&dl=pexels-alena-koval-886521.jpg&fm=jpg&_gl=1*1yqe4ni*_ga*MTM3NzE5NzA4NS4xNjY2Njc4OTQz*_ga_8JE65Q40S6*MTY2NjY4NTIxNS4yLjEuMTY2NjY4NTgxOS4wLjAuMA.."
-                                alt="card img">
-                            {% else %}
-                            <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="card img">
-                            {% endif %}
-                            <div class="image-flash">
-                                <p class="author">Author: {{ post.author }}</p>
-                            </div>
+        {% for post in post_list %}
+        <div class="col-md-4 post-card" style="margin:auto;">
+            <div class="card mb-2 mb-5 bg-white rounded text-center"
+                style="box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;">
+                <div class="card-body">
+                    <div class="image-container">
+                        {% if "placeholder" in post.featured_image.url %}
+                        <img class="card-img-top rounded mx-auto d-block"
+                            src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?cs=srgb&dl=pexels-alena-koval-886521.jpg&fm=jpg&_gl=1*1yqe4ni*_ga*MTM3NzE5NzA4NS4xNjY2Njc4OTQz*_ga_8JE65Q40S6*MTY2NjY4NTIxNS4yLjEuMTY2NjY4NTgxOS4wLjAuMA.."
+                            alt="card img">
+                        {% else %}
+                        <img class="card-img-top" src=" {{ post.featured_image.url }}" alt="card img">
+                        {% endif %}
+                        <div class="image-flash">
+                            <p class="author">Author: {{ post.author }}</p>
                         </div>
-                        <a href="{% url 'post_detail' post.slug %}" class="post-link">
-                            <h2 class="card-title">{{ post.title }}</h2>
-                            <p class="card-text">{{ post.excerpt }}</p>
-                        </a>
-                        <p class="card-text text-muted h6">{{ post.created_on}}<i
-                                class="fa-regular fa-face-grin-hearts"></i>
-                            {{ post.number_of_likes }}</p>
                     </div>
-
+                    <a href="{% url 'post_detail' post.slug %}" class="post-link">
+                        <h2 class="card-title">{{ post.title }}</h2>
+                        <p class="card-text">{{ post.excerpt }}</p>
+                    </a>
+                    <p class="card-text text-muted h6">{{ post.created_on}}<i
+                            class="fa-regular fa-face-grin-hearts"></i>
+                        {{ post.number_of_likes }}</p>
                 </div>
-            </div>
 
-            {% if forloop.counter|divisibleby:3 %}
-            <div class="row">
-                {% endif %}
-
-                {% endfor %}
             </div>
         </div>
-    </div>
-    <div class="mt-3">
-        {% if is_paginated %}
-        <nav aria-label="Page Navigation">
-            <ul class="pagination justify-content-center pagination-btn">
-                {% if page_obj.has_previous %}
-                <li class="page-item">
-                    <a href="?page={{ page_obj.previous_page_number }}" class="page-link" tabindex="-1">&laquo;
-                        Previous</a>
-                </li>
-                {% endif %}
-                {% if page_obj.has_next %}
-                <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{1}}">1</a></li>
-                <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{2}}">2</a></li>
-                <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{3}}">3</a></li>
-                <li class="page-item">
-                    <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next </a>
-                </li>
-                {% endif %}
-            </ul>
-        </nav>
-        {% endif %}
-        <hr class="break" style="width:95%; margin: auto;">
-        <br>
-        <br>
-    </div>
 
-    <!--Quick tips section-->
-    <div class="container-fluid">
+        {% if forloop.counter|divisibleby:3 %}
         <div class="row">
-            <h2 class="tips post-header">Quick Tips</h2>
-            <div class="left-image col-7">
-                <img class="rounded-circle col-10"
-                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667203578/minimal_ll5djf.jpg" alt="woman planting">
-            </div>
+            {% endif %}
 
-            <ol class="col-sm col-5 tips-list">
-                <li>
-                    Spin your plants around
-                    so they grow evenly and not lopsided.
-                <li>
-                    Pick plants that work
-                    with your schedule.</li>
-                <li>
-                    Watering: not too much
-                    and not too little.</li>
-                <li>
-                    Don't be scared to repot.</li>
-                <li>
-                    Feel the Soil to Know How Often to Water Your Plants</li>
-                <li>
-                    Cut away old growth.</li>
-                <li>
-                    Keep your pet away.</li>
-
-            </ol>
+            {% endfor %}
         </div>
     </div>
+</div>
+<div class="mt-3">
+    {% if is_paginated %}
+    <nav aria-label="Page Navigation">
+        <ul class="pagination justify-content-center pagination-btn">
+            {% if page_obj.has_previous %}
+            <li class="page-item">
+                <a href="?page={{ page_obj.previous_page_number }}" class="page-link" tabindex="-1">&laquo;
+                    Previous</a>
+            </li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{1}}">1</a></li>
+            <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{2}}">2</a></li>
+            <li class="page-item"><a class="page-link btn btn-outline-secondary" href="?page={{3}}">3</a></li>
+            <li class="page-item">
+                <a href="?page={{ page_obj.next_page_number }}" class="page-link">Next </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
     <hr class="break" style="width:95%; margin: auto;">
-    <!--Common mistakes section-->
-    <div class="container-fluid wrapper mistakes-wrapper">
-        <div class="row ">
-            <h2 class="tips post-header">Common Mistakes</h2>
-            <div class="image-2 col-7">
-                <img class="rounded-circle col-10"
-                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667217425/blue-background_wmmrnm.jpg"
-                    alt="plant">
-            </div>
+    <br>
+    <br>
+</div>
 
-            <div class="col-6" id="mistakes-list">
-                <h4>Over watering:</h4>
-                <p>
-                    Do you check the soil before you water? If you don't, you could be over or underwatering
-                    your
-                    plants. Both are problematic.
-                </p>
-                <h4>Not enough sunlight:</h4>
-                <p>
-                    Do plants need full sun of the tag says so? Yes, they do. Placing a plant that needs lots of
-                    direct sunlight (cactus, succulents, for example) in a space with no direct sunlight will
-                    not
-                    bring you a happy plant.
-                </p>
-                <h4>Forgetting to check the roots:</h4>
-                <p>
-                    Roots being the feeding organ of the plant, it's essential to keep them healthy.
-                </p>
-                <h4>Pot size:</h4>
-                <p>
-                    Use the right size container. Too small of a container will crowd the roots, and one that is
-                    too
-                    large will hold excess moisture that may cause root rot.
-                </p>
-            </div>
+<!--Quick tips section-->
+<div class="container-fluid">
+    <div class="row">
+        <h2 class="tips post-header">Quick Tips</h2>
+        <div class="left-image col-7">
+            <img class="rounded-circle col-10"
+                src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667203578/minimal_ll5djf.jpg"
+                alt="woman planting">
+        </div>
+
+        <ol class="col-sm col-5 tips-list">
+            <li>
+                Spin your plants around
+                so they grow evenly and not lopsided.
+            <li>
+                Pick plants that work
+                with your schedule.</li>
+            <li>
+                Watering: not too much
+                and not too little.</li>
+            <li>
+                Don't be scared to repot.</li>
+            <li>
+                Feel the Soil to Know How Often to Water Your Plants</li>
+            <li>
+                Cut away old growth.</li>
+            <li>
+                Keep your pet away.</li>
+
+        </ol>
+    </div>
+</div>
+<hr class="break" style="width:95%; margin: auto;">
+<!--Common mistakes section-->
+<div class="container-fluid wrapper mistakes-wrapper">
+    <div class="row ">
+        <h2 class="tips post-header">Common Mistakes</h2>
+        <div class="image-2 col-7">
+            <img class="rounded-circle col-10"
+                src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667217425/blue-background_wmmrnm.jpg"
+                alt="plant">
+        </div>
+
+        <div class="col-6" id="mistakes-list">
+            <h4>Over watering:</h4>
+            <p>
+                Do you check the soil before you water? If you don't, you could be over or underwatering
+                your
+                plants. Both are problematic.
+            </p>
+            <h4>Not enough sunlight:</h4>
+            <p>
+                Do plants need full sun of the tag says so? Yes, they do. Placing a plant that needs lots of
+                direct sunlight (cactus, succulents, for example) in a space with no direct sunlight will
+                not
+                bring you a happy plant.
+            </p>
+            <h4>Forgetting to check the roots:</h4>
+            <p>
+                Roots being the feeding organ of the plant, it's essential to keep them healthy.
+            </p>
+            <h4>Pot size:</h4>
+            <p>
+                Use the right size container. Too small of a container will crowd the roots, and one that is
+                too
+                large will hold excess moisture that may cause root rot.
+            </p>
         </div>
     </div>
+</div>
 
 
-    <hr class="break" style="width:95%; margin: auto;">
+<hr class="break" style="width:95%; margin: auto;">
 
-    <!--Plants and your health section-->
+<!--Plants and your health section-->
 
-    <section class="conatiner-fluid">
-        <div class="justify-content-center">
-            <div class="col-7 health">
-                <h2 class="tips post-header">Plants & Your Health</h2>
-                <br>
+<section class="conatiner-fluid">
+    <div class="justify-content-center">
+        <div class="col-7 health">
+            <h2 class="tips post-header">Plants & Your Health</h2>
+            <br>
 
-                <img class="rounded-circle col-10"
-                    src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667303062/pinkhair_letyourselfgrow_4x_vtkyvn.jpg"
-                    alt="woman floral">
-                <div id="health-list">
-                    <div class="text-center health">
-                        <h4>Stress reduction.</h4>
-                        <hr class="break" style="width:30%; margin: auto;">
-                        <p>
-                            Spending time in natural settings helps speed up recovery from mental fatigue, slow down
-                            heart rate, reduce high blood pressure, and lower anxiety.
-                        </p>
-                        <h4>Higher levels of creativity.</h4>
-                        <hr class="break" style="width:30%; margin: auto;">
-                        <p>
-                            Nature walks, and even short visits to parks and woodlands within urban areas, have been
-                            found to boost creativity, mood, and sense of vitality.
-                        </p>
-                        <h4>Connecting with Others.
-                        </h4>
-                        <hr class="break" style="width:30%; margin: auto;">
-                        <p>
-                            Few things boost our well-being like good relationships, and gardening offers ample
-                            opportunities to connect with others.
-                        </p>
-                        <h4>Bathing in Green.</h4>
-                        <hr class="break" style="width:30%; margin: auto;">
-                        <p>The Japanese expression "shinrin-yoku" can be translated as "forest bathing," which
-                            nicely
-                            captures the experience of being immersed in green. A growing body of research has found
-                            all
-                            kinds of benefits from being in natural landscapes.
-                        </p>
-                    </div>
-                    <hr class="break" style="width:80%; margin: auto;">
+            <img class="rounded-circle col-10"
+                src="https://res.cloudinary.com/dmqu7iqfu/image/upload/v1667303062/pinkhair_letyourselfgrow_4x_vtkyvn.jpg"
+                alt="woman floral">
+            <div id="health-list">
+                <div class="text-center health">
+                    <h4>Stress reduction.</h4>
+                    <hr class="break" style="width:30%; margin: auto;">
+                    <p>
+                        Spending time in natural settings helps speed up recovery from mental fatigue, slow down
+                        heart rate, reduce high blood pressure, and lower anxiety.
+                    </p>
+                    <h4>Higher levels of creativity.</h4>
+                    <hr class="break" style="width:30%; margin: auto;">
+                    <p>
+                        Nature walks, and even short visits to parks and woodlands within urban areas, have been
+                        found to boost creativity, mood, and sense of vitality.
+                    </p>
+                    <h4>Connecting with Others.
+                    </h4>
+                    <hr class="break" style="width:30%; margin: auto;">
+                    <p>
+                        Few things boost our well-being like good relationships, and gardening offers ample
+                        opportunities to connect with others.
+                    </p>
+                    <h4>Bathing in Green.</h4>
+                    <hr class="break" style="width:30%; margin: auto;">
+                    <p>The Japanese expression "shinrin-yoku" can be translated as "forest bathing," which
+                        nicely
+                        captures the experience of being immersed in green. A growing body of research has found
+                        all
+                        kinds of benefits from being in natural landscapes.
+                    </p>
                 </div>
+                <hr class="break" style="width:80%; margin: auto;">
             </div>
         </div>
-    </section>
     </div>
+</section>
 
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 
 
