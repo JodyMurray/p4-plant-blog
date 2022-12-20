@@ -465,28 +465,36 @@ footer {
     .pagination-btn a {
         font-size: 30px;
     }
+
     .post-image-card {
         margin-left: 25%;
         font-size: 30px;
     }
+
     .post-image-card h3 {
         font-size: 35px;
     }
+
     .post-title {
         font-size: 50px;
     }
+
     .post-subtitle {
         font-size: 30px;
     }
+
     .d-grid a {
         font-size: 30px;
     }
+
     .like-button {
         font-size: 30px;
     }
+
     .comments {
         left: 15%;
     }
+
     .post-content button {
         font-size: 30px;
     }
@@ -508,9 +516,11 @@ footer {
     #health-list {
         padding: 2%;
     }
+
     .health .tips {
         left: 35%;
     }
+
     .health img {
         left: 50%;
     }
@@ -630,6 +640,7 @@ footer {
     .profile-input icon {
         padding: 10%;
     }
+
     .update-profile a {
         font-size: 25px;
     }
@@ -651,7 +662,7 @@ footer {
         font-size: 25px;
     }
 
-    /* Register section media query */ 
+    /* Register section media query */
     .signup button {
         font-size: 30px;
     }
@@ -735,10 +746,12 @@ footer {
     .comments {
         left: 17%;
     }
+
     .post-image-card {
         margin-left: 25%;
         font-size: unset;
     }
+
     .post-image-card h3,
     .post-subtitle,
     .d-grid a,
@@ -746,10 +759,11 @@ footer {
     .post-content button {
         font-size: unset;
     }
+
     .post-title {
         font-size: 25px;
     }
-    
+
     .comments {
         left: 0;
     }
@@ -796,6 +810,7 @@ footer {
     .feature-icon i {
         font-size: unset;
     }
+
     .winter-section h2 {
         font-size: 30px;
     }
@@ -823,6 +838,7 @@ footer {
         height: 50px;
         font-size: unset;
     }
+
     .single p {
         font-size: 25px;
     }
@@ -861,7 +877,7 @@ footer {
     .profile-input icon {
         padding: unset;
     }
-    
+
 
     /* Sign out media query */
     .sign-out h1 {
@@ -890,6 +906,7 @@ footer {
     .edit-button>button {
         font-size: unset;
     }
+
     .signup button {
         font-size: 18px;
     }
@@ -953,10 +970,12 @@ footer {
     .comments {
         left: 0;
     }
+
     .post-image-card {
         margin-left: 25%;
         font-size: unset;
     }
+
     .post-image-card h3,
     .post-subtitle,
     .d-grid a,
@@ -964,6 +983,7 @@ footer {
     .post-content button {
         font-size: unset;
     }
+
     .post-title {
         font-size: 25px;
     }
@@ -973,6 +993,7 @@ footer {
     .author {
         font-size: unset;
     }
+
     .post-image-card {
         margin-left: 25%;
     }
@@ -1257,21 +1278,26 @@ footer {
     .author {
         font-size: 17px;
     }
+
     .post-image-card {
         margin-left: 25%;
     }
+
     .post-subtitle,
     .d-grid a,
     .like-button,
     .post-content button {
         font-size: unset;
     }
+
     .post-image-card h3 {
         font-size: 20px;
     }
+
     .post-content {
         font-size: 15px;
     }
+
     .post-title {
         font-size: 20px;
     }
@@ -1591,10 +1617,12 @@ footer {
     .health h4 {
         font-size: 14px;
     }
+
     .health .tips {
         left: 35%;
         width: max-content;
     }
+
     .tips {
         padding: 15%;
     }
@@ -1666,7 +1694,6 @@ footer {
     .border-right {
         border-top: 1px solid rgba(0, 0, 0, .1);
     }
-
 
     /* footer */
     footer {
@@ -1796,6 +1823,7 @@ footer {
     .winter-section h2 {
         width: 250%;
     }
+
     .winter-section h4 {
         font-size: 20px;
         width: 250%;
@@ -1810,47 +1838,59 @@ footer {
         padding: -50px;
         width: 290%;
     }
+
     .pets-away,
     .pets-away .tips {
         margin-left: -3rem;
     }
+
     .border-right {
         width: 80%;
         border: none;
     }
+
     .border-right .post-header,
     .post-header {
         text-align: center;
         white-space: inherit;
     }
+
     .edit-profile {
         width: 100%;
     }
+
     .profile-input input {
         width: 100%;
     }
+
     .border-right .form-control {
         width: 90%;
     }
+
     .input-group {
         flex-wrap: initial;
         width: 98%;
         margin-left: 4%;
     }
+
     .form-group h1 {
         font-size: 25px;
         margin-right: 10%;
     }
+
     .form-group p {
         font-size: 20px;
         width: 90%;
     }
+
     .signup button {
         font-size: 20px;
     }
+
     .mb-4 {
         width: 95%;
     }
+
     #signup_form {
         margin-left: 10%;
     }
