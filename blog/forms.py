@@ -5,6 +5,7 @@ from django import forms
 
 
 class EditProfileForm(forms.ModelForm):
+    """ Function for edit profile """
     class Meta:
         model = Profile
         fields = (
@@ -17,15 +18,8 @@ class EditProfileForm(forms.ModelForm):
         exclude = ['user']
 
 
-# class UserDeleteForm(forms.ModelForm):
-#     class Meta:
-#         model = Profile
-#         fields = []
-
-
 class CommentForm(forms.ModelForm):
+    """ Function for comment form """
     class Meta:
         model = Comment
         fields = ('body',)
-
-

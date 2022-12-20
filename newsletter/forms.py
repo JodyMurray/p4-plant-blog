@@ -4,9 +4,7 @@ from crispy_forms.helper import FormHelper
 
 
 class JoinForm(forms.ModelForm):
-    # email = forms.EmailField(
-    #     label='', widget=forms.EmailInput(
-    #         attrs={'placeholder': 'Your email', 'class': 'form-control'}))
+    """ Newsletter form view """
 
     helper = FormHelper()
     helper.form_show_labels = False

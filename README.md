@@ -431,7 +431,8 @@ The following is a list of resources used to put this project together.
 
 
 * **Python Validator**
-- Pep8
+- All Python files through the application returned no errors.
+
 
 ### **Testing and bugs**
 ## **Fixed bugs and solutions:**
