@@ -1,6 +1,7 @@
 from pathlib import Path
 import os
 import dj_database_url
+import sys
 from django.contrib.messages import constants as messages
 if os.path.isfile("env.py"):
     import env
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
+LOGIN_URL = "accounts/login/"
 LOGIN_REDIRECT_URL = '/profile'
 LOGOUT_REDIRECT_URL = '/'
 ACCOUNT_EMAIL_VERIFICATION = 'none'
@@ -106,6 +108,20 @@ WSGI_APPLICATION = 'plantblog.wsgi.application'
 DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
+
+if 'test' in sys.argv or 'test_coverage' in sys.argv:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(
+            os.environ.get('DATABASE_URL')
+        )
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
