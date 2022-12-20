@@ -106,10 +106,48 @@ To engage with topics that interest them, make a personalised profile to feel we
 For anyone who has an interest in plants and gardening of all sorts! Users of all ages and all levels of skills in gardening.
 
 ## **User Stories**
+Not all stories have been implemented. Some have been left for future implementations as the site grows and expands.
 
 ### **Site User Stories**
+- I can update and personalise a profile page so that other users can see my posts.
+*Story points:*
+- I can like or unlike a post so that I can interact with the content and support advice
+*Story points:*
+- I can view comments on an individual post so that I can read the conversation
+*Story points:*
+- I can make an account so that I can comment and like posts
+*Story points:*
+- I can click on a post so that I can read the full post.
+*Story points:*
+-  I can view a paginated list of posts so that easily select a post to view
+*Story points:*
+- I can view the number of likes on each post so that I can see which posts are popular.
+*Story points:*
+- I can apply for a newsletter on the featured page so that I can receive updates on the features
+*Story points:*
+- I can view a list of posts so that I can read posts like a news feed.
+*Story points:*
 
 ### **Admin Stories**
+As an admin:
+- I can submit new blog posts so that I can inform site visitors & fans of the site of new newsletters, featured posts that season, and more.
+*Story points:*
+- I can add a themed page with tips so that I can add a theme to the page
+*Story points:*
+- I can create draft posts so that I can save content for later.
+*Story points:*
+- I can update and personalise a profile page so that other users can see my posts.
+*Story points:*
+- I can approve or disapprove comments and posts so that I can filter unnecessary comments or posts.
+*Story points:*
+- I can create a log in / sign up page so that plant enthusiasts and visitors can sign up to the site.
+*Story points:*
+- I can view comments on an individual post so that I can read the conversation
+*Story points:*
+- I can view the number of likes on each post so that I can see which posts are popular.
+*Story points:*
+- I can apply for a newsletter on the featured page so that I can receive updates on the features
+*Story points:*
 
 ## **Design**
 

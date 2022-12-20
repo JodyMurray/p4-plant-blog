@@ -1,10 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.views import generic, View
-from django.views.generic import FormView
-from django.views.generic.edit import CreateView, DeleteView
-from django.contrib.auth.decorators import login_required
+from django.views.generic.edit import CreateView
 from django.http import HttpResponseRedirect
-from .models import Post, Profile, User
+from .models import Post, Profile
 from django.contrib import messages
 from .forms import CommentForm, EditProfileForm
 
@@ -186,4 +184,3 @@ def edit_post(request, post_id):
         post.save()
         return redirect(f"/edit/{post.id}", redirect('home'))
     return render(request, "update_post.html", {"post": post})
-
