@@ -404,6 +404,31 @@ The following is a list of resources used to put this project together.
 
 * **Lighthouse testing**
 
+* For Desktop:
+
+    | Section | Performance | Accessibility | Best Practices | SEO |
+    | --- | --- | --- | --- | --- |
+    | Home | 99 | 95 | 83 | 100 |
+    | Featured | 99 | 93 | 75 | 100 |
+    | Newsletter | 99 | 80 | 83 | 100 |
+    | Sign Up | 99 | 81 | 83 | 100 |
+    | Login | 99 | 94 | 83 | 100 |
+    | Profile | 99 | 94 | 83 | 100 |
+    | Edit Profile | 99 | 83 | 83 | 100 |
+
+    * For Mobile devices:
+
+    | Section | Performance | Accessibility | Best Practices | SEO |
+    | --- | --- | --- | --- | --- |
+    | Home | 96 | 95 | 83 | 92 |
+    | Featured | 96 | 95 | 83 | 100 |
+    | Newsletter | 91 | 86 | 83 | 100 |
+    | Sign Up | 90 | 86 | 83 | 100 |
+    | Login | 90 | 95 | 83 | 100 |
+    | Profile | 92 | 94 | 83 | 100 |
+    | Edit Profile | 89 | 86 | 75 | 100 |
+
+
 
 * **Python Validator**
 - Pep8
