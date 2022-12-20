@@ -951,7 +951,7 @@ footer {
     }
 
     .comments {
-        left: 17%;
+        left: 0;
     }
     .post-image-card {
         margin-left: 25%;
@@ -1192,7 +1192,7 @@ footer {
     }
 
     .comments {
-        left: 17%;
+        left: 0;
     }
 
     /* Navbar media query */
@@ -1530,10 +1530,6 @@ footer {
 
     .post-image-card {
         margin-left: 20%;
-    }
-
-    .comments {
-        left: -5%;
     }
 
     .d-grid {

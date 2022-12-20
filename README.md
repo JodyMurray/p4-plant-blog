@@ -107,47 +107,38 @@ For anyone who has an interest in plants and gardening of all sorts! Users of al
 
 ## **User Stories**
 Not all stories have been implemented. Some have been left for future implementations as the site grows and expands.
+Such as:
+
+    * As a Site User I can update my password so that reset it if forgotten.
 
 ### **Site User Stories**
 - I can update and personalise a profile page so that other users can see my posts.
-*Story points:*
 - I can like or unlike a post so that I can interact with the content and support advice
-*Story points:*
 - I can view comments on an individual post so that I can read the conversation
-*Story points:*
 - I can make an account so that I can comment and like posts
-*Story points:*
 - I can click on a post so that I can read the full post.
-*Story points:*
--  I can view a paginated list of posts so that easily select a post to view
-*Story points:*
+- I can view a paginated list of posts so that easily select a post to view
 - I can view the number of likes on each post so that I can see which posts are popular.
-*Story points:*
 - I can apply for a newsletter on the featured page so that I can receive updates on the features
-*Story points:*
 - I can view a list of posts so that I can read posts like a news feed.
-*Story points:*
 
 ### **Admin Stories**
 As an admin:
 - I can submit new blog posts so that I can inform site visitors & fans of the site of new newsletters, featured posts that season, and more.
-*Story points:*
 - I can add a themed page with tips so that I can add a theme to the page
-*Story points:*
 - I can create draft posts so that I can save content for later.
-*Story points:*
 - I can update and personalise a profile page so that other users can see my posts.
-*Story points:*
 - I can approve or disapprove comments and posts so that I can filter unnecessary comments or posts.
-*Story points:*
 - I can create a log in / sign up page so that plant enthusiasts and visitors can sign up to the site.
-*Story points:*
 - I can view comments on an individual post so that I can read the conversation
-*Story points:*
 - I can view the number of likes on each post so that I can see which posts are popular.
-*Story points:*
 - I can apply for a newsletter on the featured page so that I can receive updates on the features
-*Story points:*
+
+*Won`t have label*
+Labelled "Won't have" in issues:
+- As a Admin I can host events in relation to gardening so that users can meet up and get to know each other.
+- As a Site User I can sign up for events from the group so that I can be included.
+- 
 
 ## **Design**
 
@@ -312,13 +303,13 @@ This last wireframe image has the newsletter section at the end of the page, whi
 ### **Defensive Design**
 - #### **Delete operations:**
     - **Users** first need to confirm that they are sure that they want to delete:
-    - Their profile.
+        - Their profile.
 
     IMAGE
 
 
     - **Admin** first need to confirm that they are sure they want to delete:
-    - Blog Posts
+        - Blog Posts
 
     IMAGE
 
@@ -428,6 +419,7 @@ The following is a list of resources used to put this project together.
 
 * The profile picture shows up beside each comment made by the user, instead only showing up is the logged in user's profile picture.
 * When a user "deletes" their profile from the "edit profile" page, it only deletes their profile information and profile picture and not the user account itself.
+* The comment box in each blog post gets pushed to the side a bit when logged in as admin, because of the delete and edit buttons.
 
 
 ## **Future plans to implement**
