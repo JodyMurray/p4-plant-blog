@@ -394,7 +394,13 @@ The following is a list of resources used to put this project together.
 
 
 - CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
+
+    ![screenshot](media/cssvalidator.png)
+
+
 - No custom JavaScript code has been written for this project, only what is included with Bootstrap4.
+
+
 
 * **Lighthouse testing**
 
