@@ -389,6 +389,10 @@ The following is a list of resources used to put this project together.
 ### **Validator testing**
 
 - HTML files pass through the [W3C validator](https://validator.w3.org/) 
+
+    ![screenshot](media/w3c.png)
+
+
 - CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
 - No custom JavaScript code has been written for this project, only what is included with Bootstrap4.
 
