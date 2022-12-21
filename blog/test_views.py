@@ -87,6 +87,30 @@ class TestViews(TestCase):
             200
         )
 
+    def test_featured_post(self):
+        response = self.client.get(
+            '/featured_post/'
+        )
+        self.assertEqual(
+            response.status_code,
+            200
+        )
+        self.assertTemplateUsed(
+            'featured_post.html'
+        )
+
+    def test_pets_post(self):
+        response = self.client.get(
+            '/pets/'
+        )
+        self.assertEqual(
+            response.status_code,
+            200
+        )
+        self.assertTemplateUsed(
+            'pets.html'
+        )
+
     def test_get_user_profile(self):
         test_model = Profile.objects.get(
             bio='test bio'
@@ -98,7 +122,7 @@ class TestViews(TestCase):
             response.status_code,
             302
         )
-    
+
     def test_profile_settings_view(self):
         user = self.client.login(
             username='test_user',
