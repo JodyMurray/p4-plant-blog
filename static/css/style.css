@@ -1478,9 +1478,9 @@ footer {
         font-size: unset;
     }
 
-    .edit-profile {
+    /* .edit-profile {
         width: max-content;
-    }
+    } */
 
     .profile-input {
         font-size: unset;
@@ -1673,6 +1673,11 @@ footer {
         width: 30%;
         position: relative;
     }
+    .edit-profile-btn {
+        margin-left: 10%;
+        position: relative;
+        top: -16%;
+    }
 
     .edit-profile .profile-border {
         display: none;
@@ -1733,9 +1738,30 @@ footer {
         margin-top: 80%;
     }
 
+    /* Add post */
+    #id_content,
+    #id_excerpt {
+        width: 90%;
+    }
+    .welcome-add {
+        width: 90%;
+        margin-left: 5%;    
+    }
+
     /* Profile page media query */
     .border-right {
         padding-right: 0;
+    }
+
+    /* Pets section */
+    .pets-section {
+        width: 100%;
+    }
+    .pets-away .tips {
+        right: 30%;
+    }
+    .break {
+        margin-left: 10%;
     }
 
     /* footer */
@@ -1847,6 +1873,13 @@ footer {
     .post-header {
         text-align: center;
         white-space: inherit;
+    }
+
+    .edit-profile-btn {
+        margin-left: 10%;
+        position: relative;
+        top: -15%;
+        left: 20%;
     }
 
     .edit-profile {
