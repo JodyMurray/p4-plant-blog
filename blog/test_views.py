@@ -1,7 +1,8 @@
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.test import TestCase
-from .models import Profile, User
+from .models import Profile, User, Post, Comment
+import datetime
 
 
 class TestViews(TestCase):
@@ -10,7 +11,8 @@ class TestViews(TestCase):
         test_user = User.objects.create_user(
             username='test_user',
             email='test_user@gmail.com',
-            password='test_password')
+            password='test_password'
+        )
         test_user.is_staff = True
         test_user.is_superuser = True
         test_user.save()
@@ -22,11 +24,46 @@ class TestViews(TestCase):
             last_name='test last name',
             bio='test bio'
         )
+        test_post = Post.objects.create(
+            id=1,
+            title='test title',
+            slug='test_title',
+            author=test_user,
+            content='test content',
+        )
+        test_comment = Comment.objects.create(
+            id=1,
+            post=test_post,
+            body='test comment body',
+            created_on=datetime.date.today(),
+            approved=False
+        )
 
     def test_user_exists(self):
         user_count = User.objects.all().count()
         self.assertEqual(
             user_count,
+            1
+        )
+
+    def test_profile_exists(self):
+        profile_count = Profile.objects.all().count()
+        self.assertEqual(
+            profile_count,
+            1
+        )
+
+    def test_post_exists(self):
+        post_count = Post.objects.all().count()
+        self.assertEqual(
+            post_count,
+            1
+        )
+
+    def test_comment_exists(self):
+        comment_count = Comment.objects.all().count()
+        self.assertEqual(
+            comment_count,
             1
         )
 
@@ -42,8 +79,9 @@ class TestViews(TestCase):
             follow=True
         )
         status_code = response.status_code
-        redirect_path = response.get('PATH_INFO')
-        # self.assertEqual(redirect_path, settings.LOGIN_REDIRECT_URL)
+        redirect_path = response.get(
+            'PATH_INFO'
+        )
         self.assertEqual(
             status_code,
             200
@@ -59,4 +97,25 @@ class TestViews(TestCase):
         self.assertEqual(
             response.status_code,
             302
+        )
+
+    def test_post_detail_method_view_renders(self):
+        post = Post.objects.get(
+            title='test title'
+        )
+        self.assertEqual(
+            post.title,
+            'test title'
+        )
+        comments = Comment.objects.get(
+            body='test comment body'
+        )
+        self.assertEqual(
+            comments.body,
+            'test comment body'
+        )
+        liked = False
+        self.assertEqual(
+            liked,
+            False
         )
