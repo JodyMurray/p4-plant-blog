@@ -1211,9 +1211,9 @@ footer {
         font-size: 25px;
     }
 
-    .comments {
+    /* .comments {
         left: 0;
-    }
+    } */
 
     /* Navbar media query */
     .navbar-brand {
@@ -1368,6 +1368,29 @@ footer {
         font-size: 18px;
     }
 
+    /* Sign up */
+    .form-group,
+    .form-group p {
+        font-size: 20px;
+        width: 100%;
+        margin-left: -5%;
+    }
+
+    .mb-4 .btn-floating {
+        width: 10%;
+    }
+    .signup button {
+        font-size: 20px;
+        margin-left: -5%;
+    }
+    .form-group h1 {
+        font-size: 25px;
+        margin-right: 10%;
+    }
+    .form-row {
+        font-size: 15px;
+    }
+
     /* Login media query */
     .login-form,
     .login-form p,
@@ -1391,9 +1414,12 @@ footer {
     }
 
     /* Sign out media query */
-    .sign-out,
+    .sign-out {
+        font-size: unset;
+    }
     .sign-out button {
         font-size: unset;
+        margin-left: 10%;
     }
 
     .sign-out h1 {
@@ -1401,10 +1427,14 @@ footer {
     }
 
     /* Add post section media query */
-    .welcome-add,
+    
     .add-post form,
     .add-post-btn {
         font-size: unset;
+    }
+    .welcome-add {
+        font-size: unset;
+        width: 100%;
     }
 
     .feature-row {
@@ -1444,6 +1474,9 @@ footer {
     .pets-list {
         font-size: 13px;
     }
+    .pets-section {
+        width: 100%;
+    }
 
     /* Profile media query */
     .user-info,
@@ -1478,10 +1511,6 @@ footer {
         font-size: unset;
     }
 
-    /* .edit-profile {
-        width: max-content;
-    } */
-
     .profile-input {
         font-size: unset;
         padding: unset;
@@ -1498,6 +1527,7 @@ footer {
 
     .home-newsletter .single .form-control {
         height: 50px;
+        width: 40%;
     }
 
     .home-newsletter .single .btn {
@@ -1625,6 +1655,30 @@ footer {
         padding: 15%;
     }
 
+    /* Sign up */
+    #signup_form,
+    .mb-4 {
+        font-size: unset;
+        width: 95%;
+        margin-left: 2%;
+    }
+    .form-group p {
+        font-size: unset;
+        margin-left: 5%;
+    }
+    #signup_form {
+        font-size: 20px;
+    }
+
+    .signup button {
+        font-size: unset;
+    }
+
+    .form-group h1 {
+        font-size: 25px;
+        margin-left: 10%;
+    }
+
     /* Featured posts media query */
     .feature-row {
         justify-content: unset;
@@ -1668,11 +1722,22 @@ footer {
         left: -0.2% !important;
     }
 
+    .welcome-add {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    /* Pets */
+    .pets-section {
+        width: 100%;
+    }
+
     /* Edit profile media query */
     .edit-profile .profile_pic {
         width: 30%;
         position: relative;
     }
+
     .edit-profile-btn {
         margin-left: 10%;
         position: relative;
@@ -1743,10 +1808,12 @@ footer {
     #id_excerpt {
         width: 90%;
     }
+
     .welcome-add {
         width: 90%;
-        margin-left: 5%;    
+        margin-left: 5%;
     }
+
     /* Signup media query */
     #signup_form,
     .form-group p,
@@ -1756,6 +1823,7 @@ footer {
         position: relative;
         left: 6%;
     }
+
     .mb-4 .signup {
         font-size: 20px;
     }
@@ -1773,13 +1841,14 @@ footer {
     .pets-section {
         width: 100%;
     }
+
     .pets-away .tips {
         right: 30%;
     }
 
-   .pets-section img {
-    margin-left: 5%;
-   }
+    .pets-section img {
+        margin-left: 5%;
+    }
 
     /* footer */
     footer {
@@ -1930,6 +1999,7 @@ footer {
     .signup button {
         font-size: 20px;
     }
+
     #signup_form {
         left: -1%;
     }
