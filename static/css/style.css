@@ -1747,6 +1747,22 @@ footer {
         width: 90%;
         margin-left: 5%;    
     }
+    /* Signup media query */
+    #signup_form,
+    .form-group p,
+    .mb-4 {
+        font-size: unset;
+        max-width: 90%;
+        position: relative;
+        left: 6%;
+    }
+    .mb-4 .signup {
+        font-size: 20px;
+    }
+
+    .form-group h1 {
+        font-size: 30px;
+    }
 
     /* Profile page media query */
     .border-right {
@@ -1760,9 +1776,10 @@ footer {
     .pets-away .tips {
         right: 30%;
     }
-    .break {
-        margin-left: 10%;
-    }
+
+   .pets-section img {
+    margin-left: 5%;
+   }
 
     /* footer */
     footer {
@@ -1913,14 +1930,10 @@ footer {
     .signup button {
         font-size: 20px;
     }
-
-    .mb-4 {
-        width: 95%;
-    }
-
     #signup_form {
-        margin-left: 10%;
+        left: -1%;
     }
+
 
     /* Footer media query */
     .footer-16371 {
