@@ -98,6 +98,30 @@ class TestViews(TestCase):
             response.status_code,
             302
         )
+    
+    def test_profile_settings_view(self):
+        user = self.client.login(
+            username='test_user',
+            password='test_password'
+        )
+        self.client.post(
+            f'/edit_profile/',
+            {'first_name': 'test first name'}
+        )
+        profile = Profile.objects.get(
+            first_name='test first name'
+        )
+        self.assertEqual(
+            profile.first_name,
+            'test first name'
+        )
+        response = self.client.get(
+            '/profile/'
+        )
+        self.assertEqual(
+            response.status_code,
+            200
+        )
 
     def test_post_detail_method_view_renders(self):
         post = Post.objects.get(
