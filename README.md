@@ -108,8 +108,7 @@ For anyone who has an interest in plants and gardening of all sorts! Users of al
 ## **User Stories**
 Not all stories have been implemented. Some have been left for future implementations as the site grows and expands.
 Such as:
-
-    * As a Site User I can update my password so that reset it if forgotten.
+- As a Site User I can update my password so that reset it if forgotten.
 
 ### **Site User Stories**
 - I can update and personalise a profile page so that other users can see my posts.
@@ -135,10 +134,10 @@ As an admin:
 - I can apply for a newsletter on the featured page so that I can receive updates on the features
 
 *Won`t have label*
-Labelled "Won't have" in issues:
+<br>
+Some more ideas to implement in the future:
 - As a Admin I can host events in relation to gardening so that users can meet up and get to know each other.
 - As a Site User I can sign up for events from the group so that I can be included.
-- 
 
 ## **Design**
 
@@ -246,9 +245,12 @@ This last wireframe image has the newsletter section at the end of the page, whi
 ![screenshot](media/profile.png)
 
 - Here is the edit profile page:
-- Updating your profile will show a success message on the index page.
 
 ![screenshot](media/edit-profile.png)
+
+- Updating your profile will show a success message on the index page.
+
+![screenshot](media/profile_saved.png)
 
 ### **Sign-in**
 
@@ -266,13 +268,24 @@ This last wireframe image has the newsletter section at the end of the page, whi
 
 - The newsletter feature does not show up until you sign into your account, then you can spot it in the Navbar.
 
+![screenshot](media/add_post.png)
+
 - The Newsletter feature allows you to signup for the site's ongoing newsletter with featured posts about plants.
 - You can submit your email, after clicking the "Newsletter" button on the Navbar, and from the newsleter page you can choose to be redirected to an unsubscribe page to unsubscribe your email from the newsletter.
 - I came across some issues implementing this feature. Attempts to use GMAIL failed as they took away this feature just this year, I will include an option to check the results of this feature with a free email service called mailtrap.io. 
 - From mailtrap.io it is possible to see the template newsletter is being sent and linking the email used by the user.
 
+![screenshot](media/newsletter1.png)
+![screenshot](media/newsletter2.png)
+
+<br>
+
+- Subscribe to the Newsletter:
+
 ![screenshot](media/newsletter.png)
 <br>
+
+- And Unsubscribe:
 
 ![screenshot](media/unsub.png)
 
@@ -302,16 +315,18 @@ This last wireframe image has the newsletter section at the end of the page, whi
 
 ### **Defensive Design**
 - #### **Delete operations:**
-    - **Users** first need to confirm that they are sure that they want to delete:
-        - Their profile.
+- **Users** first need to confirm that they are sure that they want to delete:
+    - Their profile.
+        IMAGE
+    - Signing up to our newsletter let's you know if your email already exists in our database.
+    ![screenshot](media/newsletter3.png)
 
-    IMAGE
 
 
     - **Admin** first need to confirm that they are sure they want to delete:
         - Blog Posts
 
-    IMAGE
+        ![screenshot](media/delete_post.png)
 
 
 - #### **Comment status:**

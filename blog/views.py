@@ -55,7 +55,7 @@ class UserSettings(View):
                 request,
                 'Profile could not be updated.'
             )
-        return redirect('profile')
+        return redirect('/')
 
 
 class AddPostView(CreateView):
