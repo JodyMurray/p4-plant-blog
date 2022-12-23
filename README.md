@@ -53,6 +53,8 @@ A live version of this website will be found here: https://jodys-plants.herokuap
 
 - [Languages Used](#languages-used "Languages Used")
 - [Python Libraries and API](#python-libraries-and-api "Python Libraries and API")
+- [Databases platform and cloud storage](#databases-platform-and-cloud-storage "Databases platform and cloud storage")
+- [Database Structure](#database-structure "Database Structure")
 
 </details>
 <details><summary>Testing</summary>
@@ -365,6 +367,30 @@ This last wireframe image has the newsletter section at the end of the page, whi
 - Heroku Postgres: SQL database service provided directly by Heroku for storing data.
 - Cloudinary: to store images and static files in production.
 - Heroku: to deploy and run the application in production.
+
+### **Database Structure**
+- User
+
+    - The User model contains information about each user that registers an account,
+    - Which is part of the Django allauth library
+    - The fields used for this project are: username, first_name, last_name, profile_pic, bio 
+
+- Profile
+
+    - The Profile model is used to store information regarding any registered user
+    - Users can create a profile object upon creating an account, and then the page will redirect to profile page with an "update profile" button.
+    - Users can modify profile information at any time with a button, or delete profile, which deletes the profile not the account.
+    - An admin can also create, modify and delete profile objects.
+    - OneToOneField relationship with User
+    - Returns User to Profile page. 
+
+- Newsletteruser model
+
+    - Stores users subscribed to the newsletter.
+    - Connected via free mail service (mailtrap.io).
+    - Subscribing will send an email in the free mail service thanking you for joining the newsletter.
+    - User can unsubscribe to the newsletter and receive a "Sorry to see you leave" email.
+
 
 
 ### **Python Libraries and API**
