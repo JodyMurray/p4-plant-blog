@@ -19,17 +19,19 @@
                         <strong>{{ message }}</strong>
                     </div>
                 </div>
-            </div>
-            {% endfor %}
-            {% else %}
+                {% endfor %}
+                {% else %}
 
-            {% csrf_token %}
-            <br>
-            <div class="input-group justify-content-center">
-                {% crispy form %}
-                <span class="input-group-btn">
-                    <button class="btn btn-theme " type="submit">Subscribe</button>
-                </span>
+                {% csrf_token %}
+                <br>
+                <form>
+                    <div class="input-group justify-content-center">
+                        {% crispy form %}
+                        <span class="input-group-btn">
+                            <button class="btn btn-theme " type="submit">Subscribe</button>
+                        </span>
+                    </div>
+                </form>
             </div>
             <br>
             <p>Want to unsubscribe? <a href="{% url 'newsletter_unsubscribe' %}"><i

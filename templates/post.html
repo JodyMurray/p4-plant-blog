@@ -16,12 +16,11 @@
             src="https://images.pexels.com/photos/886521/pexels-photo-886521.jpeg?cs=srgb&dl=pexels-alena-koval-886521.jpg&fm=jpg&_gl=1*1yqe4ni*_ga*MTM3NzE5NzA4NS4xNjY2Njc4OTQz*_ga_8JE65Q40S6*MTY2NjY4NTIxNS4yLjEuMTY2NjY4NTgxOS4wLjAuMA.."
             width="100%" alt="post image">
         {% else %}
-        <img src=" {{ post.featured_image.url }}" width="100%" alt="featured image">
+        <img src=" {{ post.featured_image.url }}" width="600" alt="featured image">
         {% endif %}
         <!-- Post content -->
         <div class="row justify-content-center post-content">
-            <hr class="break" style="width:80%; margin: auto;" />
-            <p class="card-text ">
+            <p class="card-text">
                 {{ post.content | safe }}
             </p>
             <div class="container">
