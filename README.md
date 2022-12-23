@@ -400,7 +400,13 @@ The following is a list of resources used to put this project together.
 
 - No custom JavaScript code has been written for this project, only what is included with Bootstrap4.
 
-
+### **Automated testing**
+- For measuring code coverage I used the Coverage.py tool.
+- To check coverage in the HTML format run in the terminal:
+    - coverage run --source='.' manage.py test
+        - coverage html
+- Open the link that appeared in the terminal.
+- Display the HTML code in the browser with the Live Server.
 
 * **Lighthouse testing**
 
@@ -461,10 +467,11 @@ The following is a list of resources used to put this project together.
 ## **Future plans to implement**
 Future plans for this project include:
 * The Newsletter section I would like to get working properly with an email direct to an actual account instead of the free mail service (mailtrap.io). This is definitely possible, services such as MailChimp and SendGrid allow for this feature. 
-* The profile picture beside the comments made by each user is an issue that should be resolved in the future.
+* The profile picture beside the comments made by each user is something to make happen in future implementations.
 * The user should in the future be able to delete their whole user account and not just their profile information.
 * Also to implement in the future, the capability to sign in using Social medias, for now, the links added in the sign up section will just bring you to the social media site.
 * Ideally the "Featured Posts" section would change seasonally, giving us new seasonally related tips and content regarding the seasonal changes that come along with gardening.
+* "Forgot your password?" section should also be functioning in future implementations.
 
 
 ### **Deployment**

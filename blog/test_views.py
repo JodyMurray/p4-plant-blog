@@ -155,12 +155,20 @@ class TestViews(TestCase):
             post.title,
             'test title'
         )
-        comments = Comment.objects.get(
-            body='test comment body'
+        comments = Comment.objects.create(
+            body=''
         )
         self.assertEqual(
             comments.body,
-            'test comment body'
+            ''
+        )
+        response = self.client.post(
+            f'/post/{post.slug}/',
+            {'body': 'test comment body'}
+        )
+        self.assertRedirects(
+            response,
+            f'/post/{post.slug}/'
         )
         liked = False
         self.assertEqual(
