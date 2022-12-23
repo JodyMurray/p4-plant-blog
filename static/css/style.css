@@ -1197,6 +1197,9 @@ footer {
     footer i {
         font-size: 16px
     }
+    .footer-site-logo a {
+        font-size: 25px;
+    }
 
     /* Pets section media query */
     .list-pets,
@@ -1906,8 +1909,9 @@ footer {
 @media screen and (max-width: 320px) {
 
     /* Navbar */
-    .dropdown-menu {
-        left: 48%;
+    .dropdown-toggle-split {
+        position: relative;
+        left: 80%;
     }
 
     /* Index page */
@@ -2059,5 +2063,9 @@ footer {
     /* Footer media query */
     .footer-16371 {
         padding: 25rem 0 6rem;
+    }
+    .footer-site-logo a,
+    .footer-site-logo i {
+        font-size: 20px;
     }
 }

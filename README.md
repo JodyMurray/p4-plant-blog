@@ -61,6 +61,7 @@ A live version of this website will be found here: https://jodys-plants.herokuap
 
 - [Introduction](#introduction "Introduction")
 - [Validator testing](#validator-testing "Validator Testing")
+- [Automated testing](#automated-testing "Automated Testing")
 - [Testing and bugs](#testing-and-bugs "Testing and bugs")
 - [Fixed Bugs and Solutions](#fixed-bugs-and-solutions "Fixed Bugs and Solutions") 
 - [Unfixed Bugs](#unfixed-bugs "Unfixed Bugs")
@@ -453,13 +454,15 @@ The following is a list of resources used to put this project together.
 - For measuring code coverage I used the Coverage.py tool.
 - To check coverage in the HTML format run in the terminal:
     - coverage run --source='.' manage.py test
-        - coverage html
+    - coverage html
 - Open the link that appeared in the terminal.
 - Display the HTML code in the browser with the Live Server.
 
-* **Lighthouse testing**
+COVERAGE SCREENSHOT
 
-* For Desktop:
+ **Lighthouse testing**
+
+* **For Desktop:**
 
     | Section | Performance | Accessibility | Best Practices | SEO |
     | --- | --- | --- | --- | --- |
@@ -471,7 +474,7 @@ The following is a list of resources used to put this project together.
     | Profile | 99 | 94 | 83 | 100 |
     | Edit Profile | 99 | 83 | 83 | 100 |
 
-    * For Mobile devices:
+* **For Mobile devices:**
 
     | Section | Performance | Accessibility | Best Practices | SEO |
     | --- | --- | --- | --- | --- |
