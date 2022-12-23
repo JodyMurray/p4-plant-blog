@@ -369,13 +369,13 @@ This last wireframe image has the newsletter section at the end of the page, whi
 - Heroku: to deploy and run the application in production.
 
 ### **Database Structure**
-- User
+- User profile
 
     - The User model contains information about each user that registers an account,
     - Which is part of the Django allauth library
     - The fields used for this project are: username, first_name, last_name, profile_pic, bio 
 
-- Profile
+- Profile model
 
     - The Profile model is used to store information regarding any registered user
     - Users can create a profile object upon creating an account, and then the page will redirect to profile page with an "update profile" button.
@@ -383,6 +383,14 @@ This last wireframe image has the newsletter section at the end of the page, whi
     - An admin can also create, modify and delete profile objects.
     - OneToOneField relationship with User
     - Returns User to Profile page. 
+
+- Post model 
+    - The post model contains all fields necessary for a blog post. 
+    - The model includes fields; title, slug, author, update_on, content, featured_image, excerpt,
+    created_on, status, likes. 
+    - The featured_image uses cloudinary field and has a default image in case none is chosen. 
+    - The blogpost_like use a ManyToManyField and returns a likes count.
+    - Get absolute url is defined and returns you to the "Add post" section.
 
 - Newsletteruser model
 
