@@ -26,3 +26,4 @@ sqlparse==0.4.3
 starkbank-ecdsa==2.2.0
 Werkzeug==2.2.2
 WTForms==3.0.1
+setuptools>=65.5.1 # not directly required, pinned by Snyk to avoid a vulnerability
