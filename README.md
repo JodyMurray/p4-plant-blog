@@ -438,9 +438,11 @@ The following is a list of resources used to put this project together.
 
 ### **Validator testing**
 
-- HTML files pass through the [W3C validator](https://validator.w3.org/) 
+- The majority of HTML files pass through the [W3C validator](https://validator.w3.org/) without error.
 
     ![screenshot](media/w3c.png)
+
+- When testing the profile and edit profile HTML page through the validator, a 404 error came up. I pulled the text from github without the base.html and the error disappeared.
 
 
 - CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/)
@@ -514,6 +516,7 @@ COVERAGE SCREENSHOT
 * The profile picture shows up beside each comment made by the user, instead only showing up is the logged in user's profile picture.
 * When a user "deletes" their profile from the "edit profile" page, it only deletes their profile information and profile picture and not the user account itself.
 * The comment box in each blog post gets pushed to the side a bit when logged in as admin, because of the delete and edit buttons.
+
 
 
 ## **Future plans to implement**
