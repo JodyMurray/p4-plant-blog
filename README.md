@@ -542,6 +542,8 @@ Future plans for this project include:
         ![screenshot](media/validator2.png)
     - If numbers are used in the name inputs or less than 5 characters is used in the bio, an error message will appear at the top of the page.
         ![screenshot](media/validator1.png)
+    - The body section for a user comment is required before pressing the submit button:
+        ![screenshot](media/validator3.png)
     
 
 ### **Deployment**
