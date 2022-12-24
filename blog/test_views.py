@@ -2,6 +2,7 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.test import TestCase
 from .models import Profile, User, Post, Comment
+from .forms import EditProfileForm
 import datetime
 
 
@@ -111,6 +112,20 @@ class TestViews(TestCase):
             'pets.html'
         )
 
+    def test_user_profile_form(self):
+        form_data = {
+            'user': 'test_user',
+            'first_name': 'test_first_name',
+            'last_name': 'test_last_name',
+            'bio': 'test bio',
+        }
+        profile_form = EditProfileForm(
+            data=form_data
+        )
+        self.assertTrue(
+            profile_form.is_valid()
+        )
+
     def test_get_user_profile(self):
         test_model = Profile.objects.get(
             bio='test bio'
@@ -172,6 +187,43 @@ class TestViews(TestCase):
         )
         response = self.client.get(
             '/'
+        )
+        self.assertEqual(
+            response.status_code,
+            200
+        )
+
+    def test_post_can_be_modified(self):
+        user = self.client.login(
+            username='test_user',
+            password='test_password'
+        )
+        post = Post.objects.get(
+            id=1,
+            title='test title',
+            content='test content'
+        )
+        self.client.post(
+            f'/{post.id}/',
+            {
+                'title': 'new test title',
+                'content': 'new test content'
+            }
+        )
+        self.assertEqual(
+            post.id,
+            1
+        )
+        self.assertEqual(
+            post.title,
+            'test title'
+        )
+        self.assertEqual(
+            post.content,
+            'test content'
+        )
+        response = self.client.get(
+            f'/edit/{post.id}'
         )
         self.assertEqual(
             response.status_code,
