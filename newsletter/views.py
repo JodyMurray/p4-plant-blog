@@ -8,6 +8,10 @@ from django.template.loader import render_to_string
 
 
 def newsletter_signup(request):
+    """
+    Function that allows users to
+    sign up to the newsletter
+    """
     if request.method == 'POST':
         form = JoinForm(request.POST)
 
@@ -54,6 +58,9 @@ def newsletter_signup(request):
 
 
 def newsletter_unsubscribe(request):
+    """
+    Function that allows user to unsubscribe to newsletter
+    """
     form = JoinForm(request.POST or None)
 
     if form.is_valid():
