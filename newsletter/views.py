@@ -27,22 +27,30 @@ def newsletter_signup(request):
                     )
             email = form.cleaned_data['email']
             print(form.cleaned_data['email'])
-            print("Email valid")
+            print('Email valid')
             to_email = [instance.email]
 
-            html = render_to_string('newsletter/email.html', {
-                'email': email,
-            })
+            html = render_to_string(
+                'newsletter/email.html',
+                {'email': email}
+            )
 
-        send_mail('subject', 'message', settings.EMAIL_HOST_USER,
-                  [email], html_message=html)
+        send_mail(
+            'subject',
+            'message',
+            settings.EMAIL_HOST_USER,
+            [email],
+            html_message=html
+        )
 
     else:
         form = JoinForm(request.POST)
 
-    return render(request, 'newsletter/register.html', {
-        'form': form
-    })
+    return render(
+        request,
+        'newsletter/register.html',
+        {'form': form}
+    )
 
 
 def newsletter_unsubscribe(request):
@@ -52,24 +60,36 @@ def newsletter_unsubscribe(request):
         instance = form.save(commit=False)
         if NewsLetter.objects.filter(email=instance.email).exists():
             NewsLetter.objects.filter(email=instance.email).delete()
-            messages.success(request, "Your email has been removed",
-                             "alert alert-success alert-dismissible")
+            messages.success(
+                request,
+                "Your email has been removed",
+                "alert alert-success alert-dismissible"
+            )
             subject = "You have unsubscribed to our Newsletter"
             from_email = settings.EMAIL_HOST_USER
             to_email = [instance.email]
             signup_message = """ Sorry to see you go,
             let us know if there is an issue with our service """
             send_mail(
-                subject=subject, from_email=from_email,
+                subject=subject,
+                from_email=from_email,
                 recipient_list=to_email,
                 message=signup_message,
-                fail_silently=False)
+                fail_silently=False
+            )
         else:
-            messages.warning(request, "Your email is not in the database",
-                             "alert alert-warning alert-dismissible")
+            messages.warning(
+                request,
+                "Your email is not in the database",
+                "alert alert-warning alert-dismissible"
+            )
 
     context = {
         'form': form,
     }
     template = "newsletter/unsubscribe.html"
-    return render(request, template, context)
+    return render(
+        request,
+        template,
+        context
+    )

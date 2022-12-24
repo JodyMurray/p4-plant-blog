@@ -5,6 +5,7 @@ from .models import NewsLetter
 from .forms import JoinForm
 import datetime
 
+
 class TestNewsletterView(TestCase):
 
     def setUp(self):

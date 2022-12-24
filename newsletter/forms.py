@@ -8,14 +8,20 @@ class JoinForm(forms.ModelForm):
 
     helper = FormHelper()
     helper.form_show_labels = False
-    
+
     class Meta:
         model = NewsLetter
         fields = ['email']
 
         def clean_email(self, *args, **kwargs):
-            email = self.cleaned_data.get("email")
-            queryset = NewsLetter.objects.filter(email__iexact=email)
+            email = self.cleaned_data.get(
+                'email'
+            )
+            queryset = NewsLetter.objects.filter(
+                email__iexact=email
+            )
             if queryset.exists():
-                raise forms.ValidationError("This email already exists")
+                raise forms.ValidationError(
+                    'This email already exists'
+                )
             return email

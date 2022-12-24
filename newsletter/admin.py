@@ -3,7 +3,13 @@ from .models import NewsLetter
 
 
 class NewsLetterAdmin(admin.ModelAdmin):
-    list_display = ('email', 'timestamp',)
+    list_display = (
+        'email',
+        'timestamp',
+    )
 
 
-admin.site.register(NewsLetter, NewsLetterAdmin)
+admin.site.register(
+    NewsLetter,
+    NewsLetterAdmin
+)

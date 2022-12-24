@@ -6,10 +6,10 @@ urlpatterns = [
         r'register/$',
         newsletter_signup,
         name='newsletter_signup'
-        ),
+    ),
     url(
         r'unsubscribe/$',
         newsletter_unsubscribe,
         name='newsletter_unsubscribe'
-        ),
+    ),
 ]
