@@ -442,7 +442,8 @@ The following is a list of resources used to put this project together.
 
     ![screenshot](media/w3c.png)
 
-- When testing the profile and edit profile HTML page through the validator, a 404 error came up. I pulled the text from github without the base.html and the error disappeared.
+- When testing the profile and edit profile HTML page through the validator using the URL, a 404 error came up. Instead, I pulled the text from the source code without the base.html and corrected any relevent errors that appeared, therefore leaving the HTML validator clear.
+        ![screenshot](media/error.png)
 
 
 - CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/)

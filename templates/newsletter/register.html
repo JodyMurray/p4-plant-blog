@@ -7,7 +7,9 @@
 <div class="home-newsletter">
     <div class="container">
         <div class="row">
+
             <div class="col-sm-12">
+
                 <div class="single">
                     <h3 class="text-center">Sign-Up for our Newletter!</h3>
                     {% if messages %}
@@ -18,9 +20,11 @@
                         <strong>{{ message }}</strong>
                     </div>
                 </div>
+
                 {% endfor %}
                 {% else %}
-                <form method="POST" class="">
+
+                <form method="POST" class="input-group justify-content-center">
                     {% csrf_token %}
                     <br>
                     <div class="input-group justify-content-center">
@@ -33,8 +37,11 @@
                     <p>Want to unsubscribe? <a href="{% url 'newsletter_unsubscribe' %}"><i
                                 class="fa-solid fa-arrow-right-long"></i></a></p>
                 </form>
+
                 {% endif %}
+
             </div>
+
         </div>
     </div>
 </div>
