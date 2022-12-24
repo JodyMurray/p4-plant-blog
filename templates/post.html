@@ -3,6 +3,16 @@
 {% load crispy_forms_tags %}
 {% load static %}
 
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success alert-dismissible text-center" role="alert"> <button style="border: none;" class="close"
+        data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;
+        </span></button>
+    <strong>{{ message }}</strong>
+</div>
+{% endfor %}
+{% endif %}
+
 <div class="post-body text-center">
     <div class="container">
         <h1 class="post-title">{{ post.title }}</h1>
@@ -93,13 +103,10 @@
                     </div>
                 </div>
             </div>
-            {% if commented %}
+            
             <div class="col-md-6 card mb-4 mt-3 comment-area shadow-sm p-3 mb-5 rounded" style="width: 80%;">
                 <div class="card-body" style="padding: 5%;">
-                    <div class="alert" role="alert">
-                        Your comment is awaiting approval
-                    </div>
-                    {% else %}
+                    
                     <!-- Leave a comment area -->
                     {% if user.is_authenticated %}
 
@@ -111,8 +118,9 @@
                         <br>
                         <button type="submit" class="btn btn-outline-secondary">Submit</button>
                     </form>
+                    
                     {% endif %}
-                    {% endif %}
+
                 </div>
             </div>
         </div>

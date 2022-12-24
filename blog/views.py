@@ -152,6 +152,10 @@ class PostDetail(View):
             )
             comment.post = post
             comment.save()
+            messages.info(
+                request,
+                'Your comment is awaiting approval.'
+            )
         else:
             comment_form = CommentForm()
 
