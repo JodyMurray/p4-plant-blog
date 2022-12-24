@@ -7,6 +7,8 @@ from .models import NewsLetter
 from django.template.loader import render_to_string
 
 
+# https://www.youtube.com/watch?v=yZPgBThZT04&list=PLGzru6ACxEAKtb29AeyHbVGUh2-0r891H&index=27
+# The above link was a useful guide.
 def newsletter_signup(request):
     """
     Function that allows users to

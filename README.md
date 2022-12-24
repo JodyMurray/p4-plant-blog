@@ -69,6 +69,12 @@ A live version of this website will be found here: https://jodys-plants.herokuap
 
 </details>
 
+<details><summary>Data Validation</summary>
+
+- [Data Validation](#data-validation "Data Validation")
+
+</details>
+
 <details><summary>Deployment</summary>
 
 - [Deployment](#deployment "Deployment")
@@ -517,6 +523,7 @@ COVERAGE SCREENSHOT
 * The profile picture shows up beside each comment made by the user, instead only showing up is the logged in user's profile picture.
 * When a user "deletes" their profile from the "edit profile" page, it only deletes their profile information and profile picture and not the user account itself.
 * The comment box in each blog post gets pushed to the side a bit when logged in as admin, because of the delete and edit buttons.
+* When in the "Add post section" you can choose which "author" for the post and who has also liked it, this was something I wished to resolve, but trying to resolve it resulted in an error message.
 
 
 
@@ -529,6 +536,13 @@ Future plans for this project include:
 * Ideally the "Featured Posts" section would change seasonally, giving us new seasonally related tips and content regarding the seasonal changes that come along with gardening.
 * "Forgot your password?" section should also be functioning in future implementations.
 
+### **Data Validation**
+- Edit Profile Validator:
+    - Users are required to fill in each input box before saving their profile.
+        ![screenshot](media/validator2.png)
+    - If numbers are used in the name inputs or less than 5 characters is used in the bio, an error message will appear at the top of the page.
+        ![screenshot](media/validator1.png)
+    
 
 ### **Deployment**
 The site was deployed to Heroku. The steps to deploy are as follows:

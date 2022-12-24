@@ -48,6 +48,8 @@ class Profile(models.Model):
             return "/static/images/default2.jpeg"
 
 
+# https://www.youtube.com/watch?v=m3efqF9abyg
+# The above link was a useful guide.
 class Post(models.Model):
     title = models.CharField(
         max_length=200,

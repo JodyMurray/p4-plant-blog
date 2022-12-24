@@ -37,6 +37,8 @@ class DeleteProfile(View):
         )
 
 
+# https://themesberg.com/blog/django/user-profile-tutorial
+# The above link was a useful guide.
 class UserSettings(View):
     """
     View to render user profile settings
