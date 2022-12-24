@@ -146,32 +146,3 @@ class TestViews(TestCase):
             response.status_code,
             200
         )
-
-    def test_post_detail_method_view_renders(self):
-        post = Post.objects.get(
-            title='test title'
-        )
-        self.assertEqual(
-            post.title,
-            'test title'
-        )
-        comments = Comment.objects.create(
-            body=''
-        )
-        self.assertEqual(
-            comments.body,
-            ''
-        )
-        response = self.client.post(
-            f'/post/{post.slug}/',
-            {'body': 'test comment body'}
-        )
-        self.assertRedirects(
-            response,
-            f'/post/{post.slug}/'
-        )
-        liked = False
-        self.assertEqual(
-            liked,
-            False
-        )
