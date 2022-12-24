@@ -110,9 +110,7 @@ class Comment(models.Model):
         max_length=80,
     )
     email = models.EmailField()
-    body = models.TextField(
-        validators=[validate_text_length]
-    )
+    body = models.TextField()
     created_on = models.DateTimeField(
         auto_now_add=True
     )
