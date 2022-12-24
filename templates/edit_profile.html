@@ -2,7 +2,15 @@
 {% load static %}
 {% block content %}
 
-
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-success alert-dismissible text-center" role="alert"> <button style="border: none;" class="close"
+        data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;
+        </span></button>
+    <strong>{{ message }}</strong>
+</div>
+{% endfor %}
+{% endif %}
 
 <form method='POST' action="{% url 'edit_profile' %}" enctype="multipart/form-data">
     {% csrf_token %}

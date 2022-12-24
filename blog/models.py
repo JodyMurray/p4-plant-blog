@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.urls import reverse
+from plantblog.validators import validate_text_length, validate_letters
 
 
 STATUS = (
@@ -19,18 +20,22 @@ class Profile(models.Model):
     first_name = models.CharField(
         max_length=100,
         null=True,
-        blank=True
+        blank=True,
+        validators=[validate_letters]
     )
     last_name = models.CharField(
         max_length=100,
         null=True,
-        blank=True
+        blank=True,
+        validators=[validate_letters]
     )
     profile_pic = models.ImageField(
         upload_to='media',
         blank=True
     )
-    bio = models.TextField()
+    bio = models.TextField(
+        validators=[validate_text_length]
+    )
 
     def __str__(self):
         return self.user.username
@@ -102,10 +107,12 @@ class Comment(models.Model):
         related_name="comments"
     )
     name = models.CharField(
-        max_length=80
+        max_length=80,
     )
     email = models.EmailField()
-    body = models.TextField()
+    body = models.TextField(
+        validators=[validate_text_length]
+    )
     created_on = models.DateTimeField(
         auto_now_add=True
     )
