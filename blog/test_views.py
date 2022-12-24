@@ -146,3 +146,34 @@ class TestViews(TestCase):
             response.status_code,
             200
         )
+
+    def test_post_can_be_deleted(self):
+        user = self.client.login(
+            username='test_user',
+            password='test_password'
+        )
+        post = Post.objects.get(
+            id=1
+        )
+        self.assertEqual(
+            post.id,
+            1
+        )
+        post_count = Post.objects.all().count()
+        self.assertEqual(
+            post_count,
+            1
+        )
+        post.delete()
+        new_post_count = Post.objects.all().count()
+        self.assertEqual(
+            new_post_count,
+            0
+        )
+        response = self.client.get(
+            '/'
+        )
+        self.assertEqual(
+            response.status_code,
+            200
+        )
