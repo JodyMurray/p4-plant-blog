@@ -298,6 +298,10 @@ ol {
     transform: scale(1.1);
 }
 
+#error_1_id_email {
+    display: none;
+}
+
 /* Post-page html */
 .post-image {
     position: relative;
