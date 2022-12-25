@@ -475,6 +475,7 @@ footer {
     .pagination-btn a {
         font-size: 30px;
     }
+    /* Blog posts */
 
     .post-image-card {
         margin-left: 25%;
@@ -503,6 +504,14 @@ footer {
 
     .post-content button {
         font-size: 30px;
+    }
+
+    .comments {
+        left: 17%;
+    }
+
+    .comment-area {
+        left: 0;
     }
 
     /* Index section */
@@ -766,6 +775,14 @@ footer {
         font-size: 25px;
     }
 
+    .comments {
+        left: 17%;
+    }
+
+    .comment-area {
+        left: 0;
+    }
+
     /* Index page features media query */
     .tips-list,
     .health {
@@ -965,9 +982,12 @@ footer {
         font-size: 20px;
     }
 
-    /* .comments {
+    .comments {
+        left: 18%;
+    } 
+    .comment-area {
         left: 0;
-    } */
+    }
 
     .post-image-card {
         margin-left: 25%;
@@ -1320,6 +1340,12 @@ footer {
     }
     #div_id_body {
         font-size: 20px;
+    }
+    .comments {
+        left: 17%;
+    }
+    .comment-area {
+        left: 0;
     }
 
     /* Index features media query */
@@ -1858,6 +1884,7 @@ footer {
         font-size: unset;
         max-width: 90%;
         position: relative;
+        left: 10px;
     }
 
     .mb-4 .signup {
