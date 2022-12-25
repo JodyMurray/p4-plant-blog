@@ -79,11 +79,9 @@
 </div>
 
 <div class="col text-start text-center mb-3 edit-profile-btn">
-    <form action="{% url 'delete_profile' user.id %}" method="post">
-        {% csrf_token %}
-        <button type="submit" name="profile_id" value="{{user.id}}" class="btn btn-outline-danger">Delete
-            profile</button>
-    </form>
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal">
+        Delete Profile
+    </button>
 </div>
 
 <!-- Modal -->
@@ -92,17 +90,28 @@
     <div class="modal-dialog" role="document" id="deleteModalLabel">
         <div class="modal-content">
 
+            <section class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">
+                    Hang on!
+                </h5>
+            </section>
 
-            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Go
-                back</button>
+            <div class="modal-body">
+                Are you sure?
+            </div>
 
-            <form action="{% url 'delete_profile' user.id %}" method="post">
-                {% csrf_token %}
-                <button type="submit" name="profile_id" value="{{user.id}}" class="btn btn-danger">Delete
-                    profile</button>
-            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Go
+                    back</button>
+
+                <form action="{% url 'delete_profile' user.id %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" name="profile_id" value="{{user.id}}" class="btn btn-danger">Delete
+                        profile</button>
+                </form>
+            </div>
+
         </div>
-
     </div>
 </div>
 
