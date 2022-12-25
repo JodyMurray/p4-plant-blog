@@ -10,6 +10,10 @@ This project is the fourth of five projects that needs to be completed in order 
 A live version of this website will be found here: https://jodys-plants.herokuapp.com/
 
 
+Test Account:
+
+- A test account for this website to test features including commenting, subscribing and unsubscribing to the newsletter, delet
+
 ## **Table of Contents** ##
 <details><summary>UX</summary>
 
@@ -280,7 +284,7 @@ This last wireframe image has the newsletter section at the end of the page, whi
 ![screenshot](media/add_post.png)
 
 - The Newsletter feature allows you to signup for the site's ongoing newsletter with featured posts about plants.
-- You can submit your email, after clicking the "Newsletter" button on the Navbar, and from the newsleter page you can choose to be redirected to an unsubscribe page to unsubscribe your email from the newsletter.
+- You can submit your email, after clicking the "Newsletter" button on the Navbar, and from the newsletter page you can choose to be redirected to an unsubscribe page to unsubscribe your email from the newsletter.
 - I came across some issues implementing this feature. Attempts to use GMAIL failed as they took away this feature just this year, I will include an option to check the results of this feature with a free email service called mailtrap.io. 
 - From mailtrap.io it is possible to see the template newsletter is being sent and linking the email used by the user.
 
@@ -291,7 +295,7 @@ This last wireframe image has the newsletter section at the end of the page, whi
 
 - Subscribe to the Newsletter:
 
-![screenshot](media/newsletter.png)
+![screenshot](media/newsletter4.png)
 <br>
 
 - And Unsubscribe:
@@ -334,6 +338,7 @@ This last wireframe image has the newsletter section at the end of the page, whi
 
     - **Admin** first need to confirm that they are sure they want to delete:
         - Blog Posts
+        ![screenshot](media/delete.png)
 
         ![screenshot](media/delete_post.png)
 
@@ -467,7 +472,9 @@ The following is a list of resources used to put this project together.
 - Open the link that appeared in the terminal.
 - Display the HTML code in the browser with the Live Server.
 
-COVERAGE SCREENSHOT
+    ![screenshot](media/coverage1.png)
+    ![screenshot](media/coverage2.png)
+
 
  **Lighthouse testing**
 
@@ -523,7 +530,7 @@ COVERAGE SCREENSHOT
 * The profile picture shows up beside each comment made by the user, instead only showing up is the logged in user's profile picture.
 * When a user "deletes" their profile from the "edit profile" page, it only deletes their profile information and profile picture and not the user account itself.
 * The comment box in each blog post gets pushed to the side a bit when logged in as admin, because of the delete and edit buttons.
-* When in the "Add post section" you can choose which "author" for the post and who has also liked it, this was something I wished to resolve, but trying to resolve it resulted in an error message.
+* When in the "Add post section" you can choose which "author" for the post, this was something I wished to resolve, but trying to delete it from the model resulted in an error message.
 
 
 
