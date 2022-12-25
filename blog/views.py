@@ -88,7 +88,15 @@ class AddPostView(CreateView):
     """
     model = Post
     template_name = 'add_post.html'
-    fields = '__all__'
+    fields = [
+        'title',
+        'slug',
+        'author',
+        'content',
+        'featured_image',
+        'excerpt',
+        'status',
+    ]
 
 
 class PostList(generic.ListView):

@@ -5,7 +5,9 @@ from django import forms
 
 
 class EditProfileForm(forms.ModelForm):
-    """ Function for edit profile """
+    """
+    Function for edit profile
+    """
     class Meta:
         model = Profile
         fields = (
@@ -19,7 +21,9 @@ class EditProfileForm(forms.ModelForm):
 
 
 class CommentForm(forms.ModelForm):
-    """ Function for comment form """
+    """
+    Function for comment form
+    """
     class Meta:
         model = Comment
         fields = [
