@@ -491,10 +491,6 @@ footer {
         font-size: 30px;
     }
 
-    .comments {
-        left: 15%;
-    }
-
     .post-content button {
         font-size: 30px;
     }
@@ -741,10 +737,6 @@ footer {
     .card-text,
     .author {
         font-size: unset;
-    }
-
-    .comments {
-        left: 17%;
     }
 
     .post-image-card {
@@ -1223,10 +1215,6 @@ footer {
         font-size: 25px;
     }
 
-    /* .comments {
-        left: 0;
-    } */
-
     /* Navbar media query */
     .navbar-brand {
         font-size: 18px;
@@ -1310,6 +1298,17 @@ footer {
     }
 
     .post-title {
+        font-size: 20px;
+    }
+
+    .post-image-card img {
+        width: 80%;
+    }
+
+    .card-body p {
+        font-size: 20px;
+    }
+    #div_id_body {
         font-size: 20px;
     }
 
@@ -1849,7 +1848,6 @@ footer {
         font-size: unset;
         max-width: 90%;
         position: relative;
-        left: 5%;
     }
 
     .mb-4 .signup {
