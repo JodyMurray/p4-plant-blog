@@ -27,9 +27,9 @@ class DeleteProfile(View):
         profile.delete()
 
         messages.success(
-                request,
-                'Profile deleted successfully.'
-            )
+            request,
+            'Profile deleted successfully.'
+        )
         return HttpResponseRedirect(
             reverse(
                 'home'
