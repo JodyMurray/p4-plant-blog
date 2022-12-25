@@ -12,7 +12,7 @@ A live version of this website will be found here: https://jodys-plants.herokuap
 
 Test Account:
 
-- A test account for this website to test features including commenting, subscribing and unsubscribing to the newsletter, delet
+- A test account for this website to test features including commenting, subscribing and unsubscribing to the newsletter, deleting and editing blog posts can be provided at request.
 
 ## **Table of Contents** ##
 <details><summary>UX</summary>
@@ -386,6 +386,29 @@ This last wireframe image has the newsletter section at the end of the page, whi
 - Cloudinary: to store images and static files in production.
 - Heroku: to deploy and run the application in production.
 
+### **Python Libraries and API**
+
+The following is a list of resources used to put this project together.
+
+- Google Fonts - for the font families: 
+- Font Awesome - to add icons to the social links in the footer element.
+- GitPod - to create my html files & styling sheet before pushing the project to Github.
+- GitHub - to store my repository for submission.
+- Balsamiq - were used to create mockups of the project prior to starting.
+- Am I Responsive? - to ensure the project looked good across all devices.
+- Icons8 - to provide the code & image for the icon in the tab bar.
+- Crispy Forms: used for comment and sign-in forms throughout website.
+- Google Lighthouse: used to access website performance.
+- Coverage.py: used for coverage testing of Python programs. 
+- HTML Markup Validation: used to validate HTML code syntax.
+- CSS Validation Service: used to validate CSS code syntax.
+- PEP8 Validation: used to validate Python code syntax.
+- Chrome DevTools: development tool supplied by Google Chrome browser to test responsive design during development.
+- Pillow: This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
+- MailTrap: Free mail platform used for newsletter.
+- Django: Python-based framework for rapid website development.
+- Bootstrap: CSS and JavaScript library.
+
 ### **Database Structure**
 - User profile
 
@@ -417,30 +440,6 @@ This last wireframe image has the newsletter section at the end of the page, whi
     - Subscribing will send an email in the free mail service thanking you for joining the newsletter.
     - User can unsubscribe to the newsletter and receive a "Sorry to see you leave" email.
 
-
-
-### **Python Libraries and API**
-
-The following is a list of resources used to put this project together.
-
-- Google Fonts - for the font families: 
-- Font Awesome - to add icons to the social links in the footer element.
-- GitPod - to create my html files & styling sheet before pushing the project to Github.
-- GitHub - to store my repository for submission.
-- Balsamiq - were used to create mockups of the project prior to starting.
-- Am I Responsive? - to ensure the project looked good across all devices.
-- Icons8 - to provide the code & image for the icon in the tab bar.
-- Crispy Forms: used for comment and sign-in forms throughout website.
-- Google Lighthouse: used to access website performance.
-- Coverage.py: used for coverage testing of Python programs. 
-- HTML Markup Validation: used to validate HTML code syntax.
-- CSS Validation Service: used to validate CSS code syntax.
-- PEP8 Validation: used to validate Python code syntax.
-- Chrome DevTools: development tool supplied by Google Chrome browser to test responsive design during development.
-- Pillow: This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities.
-- MailTrap: Free mail platform used for newsletter.
-- Django: Python-based framework for rapid website development.
-- Bootstrap: CSS and JavaScript library.
 
 
 ## **Testing**
@@ -510,12 +509,12 @@ The following is a list of resources used to put this project together.
 
 
 
-* **Python Validator**
+ **Python Validator**
 - All Python files through the application returned no errors.
 
 
-### **Testing and bugs**
-## **Fixed bugs and solutions:**
+## **Testing and bugs**
+### **Fixed bugs and solutions:**
 
 * Navigation bar links were too large for smaller screen size,  
     * *Solution: a dropdown burger menu was added for screen sizes 768px and less.*
@@ -531,7 +530,7 @@ The following is a list of resources used to put this project together.
     * *Solution: I added an else if statement to the model which uses a default image if no image is used.*
 
 
-## **Unfixed bugs**
+### **Unfixed bugs**
 
 * The profile picture shows up beside each comment made by the user, instead only showing up is the logged in user's profile picture.
 * When a user "deletes" their profile from the "edit profile" page, it only deletes their profile information and profile picture and not the user account itself.
@@ -540,7 +539,7 @@ The following is a list of resources used to put this project together.
 
 
 
-## **Future plans to implement**
+### **Future plans to implement**
 Future plans for this project include:
 * The Newsletter section I would like to get working properly with an email direct to an actual account instead of the free mail service (mailtrap.io). This is definitely possible, services such as MailChimp and SendGrid allow for this feature. 
 * The profile picture beside the comments made by each user is something to make happen in future implementations.
@@ -597,7 +596,7 @@ The site was deployed to Heroku. The steps to deploy are as follows:
 For inspiration, for code, design help and advice, I'd like to thank;
 
 * Martina Terlevic
-    * My wonderful mentor at Code Institute.
+    * My mentor at Code Institute.
     <br>
 * The Code Institute.
 
