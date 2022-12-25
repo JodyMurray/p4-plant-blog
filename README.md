@@ -267,13 +267,17 @@ This last wireframe image has the newsletter section at the end of the page, whi
 
 ### **Sign-in**
 
-- The Sign up page requires username and password to sign in, including a "forgot password" section.
+- The Sign in page requires username and password to sign in.
 
 ![screenshot](media/signin.png)
 
+- And once logged out, you'll be redirected to the index page with this message:
+
+![screenshot](media/signout-msg.png)
+
 ### **Register**
 
-- The register page requires specific information to sign up for a profile, and includes a social media sign in section.
+- The register page requires specific information to sign up for a profile.
 
 ![screenshot](media/signup.png)
 
@@ -327,23 +331,25 @@ This last wireframe image has the newsletter section at the end of the page, whi
 
 
 ### **Defensive Design**
-- #### **Delete operations:**
+#### **Delete operations:**
 - **Users** first need to confirm that they are sure that they want to delete:
     - Their profile.
-        IMAGE
-    - Signing up to our newsletter let's you know if your email already exists in our database.
+        ![screenshot](media/delete2.png)
+- **Users** trying to sign in with wrong details or no user created won't be allowed access and see this message.
+        ![screenshot](media/error2.png)
+
+- **Users** signing up to our newsletter let's you know if your email already exists in our database.
     ![screenshot](media/newsletter3.png)
 
 
+- **Admin** first need to confirm that they are sure they want to delete:
+    - Blog Posts
+    ![screenshot](media/delete.png)
+    - You'll see this message once you delete a post confirming it's deletion.
+    ![screenshot](media/delete_post.png)
 
-    - **Admin** first need to confirm that they are sure they want to delete:
-        - Blog Posts
-        ![screenshot](media/delete.png)
 
-        ![screenshot](media/delete_post.png)
-
-
-- #### **Comment status:**
+#### **Comment status:**
  - Comments can be written only by authorised users after logging in.
     - If the admin does not approve the review:
         - Comment will not be displayed on the blog post page comment section.
@@ -354,7 +360,7 @@ This last wireframe image has the newsletter section at the end of the page, whi
     - In the comments section you will see the comment displayed:
     ![screenshot](media/approved.png)
 
-- #### **Admin user mode:**
+#### **Admin user mode:**
 - Authorised admin login allows for a few small features to allow easy access to edit and create posts from the webpage directly: 
     ![screenshot](media/adminonly.png)
 - Authorised admin can add a blog post:

@@ -85,6 +85,12 @@ a:active {
     color: #306844;
 }
 
+/* Login */
+.errorlist {
+    list-style: none;
+    color: olivedrab;
+}
+
 /*Profile */
 .profile_form input {
     width: 50%;
