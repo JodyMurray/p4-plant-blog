@@ -16,7 +16,7 @@
 
                     {% if messages %}
                     {% for message in messages %}
-                    
+
                     <div {% if message.tags %} class="{{message.tags}}" {% endif %} role="alert">
                         <button type="button" data-bs-dismiss="alert" class="close" data-dismiss="alert"
                             aria-label="Close">
@@ -38,8 +38,10 @@
                         </span>
                     </div>
                     <br>
-                    <p>Want to unsubscribe? <a href="{% url 'newsletter_unsubscribe' %}"><i
-                                class="fa-solid fa-arrow-right-long"></i></a></p>
+                    <p>Want to unsubscribe? <a href="{% url 'newsletter_unsubscribe' %}">
+                            <iclass="fa-solid fa-arrow-right-long"></i>
+                        </a>
+                    </p>
                 </form>
 
                 {% endif %}

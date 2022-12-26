@@ -58,6 +58,7 @@ Test Account:
 - [Languages Used](#languages-used "Languages Used")
 - [Python Libraries and API](#python-libraries-and-api "Python Libraries and API")
 - [Databases platform and cloud storage](#databases-platform-and-cloud-storage "Databases platform and cloud storage")
+- [Relational Database Diagram](#relational-database-diagram "Relational Database Diagram")
 - [Database Structure](#database-structure "Database Structure")
 
 </details>
@@ -368,6 +369,8 @@ This last wireframe image has the newsletter section at the end of the page, whi
 - Authorised admin can also edit or delete blog posts from each post page:
     ![screenshot](media/edit_delete.png)
 
+    * This feature was added to allow easy access to add, edit and delete posts for an admin "user", this idea was to make it simple to add and edit directly from the website instead of going into django admin to make new blog posts, or edit and delete and see directly how it would look on the site.
+
 
 
 
@@ -408,6 +411,14 @@ The following is a list of resources used to put this project together.
 - MailTrap: Free mail platform used for newsletter.
 - Django: Python-based framework for rapid website development.
 - Bootstrap: CSS and JavaScript library.
+
+### **Relational Database Diagram**
+* The project uses a relational database (PostgreSQL)
+
+* The following diagram displays the relational database model design for this website. It was made using Quick Database Diagrams:
+
+![screenshot](media/database_diagram.png)
+
 
 ### **Database Structure**
 - User profile
@@ -537,6 +548,13 @@ The following is a list of resources used to put this project together.
 * The comment box in each blog post gets pushed to the side a bit when logged in as admin, because of the delete and edit buttons.
 * When in the "Add post section" you can choose which "author" for the post, this was something I wished to resolve, but trying to delete it from the model resulted in an error message.
 
+<br>
+
+* When putting through the newsletter subscribe/unsubscribe HTML pages through the w3c validator throws this error:
+        ![screenshot](media/bug.png)
+    * Taking out the form element resulted in the newsletter button not submitting.
+
+
 
 
 ### **Future plans to implement**
@@ -546,7 +564,6 @@ Future plans for this project include:
 * The user should in the future be able to delete their whole user account and not just their profile information.
 * Also to implement in the future, the capability to sign in using Social medias, for now, the links added in the sign up section will just bring you to the social media site.
 * Ideally the "Featured Posts" section would change seasonally, giving us new seasonally related tips and content regarding the seasonal changes that come along with gardening.
-* "Forgot your password?" section should also be functioning in future implementations.
 
 ### **Data Validation**
 - Edit Profile Validator:
