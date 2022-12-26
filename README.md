@@ -546,7 +546,7 @@ The following is a list of resources used to put this project together.
 * The profile picture shows up beside each comment made by the user, instead only showing up is the logged in user's profile picture.
 * When a user "deletes" their profile from the "edit profile" page, it only deletes their profile information and profile picture and not the user account itself.
 * The comment box in each blog post gets pushed to the side a bit when logged in as admin, because of the delete and edit buttons.
-* When in the "Add post section" you can choose which "author" for the post, this was something I wished to resolve, but trying to delete it from the model resulted in an error message.
+* When in the "Add post section" you can choose which "author" for the post, this was something I wished to resolve, but trying to delete it from the model resulted in an error message. It was not the intention to allow any user to be an author of a blog posts.
 
 <br>
 
